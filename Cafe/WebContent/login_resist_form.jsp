@@ -5,8 +5,8 @@
 <html>
     <head>
     	<meta charset="utf-8" />
-        <title>ë¡ê·¸ì¸ / íìê°ì í¼ ííë¦¿</title>
-        <link rel="stylesheet" href="./Resources/css/style.css">
+        <title>로그인 회원가입</title>
+        <link rel="stylesheet" href="./Resources/css/style.css" />
     </head>
     <body>
         <div class="wrap">

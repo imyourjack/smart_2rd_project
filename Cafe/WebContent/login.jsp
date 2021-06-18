@@ -1,4 +1,7 @@
-
+<!-- 로그인 초기화면 -->
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+	pageEncoding="UTF-8"%>
+<%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 <!DOCTYPE html>
 <html lang="en">
     <head>
@@ -16,6 +19,7 @@
         <link href="stylesheet" rel="stylesheet" />
         <!-- Core theme CSS (includes Bootstrap)-->
         <link href="./Resources/css/styles.css" rel="stylesheet" />
+        
     </head>
     <body>
         <header>
@@ -31,32 +35,53 @@
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <ul class="navbar-nav mx-auto">
-                        <li class="nav-item px-lg-4"><a class="nav-link text-uppercase" href="index.html">Home</a></li>
-                        <li class="nav-item px-lg-4"><a class="nav-link text-uppercase" href="about.html">About</a></li>
-                        <li class="nav-item px-lg-4"><a class="nav-link text-uppercase" href="products.html">Products</a></li>
-                        <li class="nav-item px-lg-4"><a class="nav-link text-uppercase" href="store.html">Store</a></li>
+                        <li class="nav-item px-lg-4"><a class="nav-link text-uppercase" href="index.jsp">Home</a></li>
+                        <li class="nav-item px-lg-4"><a class="nav-link text-uppercase" href="about.jsp">About</a></li>
+                        <li class="nav-item px-lg-4"><a class="nav-link text-uppercase" href="products.jsp">Products</a></li>
+                        <li class="nav-item px-lg-4"><a class="nav-link text-uppercase" href="store.jsp">Store</a></li>
                     </ul>
                 </div>
             </div>
         </nav>
         <section class="page-section about-heading">
             <div class="container">
-                <img class="img-fluid rounded about-heading-img mb-3 mb-lg-0" src="./Resources/assets/img/about.jpg" alt="..." />
+            
+            
                 <div class="about-heading-content">
                     <div class="row">
                         <div class="col-xl-9 col-lg-10 mx-auto">
-                            <div class="bg-faded rounded p-5">
-                                <h2 class="section-heading mb-4">
-                                    <span class="section-heading-upper">Strong Coffee, Strong Roots</span>
-                                    <span class="section-heading-lower">About Our Cafe</span>
-                                </h2>
-                                <p>Founded in 1987 by the Hernandez brothers, our establishment has been serving up rich coffee sourced from artisan farmers in various regions of South and Central America. We are dedicated to travelling the world, finding the best coffee, and bringing back to you here in our cafe.</p>
-                                <p class="mb-0">
-                                    We guarantee that you will fall in
-                                    <em>lust</em>
-                                    with our decadent blends the moment you walk inside until you finish your last sip. Join us for your daily routine, an outing with friends, or simply just to enjoy some alone time.
-                                </p>
-                            </div>
+                        
+                        <!-- 로그인 넣을 곳 -->
+          <div class="wrap">
+            <div class="form-wrap">
+                <div class="button-wrap">
+                    <div id="btn"></div>
+                    <button type="button" class="togglebtn" onclick="login()">LOG IN</button>
+                    <button type="button" class="togglebtn" onclick="register()">REGISTER</button>
+                </div>
+                <div class="social-icons">
+                    <img src="./Resources/assets/img/fb.png" alt="facebook">
+                    <img src="./Resources/assets/img/tw.png" alt="twitter">
+                    <img src="./Resources/assets/img/gl.png" alt="google">
+                </div>
+                <form id="login" action="" class="input-group">
+                    <input type="text" class="input-field" placeholder="User name or Email" required>
+                    <input type="password" class="input-field" placeholder="Enter Password" required>
+                    <input type="checkbox" class="checkbox"><span>Remember Password</span>
+                    <button class="submit">Login</button>
+                </form>
+                <form id="register" action="" class="input-group">
+                    <input type="text" class="input-field" placeholder="User name or Email" required>
+                    <input type="email" class="input-field" placeholder="Your Email" required>
+                    <input type="password" class="input-field" placeholder="Enter Password" required>
+                    <input type="checkbox" class="checkbox"><span>Terms and conditions</span>
+                    <button class="submit">REGISTER</button>
+                </form>
+            </div>
+        </div>
+        
+        
+                        
                         </div>
                     </div>
                 </div>
