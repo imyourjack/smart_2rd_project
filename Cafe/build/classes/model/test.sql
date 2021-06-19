@@ -17,12 +17,11 @@ create table user_tbl(
    user_id varchar(30) not null,
    password varchar(30) not null,
    user_name varchar(30) not null,
-   user_email varchar(50) not null,
    gender varchar(30) not null,
    primary key(user_id)
 );
 
 
 
-insert into user_tbl values('admin','admin','관리자','cocap.naver.com','female');
+insert into user_tbl values('admin','admin','관리자','female');
 select * from user_tbl;
