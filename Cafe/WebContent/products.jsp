@@ -37,6 +37,7 @@
                         <li class="nav-item px-lg-4"><a class="nav-link text-uppercase" href="about.jsp">About</a></li>
                         <li class="nav-item px-lg-4"><a class="nav-link text-uppercase" href="products.jsp">Products</a></li>
                         <li class="nav-item px-lg-4"><a class="nav-link text-uppercase" href="store.jsp">Store</a></li>
+                        <li class="nav-item px-lg-4"><a class="nav-link text-uppercase" href="login.jsp">Login</a></li>
                     </ul>
                 </div>
             </div>

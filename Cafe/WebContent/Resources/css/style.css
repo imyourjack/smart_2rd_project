@@ -3,17 +3,22 @@
     padding: 0;
     font-family: sans-serif;
 }
+input[type="radio"] {
+  margin-right: 0;
+    margin: 6px;
+    margin-left: 10px;
+}
 .wrap {
     height: 100%;
     width: 100%;
-    background:linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) ), url(../assets/img/background.jpg);
+    background:linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) ), url(../assets/img/fb.jpg);
     background-position: center;
     background-size: cover;
     position: absolute;
 }
 .form-wrap {
     width: 380px;
-    height: 480px;
+    height: 600px;
     position: relative;
     margin: 6% auto;
     background: #fff;
@@ -21,7 +26,7 @@
     overflow: hidden;
 }
 .button-wrap {
-    width: 230px;
+    width: 250px;
     margin: 35px auto;
     position: relative;
     box-shadow: 0 0 600px 9px #fcae8f;
@@ -68,12 +73,23 @@
     outline: none;
     background: transparent;
 }
-.submit {
+.registersubmit {
     width: 85%;
     padding: 10px 30px;
     cursor: pointer;
     display: block;
-    margin: auto;
+    margin: 30px auto;
+    background: linear-gradient(to right, #ff105f, #ffad06);
+    border: 0;
+    outline: none;
+    border-radius: 30px;
+}
+.loginsubmit {
+    width: 85%;
+    padding: 10px 30px;
+    cursor: pointer;
+    display: block;
+    margin: 200px auto;
     background: linear-gradient(to right, #ff105f, #ffad06);
     border: 0;
     outline: none;

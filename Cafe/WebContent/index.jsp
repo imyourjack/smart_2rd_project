@@ -22,8 +22,8 @@
     <body>
         <header>
             <h1 class="site-heading text-center text-faded d-none d-lg-block">
-                <span class="site-heading-upper text-primary mb-3">coooooooofffffffffeeeeeeeeeeeee</span>
-                <span class="site-heading-lower">coooooooofffffffffeeeeeeeeeeeee</span>
+                <span class="site-heading-upper text-primary mb-3">Let's me alone</span>
+                <span class="site-heading-lower">home comming</span>
             </h1>
         </header>
         <!-- Navigation-->
@@ -37,7 +37,7 @@
                         <li class="nav-item px-lg-4"><a class="nav-link text-uppercase" href="about.jsp">About</a></li>
                         <li class="nav-item px-lg-4"><a class="nav-link text-uppercase" href="products.jsp">Products</a></li>
                         <li class="nav-item px-lg-4"><a class="nav-link text-uppercase" href="store.jsp">Store</a></li>
-                        <li class="nav-item px-lg-4"><a class="nav-link text-uppercase" href="login.jsp">로그인/회원가입</a></li>
+                        <li class="nav-item px-lg-4"><a class="nav-link text-uppercase" href="login.jsp">Login</a></li>
                     </ul>
                 </div>
             </div>
