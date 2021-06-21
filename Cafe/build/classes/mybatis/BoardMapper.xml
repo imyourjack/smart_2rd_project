@@ -7,7 +7,7 @@
     
     
     <select id="loginMember" resultType="userVO">
-        select * from tbl_user2 where user_id=#{user_id} and password=#{password}
+        select * from user_tbl where user_id=#{user_id} and password=#{password}
     </select>
     
 </mapper>
