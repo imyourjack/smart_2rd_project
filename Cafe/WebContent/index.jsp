@@ -8,7 +8,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
         <meta name="description" content="" />
         <meta name="author" content="" />
-        <title>Business Casual - Start Bootstrap Theme</title>
+        <title>cafe</title>
         <link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
         <!-- Font Awesome icons (free version)-->
         <script src="./Resources/js/all.js" crossorigin="anonymous"></script>
@@ -48,7 +48,7 @@
         <!-- Navigation-->
         <nav class="navbar navbar-expand-lg navbar-dark py-lg-4" id="mainNav">
             <div class="container">
-                <a class="navbar-brand text-uppercase fw-bold d-lg-none" href="index.html">Start Bootstrap</a>
+                <a class="navbar-brand text-uppercase fw-bold d-lg-none" href="index.html">Cafe</a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <ul class="navbar-nav mx-auto">
@@ -72,13 +72,9 @@
 					</c:if>
 					
 					
-					<!-- <li class="nav-item pax-lg-4">
-					</li> -->
-					
 					<c:if test="${sessionScope.userVO!=null}">
 					<li class="nav-item px-lg-4">
-					<%-- <a class="nav-link text-uppercase">${sessionScope.userVO.user_name}님</a> --%>
-					<a class="nav-link text-uppercase" onclick="logoutFn()">${sessionScope.userVO.user_name}님 Logout</a>
+					<a class="nav-link text-uppercase" href="index.jsp" onclick="logoutFn()">${sessionScope.userVO.user_name}님 Logout</a>
 					</li>
 					</c:if>
 					

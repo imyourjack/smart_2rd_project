@@ -22,21 +22,7 @@
 <link rel="stylesheet" href="./Resources/css/style.css" />
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 <script type="text/javascript">
-		var x = document.getElementById("login");
-		var y = document.getElementById("register");
-		var z = document.getElementById("btn");
-
-		function login() {
-			x.style.left = "50px";
-			y.style.left = "450px";
-			z.style.left = "0";
-		}
-
-		function register() {
-			x.style.left = "-400px";
-			y.style.left = "50px";
-			z.style.left = "110px";
-		}
+		
 
 		function regisgerFn() {
 
@@ -118,13 +104,9 @@
 					</c:if>
 					
 					
-					<!-- <li class="nav-item pax-lg-4">
-					</li> -->
-					
 					<c:if test="${sessionScope.userVO!=null}">
 					<li class="nav-item px-lg-4">
-					<%-- <a class="nav-link text-uppercase">${sessionScope.userVO.user_name}님</a> --%>
-					<a class="nav-link text-uppercase" onclick="logoutFn()">${sessionScope.userVO.user_name}님 Logout</a>
+					<a class="nav-link text-uppercase" href="index.jsp" onclick="logoutFn()">${sessionScope.userVO.user_name}님 Logout</a>
 					</li>
 					</c:if>
 					
@@ -204,6 +186,22 @@
 		src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js"></script>
 	<!-- Core theme JS-->
 	<script src="./Resources/js/scripts.js"></script>
+	<script>
+		var x = document.getElementById("login");
+		var y = document.getElementById("register");
+		var z = document.getElementById("btn");
 
+		function login() {
+			x.style.left = "50px";
+			y.style.left = "450px";
+			z.style.left = "0";
+		}
+
+		function register() {
+			x.style.left = "-400px";
+			y.style.left = "50px";
+			z.style.left = "110px";
+		}
+	</script>
 </body>
 </html>
