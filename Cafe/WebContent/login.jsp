@@ -66,6 +66,18 @@
 			});
 
 		}
+		function logoutFn() {
+			$.ajax({
+				url : "ajaxlogout.do",
+				type : "get",
+				success : function name() {
+					location.href = "index.jsp";
+				},
+				error : function() {
+					alert("error");
+				}
+			});
+		}
 	</script>
 </head>
 <body>
@@ -80,7 +92,7 @@
 	<nav class="navbar navbar-expand-lg navbar-dark py-lg-4" id="mainNav">
 		<div class="container">
 			<a class="navbar-brand text-uppercase fw-bold d-lg-none"
-				href="index.html">Start Bootstrap</a>
+				href="index.html">cafe</a>
 			<button class="navbar-toggler" type="button"
 				data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
 				aria-controls="navbarSupportedContent" aria-expanded="false"
@@ -89,16 +101,21 @@
 			</button>
 			<div class="collapse navbar-collapse" id="navbarSupportedContent">
 				<ul class="navbar-nav mx-auto">
-					<li class="nav-item px-lg-4"><a
-						class="nav-link text-uppercase" href="index.jsp">Home</a></li>
-					<li class="nav-item px-lg-4"><a
-						class="nav-link text-uppercase" href="about.jsp">About</a></li>
-					<li class="nav-item px-lg-4"><a
-						class="nav-link text-uppercase" href="products.jsp">Products</a></li>
-					<li class="nav-item px-lg-4"><a
-						class="nav-link text-uppercase" href="store.jsp">Store</a></li>
-					<li class="nav-item px-lg-4"><a
-						class="nav-link text-uppercase" href="login.jsp">Login</a></li>
+					<li class="nav-item px-lg-4">
+					<a class="nav-link text-uppercase" href="index.jsp">Home</a></li>
+					
+					<li class="nav-item px-lg-4">
+					<a class="nav-link text-uppercase" href="about.jsp">About</a></li>
+					
+					<li class="nav-item px-lg-4">
+					<a class="nav-link text-uppercase" href="products.jsp">Products</a></li>
+					
+					<li class="nav-item px-lg-4">
+					<a class="nav-link text-uppercase" href="store.jsp">Store</a></li>
+					
+					<li class="nav-item px-lg-4">
+					<a class="nav-link text-uppercase" href="login.jsp">Login</a></li>
+					
 				</ul>
 			</div>
 		</div>
@@ -111,31 +128,31 @@
 				<div class="row">
 					<div class="col-xl-9 col-lg-10 mx-auto">
 						<!-- 로그인 바디 넣는 곳 -->
-
 						<div class="form-wrap">
 							<div class="button-wrap">
 								<div id="btn"></div>
-								<button type="button" class="togglebtn" onclick="login()">LOG
-									IN</button>
+								<button type="button" class="togglebtn" onclick="login()">LOGIN</button>
 								<button type="button" class="togglebtn" onclick="register()">REGISTER</button>
 							</div>
-							<!--  <div class="social-icons">
-                 		   <img src="./Resources/assets/img/fb.png" alt="facebook">
-                   			<img src="./Resources/assets/img/tw.png" alt="twitter">
-                   			<img src="./Resources/assets/img/gl.png" alt="google">
-              			  </div> -->
-							<c:if test="${sessionScope.userVO==null}">
+								<c:if test="${sessionScope.userVO==null}">
 								<form id="login" class="input-group" method="post">
 									<input type="text" class="input-field" id="user_id"
-										name="user_id" placeholder="User ID" required> <input
-										type="password" class="input-field" id="password"
+										name="user_id" placeholder="User ID" required>
+										<input type="password" class="input-field" id="password"
 										name="password" placeholder="Password" required>
 									<!-- <input type="checkbox" class="checkbox"><span>Remember Password</span> -->
 									<button type="submit" class="loginsubmit" onclick="loginFn()">Login</button>
 								</form>
-							</c:if>
-
-							<form id="register" action="#login.jsp" class="input-group">
+								</c:if>
+								
+								<c:if test="${sessionScope.userVO!=null}">
+									${sessionScope.userVO.user_name}님 방문을 환영합니다.
+									<button type="submit" class="loginsubmit" onclick="logoutFn()">Logout</button>
+								</c:if>
+								
+								
+								
+								<form id="register" action="#login.jsp" class="input-group">
 								<input type="text" class="input-field" id="regi_userid"
 									maxlength="20" placeholder="ID" required>
 								<!-- <input type="email" class="input-field" placeholder="Your Email" required> -->
@@ -152,13 +169,9 @@
 								<p style="font-size: 1.0em; color: gray;">
 									gender <input type="radio" name="chk_info" value="male">male
 									<input type="radio" name="chk_info" value="female">female
-
 								</p>
-
-
 								<button type="submit" class="registersubmit"
 									onclick="registerFn()">register</button>
-
 							</form>
 						</div>
 
