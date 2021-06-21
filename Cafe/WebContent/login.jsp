@@ -20,8 +20,7 @@
 <!-- Core theme CSS (includes Bootstrap)-->
 <link href="./Resources/css/styles.css" rel="stylesheet" />
 <link rel="stylesheet" href="./Resources/css/style.css" />
-<script
-	src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 <script type="text/javascript">
 		var x = document.getElementById("login");
 		var y = document.getElementById("register");
@@ -113,8 +112,23 @@
 					<li class="nav-item px-lg-4">
 					<a class="nav-link text-uppercase" href="store.jsp">Store</a></li>
 					
+					<c:if test="${sessionScope.userVO==null}">
 					<li class="nav-item px-lg-4">
 					<a class="nav-link text-uppercase" href="login.jsp">Login</a></li>
+					</c:if>
+					
+					
+					<!-- <li class="nav-item pax-lg-4">
+					</li> -->
+					
+					<c:if test="${sessionScope.userVO!=null}">
+					<li class="nav-item px-lg-4">
+					<%-- <a class="nav-link text-uppercase">${sessionScope.userVO.user_name}님</a> --%>
+					<a class="nav-link text-uppercase" onclick="logoutFn()">${sessionScope.userVO.user_name}님 Logout</a>
+					</li>
+					</c:if>
+					
+					
 					
 				</ul>
 			</div>
@@ -190,8 +204,6 @@
 		src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js"></script>
 	<!-- Core theme JS-->
 	<script src="./Resources/js/scripts.js"></script>
-
-	
 
 </body>
 </html>
