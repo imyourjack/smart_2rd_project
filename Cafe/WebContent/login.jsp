@@ -20,12 +20,16 @@
 <!-- Core theme CSS (includes Bootstrap)-->
 <link href="./Resources/css/styles.css" rel="stylesheet" />
 <link rel="stylesheet" href="./Resources/css/style.css" />
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script
+	src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
 <script type="text/javascript">
-		
-
 		function regisgerFn() {
-
+			var user_id = $("#user_id").val();
+			var password = $("#password").val();
+			var password = $("#password").val();
+			var nickname = $("#nickname").val();
+			var gender = $("#gender").val();
 		}
 		
 		function loginFn() {
@@ -52,6 +56,7 @@
 
 		}
 		function logoutFn() {
+			if(confirm ("정말로 삭제 하시겠습니까?")==true){
 			$.ajax({
 				url : "ajaxlogout.do",
 				type : "get",
@@ -62,6 +67,7 @@
 					alert("error");
 				}
 			});
+			}
 		}
 	</script>
 </head>
@@ -77,7 +83,7 @@
 	<nav class="navbar navbar-expand-lg navbar-dark py-lg-4" id="mainNav">
 		<div class="container">
 			<a class="navbar-brand text-uppercase fw-bold d-lg-none"
-				href="index.html">cafe</a>
+				href="index.jsp">cafe</a>
 			<button class="navbar-toggler" type="button"
 				data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
 				aria-controls="navbarSupportedContent" aria-expanded="false"
@@ -86,32 +92,36 @@
 			</button>
 			<div class="collapse navbar-collapse" id="navbarSupportedContent">
 				<ul class="navbar-nav mx-auto">
-					<li class="nav-item px-lg-4">
-					<a class="nav-link text-uppercase" href="index.jsp">Home</a></li>
-					
-					<li class="nav-item px-lg-4">
-					<a class="nav-link text-uppercase" href="about.jsp">About</a></li>
-					
-					<li class="nav-item px-lg-4">
-					<a class="nav-link text-uppercase" href="products.jsp">Products</a></li>
-					
-					<li class="nav-item px-lg-4">
-					<a class="nav-link text-uppercase" href="store.jsp">Store</a></li>
-					
+					<li class="nav-item px-lg-4"><a
+						class="nav-link text-uppercase" href="index.jsp">Home</a></li>
+
+					<li class="nav-item px-lg-4"><a
+						class="nav-link text-uppercase" href="about.jsp">About</a></li>
+
+					<li class="nav-item px-lg-4"><a
+						class="nav-link text-uppercase" href="products.jsp">Products</a></li>
+
+					<li class="nav-item px-lg-4"><a
+						class="nav-link text-uppercase" href="store.jsp">Store</a></li>
+						
+					<li class="nav-item px-lg-4"><a
+						class="nav-link text-uppercase" href="mypage.jsp">Mypage</a></li>
+
 					<c:if test="${sessionScope.userVO==null}">
-					<li class="nav-item px-lg-4">
-					<a class="nav-link text-uppercase" href="login.jsp">Login</a></li>
+						<li class="nav-item px-lg-4"><a
+							class="nav-link text-uppercase" href="login.jsp">Login</a></li>
 					</c:if>
-					
-					
+
+
 					<c:if test="${sessionScope.userVO!=null}">
-					<li class="nav-item px-lg-4">
-					<a class="nav-link text-uppercase" href="index.jsp" onclick="logoutFn()">${sessionScope.userVO.user_name}님 Logout</a>
-					</li>
+						<li class="nav-item px-lg-4"><a
+							class="nav-link text-uppercase" href="index.jsp"
+							onclick="logoutFn()"> ${sessionScope.userVO.user_name}님
+								Logout</a></li>
 					</c:if>
-					
-					
-					
+
+
+
 				</ul>
 			</div>
 		</div>
@@ -130,25 +140,25 @@
 								<button type="button" class="togglebtn" onclick="login()">LOGIN</button>
 								<button type="button" class="togglebtn" onclick="register()">REGISTER</button>
 							</div>
-								<c:if test="${sessionScope.userVO==null}">
+							<c:if test="${sessionScope.userVO==null}">
 								<form id="login" class="input-group" method="post">
 									<input type="text" class="input-field" id="user_id"
-										name="user_id" placeholder="User ID" required>
-										<input type="password" class="input-field" id="password"
+										name="user_id" placeholder="User ID" required> <input
+										type="password" class="input-field" id="password"
 										name="password" placeholder="Password" required>
 									<!-- <input type="checkbox" class="checkbox"><span>Remember Password</span> -->
 									<button type="submit" class="loginsubmit" onclick="loginFn()">Login</button>
 								</form>
-								</c:if>
-								
-								<c:if test="${sessionScope.userVO!=null}">
+							</c:if>
+
+							<c:if test="${sessionScope.userVO!=null}">
 									${sessionScope.userVO.user_name}님 방문을 환영합니다.
 									<button type="submit" class="loginsubmit" onclick="logoutFn()">Logout</button>
-								</c:if>
-								
-								
-								
-								<form id="register" action="#login.jsp" class="input-group">
+							</c:if>
+
+
+
+							<form id="register" action="#login.jsp" class="input-group">
 								<input type="text" class="input-field" id="regi_userid"
 									maxlength="20" placeholder="ID" required>
 								<!-- <input type="email" class="input-field" placeholder="Your Email" required> -->
