@@ -8,7 +8,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
         <meta name="description" content="" />
         <meta name="author" content="" />
-        <title>cafe</title>
+        <title>카페</title>
         <link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
         <!-- Font Awesome icons (free version)-->
         <script src="./Resources/js/all.js" crossorigin="anonymous"></script>
@@ -19,25 +19,6 @@
         <!-- Core theme CSS (includes Bootstrap)-->
         <link href="./Resources/css/styles.css" rel="stylesheet" />
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-		
-		<script type="text/javascript">
-		
-		function logoutFn() {
-			if(confirm ("정말로 삭제 하시겠습니까?")==true){
-			$.ajax({
-				url : "ajaxlogout.do",
-				type : "get",
-				success : function name() {	
-					location.href = "index.jsp";
-				},
-				error : function() {
-					alert("error");
-				}
-			});
-			}
-		}
-	</script>
-		
 		
     </head>
     <body>
@@ -50,14 +31,20 @@
         <!-- Navigation-->
         <nav class="navbar navbar-expand-lg navbar-dark py-lg-4" id="mainNav">
             <div class="container">
-                <a class="navbar-brand text-uppercase fw-bold d-lg-none" href="index.jsp">Cafe</a>
+                <a class="navbar-brand text-uppercase fw-bold d-lg-none" href="index.jsp">카페</a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <ul class="navbar-nav mx-auto">
                         
                         
                     <li class="nav-item px-lg-4"><a
-						class="nav-link text-uppercase" href="index.jsp">Home</a></li>
+						class="nav-link text-uppercase" href="index.jsp">카페</a></li>
+
+					<li class="nav-item px-lg-4"><a
+						class="nav-link text-uppercase" href="recommend.jsp">원두추천</a></li>
+
+					<li class="nav-item px-lg-4"><a
+						class="nav-link text-uppercase" href="search.jsp">원두정보</a></li>
 
 					<li class="nav-item px-lg-4"><a
 						class="nav-link text-uppercase" href="about.jsp">About</a></li>
@@ -67,21 +54,27 @@
 
 					<li class="nav-item px-lg-4"><a
 						class="nav-link text-uppercase" href="store.jsp">Store</a></li>
-						
-					<li class="nav-item px-lg-4"><a
-						class="nav-link text-uppercase" href="mypage.jsp">Mypage</a></li>
 
 					<c:if test="${sessionScope.userVO==null}">
 						<li class="nav-item px-lg-4"><a
-							class="nav-link text-uppercase" href="login.jsp">Login</a></li>
+							class="nav-link text-uppercase" href="login.jsp"
+							onclick="mypageFn()">마이페이지</a></li>
 					</c:if>
 
+					<c:if test="${sessionScope.userVO!=null}">
+						<li class="nav-item px-lg-4"><a
+							class="nav-link text-uppercase" href="mypage.jsp">마이페이지</a></li>
+					</c:if>
+
+					<c:if test="${sessionScope.userVO==null}">
+						<li class="nav-item px-lg-4"><a
+							class="nav-link text-uppercase" href="login.jsp">로그인</a></li>
+					</c:if>
 
 					<c:if test="${sessionScope.userVO!=null}">
 						<li class="nav-item px-lg-4"><a
 							class="nav-link text-uppercase" href="index.jsp"
-							onclick="logoutFn()"> ${sessionScope.userVO.user_name}님
-								Logout</a></li>
+							onclick="logoutFn()"> ${sessionScope.userVO.user_name}님 로그아웃</a></li>
 					</c:if>
 					
 					
@@ -99,7 +92,7 @@
                             <span class="section-heading-lower">Worth Drinking</span>
                         </h2>
                         <p class="mb-3">Every cup of our quality artisan coffee starts with locally sourced, hand picked ingredients. Once you try it, our coffee will be a blissful addition to your everyday morning routine - we guarantee it!</p>
-                        <div class="intro-button mx-auto"><a class="btn btn-primary btn-xl" href="#!">로그인</a></div>
+                        <div class="intro-button mx-auto"><a class="btn btn-primary btn-xl" href="#!">안녕</a></div>
                     </div>
                 </div>
             </div>

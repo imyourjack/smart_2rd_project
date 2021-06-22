@@ -1,30 +1,49 @@
-create table userTbl(
-	user_id varchar(30) not null,
-	user_name varchar(30) not null,
-	password varchar(30) not null,
-	primary key(user_id)
-);
-
-insert into userTbl values('admin', '관리자', 'admin');
-insert into userTbl values('jun', '이준혁', '12345');
-insert into userTbl values('guest', '사용자', '12345');
-
-DROP TABLE userTbl CASCADE;
-DROP TABLE tbl_user2 CASCADE;
-DROP TABLE user_tbl CASCADE;
-
--- 여기서부터 시작! 위에는 무시!
 create table user_tbl(
    user_id varchar(30) not null,
    password varchar(30) not null,
    user_name varchar(30) not null,
-   gender varchar(30) not null,
    primary key(user_id)
 );
 
 
+insert into user_tbl values('admin','admin','관리자');
 
-insert into user_tbl values('admin','admin','관리자','female');
-select * from user_tbl;
+select * from wondu_tbl;
 
-select * from tbl_user2;
+
+create table wondu_tbl(
+   wondu_n varchar(100) not null,
+   wondu_c varchar(500) not null,
+   primary key(wondu_n)
+);
+
+create table review_tbl(
+   r_idx int not null auto_increment,
+   wondu_r varchar(500) not null,
+   wondu_n varchar(100) not null,
+   user_id varchar(30) not null, 
+   primary key(r_idx),
+   FOREIGN KEY (wondu_n) REFERENCES wondu_tbl (wondu_n),
+   FOREIGN KEY (user_id) REFERENCES user_tbl (user_id)
+);
+
+create table wondu_good(
+  good_index int not null auto_increment,
+  good int not null,
+  wondu_n varchar(100) not null,
+  primary key(good_index),
+  FOREIGN KEY (wondu_n) REFERENCES wondu_tbl (wondu_n)
+); 
+
+create table reco_tbl(
+  reco_index int not null auto_increment,
+  wondu_n varchar(100) not null,
+  user_id varchar(30) not null, 
+   primary key(reco_index),
+   FOREIGN KEY (wondu_n) REFERENCES wondu_tbl (wondu_n),
+   FOREIGN KEY (user_id) REFERENCES user_tbl (user_id)
+); 
+
+DESCRIBE review_tbl;
+
+
