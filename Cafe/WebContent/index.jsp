@@ -46,6 +46,9 @@
 
 					<li class="nav-item px-lg-4"><a
 						class="nav-link text-uppercase" href="search.jsp">원두정보</a></li>
+						
+					<li class="nav-item px-lg-4"><a
+						class="nav-link text-uppercase" href="map.jsp">커피맵</a></li>
 
 					<li class="nav-item px-lg-4"><a
 						class="nav-link text-uppercase" href="about.jsp">About</a></li>

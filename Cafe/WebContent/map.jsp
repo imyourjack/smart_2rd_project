@@ -58,14 +58,14 @@
 						class="nav-link text-uppercase" href="index.jsp">카페</a></li>
 
 					<li class="nav-item px-lg-4"><a
-						class="nav-link text-uppercase" href="recommend.jsp"
-						style="background-color:#e6a756; border-radius: 80px / 40px;">원두추천</a></li>
-						
+						class="nav-link text-uppercase" href="recommend.jsp">원두추천</a></li>
+
 					<li class="nav-item px-lg-4"><a
 						class="nav-link text-uppercase" href="search.jsp">원두정보</a></li>
 						
 					<li class="nav-item px-lg-4"><a
-						class="nav-link text-uppercase" href="map.jsp">커피맵</a></li>
+						class="nav-link text-uppercase" href="map.jsp"
+						style="background-color:#e6a756; border-radius: 80px / 40px;">커피맵</a></li>
 
 					<li class="nav-item px-lg-4"><a
 						class="nav-link text-uppercase" href="about.jsp">About</a></li>
@@ -105,6 +105,7 @@
 
 	<div class="row">
 	<!-- 내용 넣을 곳 -->
+	
 	<div class="column">
 			<h2>Column</h2>
 			<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.
@@ -113,7 +114,7 @@
 				eget aliquam placerat, purus leo tincidunt eros, eget luctus quam
 				orci in velit. Praesent scelerisque tortor sed accumsan convallis.</p>
 		</div>
-	
+		
 	</div>
 
 	<footer class="footer text-faded text-center py-5">
