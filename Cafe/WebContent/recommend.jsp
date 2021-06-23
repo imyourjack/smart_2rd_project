@@ -52,51 +52,11 @@
 			</button>
 			<div class="collapse navbar-collapse" id="navbarSupportedContent">
 				<ul class="navbar-nav mx-auto">
+				
+                    <jsp:include page="menu.jsp">
+                    	<jsp:param name="pageSelection" value="2" />
+                    </jsp:include>
 
-
-					<li class="nav-item px-lg-4"><a
-						class="nav-link text-uppercase" href="index.jsp">카페</a></li>
-
-					<li class="nav-item px-lg-4"><a
-						class="nav-link text-uppercase" href="recommend.jsp"
-						style="background-color:#e6a756; border-radius: 80px / 40px;">원두추천</a></li>
-						
-					<li class="nav-item px-lg-4"><a
-						class="nav-link text-uppercase" href="search.jsp">원두정보</a></li>
-						
-					<li class="nav-item px-lg-4"><a
-						class="nav-link text-uppercase" href="map.jsp">커피맵</a></li>
-
-					<li class="nav-item px-lg-4"><a
-						class="nav-link text-uppercase" href="about.jsp">About</a></li>
-
-					<li class="nav-item px-lg-4"><a
-						class="nav-link text-uppercase" href="products.jsp">Products</a></li>
-
-					<li class="nav-item px-lg-4"><a
-						class="nav-link text-uppercase" href="store.jsp">Store</a></li>
-
-					<c:if test="${sessionScope.userVO==null}">
-						<li class="nav-item px-lg-4"><a
-							class="nav-link text-uppercase" href="login.jsp"
-							onclick="mypageFn()">마이페이지</a></li>
-					</c:if>
-
-					<c:if test="${sessionScope.userVO!=null}">
-						<li class="nav-item px-lg-4"><a
-							class="nav-link text-uppercase" href="mypage.jsp">마이페이지</a></li>
-					</c:if>
-
-					<c:if test="${sessionScope.userVO==null}">
-						<li class="nav-item px-lg-4"><a
-							class="nav-link text-uppercase" href="login.jsp">로그인</a></li>
-					</c:if>
-
-					<c:if test="${sessionScope.userVO!=null}">
-						<li class="nav-item px-lg-4"><a
-							class="nav-link text-uppercase" href="index.jsp"
-							onclick="logoutFn()"> ${sessionScope.userVO.user_name}님 로그아웃</a></li>
-					</c:if>
 				</ul>
 			</div>
 		</div>
