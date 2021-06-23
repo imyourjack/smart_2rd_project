@@ -111,10 +111,15 @@
     <title>간단한 지도 표시하기</title>
     <script type="text/javascript" src="https://openapi.map.naver.com/openapi/v3/maps.js?ncpClientId=n2u6sqdm7a"></script>
 </head>
+
 <body>
+<!-- 지도 맵의 크기 css 형식입니다 수정 가능 합니다 !  -->
+
 <div id="map" style="width:40%;height:400px;"></div>
 
 <script>
+// 여기가  지도 위치와 줌 정도를 수정하는 공간 입니다 . 위치를 변경하고 싶으면 위도경도 수정하고 
+// 줌 정도 수정하시면 됩니다 
 var mapOptions = {
     center: new naver.maps.LatLng(35.149741, 126.920007),
     zoom: 19
