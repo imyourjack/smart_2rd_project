@@ -9,7 +9,7 @@
 	content="width=device-width, initial-scale=1, shrink-to-fit=no" />
 <meta name="description" content="" />
 <meta name="author" content="" />
-<title>cafe</title>
+<title>카페</title>
 <link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
 <!-- Font Awesome icons (free version)-->
 <script src="./Resources/js/all.js" crossorigin="anonymous"></script>
@@ -61,7 +61,8 @@
 						class="nav-link text-uppercase" href="recommend.jsp">원두추천</a></li>
 
 					<li class="nav-item px-lg-4"><a
-						class="nav-link text-uppercase" href="search.jsp">원두정보</a></li>
+						class="nav-link text-uppercase" href="search.jsp"
+						style="background-color:#e6a756; border-radius: 80px / 40px;">원두정보</a></li>
 
 					<li class="nav-item px-lg-4"><a
 						class="nav-link text-uppercase" href="about.jsp">About</a></li>

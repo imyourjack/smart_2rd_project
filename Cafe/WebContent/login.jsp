@@ -9,7 +9,7 @@
 	content="width=device-width, initial-scale=1, shrink-to-fit=no" />
 <meta name="description" content="" />
 <meta name="author" content="" />
-<title>로그인</title>
+<title>카페</title>
 <link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
 <!-- Font Awesome icons (free version)-->
 <script src="./Resources/js/all.js" crossorigin="anonymous"></script>
@@ -20,8 +20,7 @@
 <!-- Core theme CSS (includes Bootstrap)-->
 <link href="./Resources/css/styles.css" rel="stylesheet" />
 <link rel="stylesheet" href="./Resources/css/style.css" />
-<script
-	src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 
 </head>
 
@@ -79,13 +78,15 @@
 
 					<c:if test="${sessionScope.userVO==null}">
 						<li class="nav-item px-lg-4"><a
-							class="nav-link text-uppercase" href="login.jsp">로그인</a></li>
+							class="nav-link text-uppercase" href="login.jsp"
+							style="background-color:#e6a756; border-radius: 80px / 40px;">로그인</a></li>
 					</c:if>
 
 					<c:if test="${sessionScope.userVO!=null}">
 						<li class="nav-item px-lg-4"><a
 							class="nav-link text-uppercase" href="index.jsp"
-							onclick="logoutFn()"> ${sessionScope.userVO.user_name}님 로그아웃</a></li>
+							onclick="logoutFn()"
+							style="background-color:#e6a756; border-radius: 80px / 40px;"> ${sessionScope.userVO.user_name}님 로그아웃</a></li>
 					</c:if>
 
 

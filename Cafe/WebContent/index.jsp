@@ -38,7 +38,8 @@
                         
                         
                     <li class="nav-item px-lg-4"><a
-						class="nav-link text-uppercase" href="index.jsp">카페</a></li>
+						class="nav-link text-uppercase" href="index.jsp" 
+						style="background-color:#e6a756; border-radius: 80px / 40px;">카페</a></li>
 
 					<li class="nav-item px-lg-4"><a
 						class="nav-link text-uppercase" href="recommend.jsp">원두추천</a></li>
