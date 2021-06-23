@@ -1,0 +1,54 @@
+@charset "UTF-8";
+
+element.style {
+}
+.QuestionBlock__label {
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: block;
+}
+body, caption, dd, div, dl, dt, fieldset, form, h1, h2, h3, h4, h5, h6, html, iframe, label, legend, li, ol, p, table, tbody, td, tfoot, th, thead, tr, ul {
+    border: 0;
+    color: #212121;
+    font-size: 13px;
+    font-family: Arial,Malgun Gothic,Helverica,JungGothic,sans-serif;
+    vertical-align: baseline;
+    margin: 0;
+    padding: 0;
+    outline: 0;
+}
+.PageViewer__viewer {
+    position: relative;
+    width: 100%;
+    min-height: calc(100vh - 105px);
+    display: -webkit-box;
+    display: -moz-flex;
+    display: flex;
+    -webkit-box-direction: normal;
+    -webkit-box-orient: vertical;
+    -moz-flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    display: -ms-flexbox;
+}
+body {
+    line-height: 1;
+    height: 100%;
+    position: relative;
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+html {
+    -webkit-text-size-adjust: 100%;
+    -ms-text-size-adjust: 100%;
+    height: 100%;
+    overflow-y: hidden;
+    overflow-x: hidden;
+}
+
+
+

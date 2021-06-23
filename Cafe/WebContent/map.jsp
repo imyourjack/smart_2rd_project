@@ -53,7 +53,7 @@
          <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav mx-auto">
 
-	<jsp:include page="menu.jsp">
+	      <jsp:include page="menu.jsp">
                     	<jsp:param name="pageSelection" value="4" />
                     </jsp:include>
                
