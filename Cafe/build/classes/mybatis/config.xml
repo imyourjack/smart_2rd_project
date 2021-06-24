@@ -15,6 +15,8 @@
         <property name="url" value="${url}"/>
         <property name="username" value="${username}"/>
         <property name="password" value="${password}"/>
+        <property name="wondu_n" value="${wondu_n}"/>
+        <property name="user_id" value="${user_id}"/>
       </dataSource>
     </environment>
   </environments>

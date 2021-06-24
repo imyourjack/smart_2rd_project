@@ -26,7 +26,19 @@ public class DAOMybatis {
 		sqlSession.close();
 		return vo;
 	}
-	
+	public int coffeeContents(UserVO vo ) {
+		SqlSession sqlSession = sqlSessionFactory.openSession();
+		int cnt = sqlSession.insert("coffeeContents", vo);
+		sqlSession.commit();//완료  insert, update, delete는 commit을 해줘야함
+		sqlSession.close();//반납
+		return cnt;
+	}
+	public UserVO wondu_name(UserVO vo) {
+		SqlSession sqlSession = sqlSessionFactory.openSession();
+		vo = sqlSession.selectOne("wondu_name", vo);
+		sqlSession.close();
+		return vo;
+	}
 	
 	
 	

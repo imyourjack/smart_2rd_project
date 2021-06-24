@@ -25,6 +25,16 @@ input[type="radio"] {
     padding: 5px;
     overflow: hidden;
 }
+.form-wrap2 {
+    width: 600px;
+    height: 1650px;
+    position: relative;
+    margin: 6% auto;
+    background: #fff;
+    padding: 5px;
+    overflow: hidden;
+    color: yrllow;
+}
 .button-wrap {
     width: 250px;
     margin: 35px auto;

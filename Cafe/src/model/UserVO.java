@@ -4,8 +4,7 @@ public class UserVO {
    private String user_id;
    private String password;
    private String user_name;
-   private String gender;
-   
+   private String wondu_n;
    public String getUser_id() {
       return user_id;
    }
@@ -24,11 +23,11 @@ public class UserVO {
    public void setUser_name(String user_name) {
       this.user_name = user_name;
    }
-   public String getGender() {
-      return gender;
+   public String getwondu_n() {
+      return wondu_n;
    }
-   public void setGender(String gender) {
-      this.gender = gender;
+   public void setwondu_n(String wondu_n) {
+      this.wondu_n = wondu_n;
    }
    
    
