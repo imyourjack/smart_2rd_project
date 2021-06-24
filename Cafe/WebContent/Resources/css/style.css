@@ -3,6 +3,29 @@
     padding: 0;
     font-family: sans-serif;
 }
+/*
+.freebirdSolidBackground {
+    background-color: rgb(10, 136, 117);
+    color: rgba(255, 255, 255, 1);
+}
+*/
+#searchbean{
+	align:center;
+}
+.gray-line-head{
+	 background: #FFF2E6;
+	 color:#583E32;
+	 border: 2px solid black;
+  	border-radius: 8px;
+  	border-left: 6px solid #583E32!important;
+}
+.gray-line{
+	 background: #FFF2E6;
+	 color:#583E32;
+	 border: 2px solid black;
+  	border-radius: 8px;
+}
+
 input[type="radio"] {
   margin-right: 0;
     margin: 6px;
@@ -27,10 +50,10 @@ input[type="radio"] {
 }
 .form-wrap2 {
     width: 600px;
-    height: 1650px;
+    height: 1850px;
     position: relative;
     margin: 6% auto;
-    background: #fff;
+    background: none;
     padding: 5px;
     overflow: hidden;
 }
@@ -94,16 +117,26 @@ input[type="radio"] {
     border-radius: 30px;
 }
 
+/* submit버튼 색깔 수정함. 원본=> background: linear-gradient(to right, #ff105f, #ffad06);*/
 .recosubmit {
-    width: 85%;
-    padding: 10px 30px;
+    width: 100px;
+    padding: 15px 25px;
     cursor: pointer;
     display: block;
     margin: 30px auto;
-    background: linear-gradient(to right, #ff105f, #ffad06);
+    background: green;
+    color:white;
     border: 0;
     outline: none;
     border-radius: 30px;
+}
+.reco-img{
+	width: 20px; height: 20px;
+    background-size: contain;
+}
+.reco-img-head{
+	width: 30px; height: 35px;
+    background-size: contain;
 }
 .loginsubmit {
     width: 85%;
