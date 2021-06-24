@@ -11055,9 +11055,9 @@ p {
     border: 1px solid #dadada;
     border-radius: 2px;
     background: #fff;
-    display: flex;
+    /* display: flex;
     /* align-items: center; */
-    justify-content: center;
+    /* justify-content: center; */
 }
 .sh_lst .nic_desc {
     font-size: 14px;
@@ -11067,9 +11067,8 @@ p {
     color: #666;
 }
 
-
-
-
-
+.sh_lst .nic_tit {
+    margin: 12px 8px 0 40%;
+}
 
 
