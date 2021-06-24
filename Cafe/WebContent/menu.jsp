@@ -13,7 +13,7 @@
 		<%
 			if(num.equals("1")){
 		%>
-			style="background-color:#e6a756; border-radius: 80px / 40px;"
+			style="color:#e6a756;"
 		<% } %>
 	>카페</a>
 </li>
@@ -23,7 +23,7 @@
 		<%
 			if(num.equals("2")){
 		%>
-			style="background-color:#e6a756; border-radius: 80px / 40px;"
+			style="color:#e6a756;"
 		<% } %>
 	>원두추천</a>
 </li>
@@ -33,7 +33,7 @@
 		<%
 			if(num.equals("3")){
 		%>
-			style="background-color:#e6a756; border-radius: 80px / 40px;"
+			style="color:#e6a756;"
 		<% } %>
 	>원두정보</a>
 </li>
@@ -43,7 +43,7 @@
 		<%
 			if(num.equals("4")){
 		%>
-			style="background-color:#e6a756; border-radius: 80px / 40px;"
+			style="color:#e6a756;"
 		<% } %>
 	>커피맵</a>
 </li>
@@ -67,7 +67,7 @@
 			if(num.equals("9")){
 		%>
 	   		
-			style="background-color:#e6a756; border-radius: 80px / 40px;"
+			style="color:#e6a756;"
 		<% } %>
 	>마이페이지</a>
 </li>
@@ -81,7 +81,7 @@
 			if(num.equals("9")){
 		%>
 			
-			style="background-color:#e6a756; border-radius: 80px / 40px;"
+			style="color:#e6a756;"
 		<% } %>
 	>마이페이지</a>
 </li>
@@ -93,7 +93,7 @@
 		<%
 			if(num.equals("10")){
 		%>
-			style="background-color:#e6a756; border-radius: 80px / 40px;"
+			style="color:#e6a756;"
 		<% } %>
 	>로그인</a>
 </li>
@@ -106,7 +106,7 @@
 		<%
 			if(num.equals("10")){
 		%>
-			style="background-color:#e6a756; border-radius: 80px / 40px;"
+			style="color:#e6a756;"
 		<% } %>
 	>${sessionScope.userVO.user_name}님 로그아웃</a>
 </li>
