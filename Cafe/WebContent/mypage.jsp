@@ -64,6 +64,7 @@
 								<div class="column">
 									<!-- 프로필 설정 -->
 									<div class="sh_group">
+									<br>
 										<div>
 											<div class="sh_header">
 												<h2>프로필</h2>
@@ -88,9 +89,18 @@
 													</dd>
 													<dt class="blind">&nbsp;</dt>
 													<dd class="intro_desc">&nbsp;</dd>
-													<dt class="nic_tit">아이디</dt>
-													<dt class="nic_tit">별명</dt>
-													<dd class="nic_desc">Imyourjack</dd>
+													<dt class="nic_tit">아이디 : ${sessionScope.userVO.user_id}
+													<dt><br></dt>
+													
+													<dt class="nic_tit">
+													<label for="fname">이름  : </label>
+  													<input type="text" value="${sessionScope.userVO.user_name}">
+  													<br></dt>
+  													
+													<dt class="nic_tit">
+													<label for="fname">비밀번호 :</label>
+  													<input type="password" value="${sessionScope.userVO.password}">
+  													<br></dt>
 												</dl>
 											</div>
 											<p class="btn_area_btm">
@@ -106,7 +116,6 @@
 									<div class="sh_group">
 										<div class="sh_header">
 											<h2>지역 설정</h2>
-											<br>
 										</div>
 										<div class="sh_content">
 											<dl class="sh_lst2">
