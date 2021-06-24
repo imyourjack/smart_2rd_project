@@ -42,51 +42,9 @@
 			<div class="collapse navbar-collapse" id="navbarSupportedContent">
 				<ul class="navbar-nav mx-auto">
 
-					<li class="nav-item px-lg-4"><a
-						class="nav-link text-uppercase" href="index.jsp">카페</a></li>
-
-					<li class="nav-item px-lg-4"><a
-						class="nav-link text-uppercase" href="recommend.jsp">원두추천</a></li>
-
-					<li class="nav-item px-lg-4"><a
-						class="nav-link text-uppercase" href="search.jsp">원두정보</a></li>
-						
-					<li class="nav-item px-lg-4"><a
-						class="nav-link text-uppercase" href="map.jsp">커피맵</a></li>
-
-					<li class="nav-item px-lg-4"><a
-						class="nav-link text-uppercase" href="about.jsp">About</a></li>
-
-					<li class="nav-item px-lg-4"><a
-						class="nav-link text-uppercase" href="products.jsp">Products</a></li>
-
-					<li class="nav-item px-lg-4"><a
-						class="nav-link text-uppercase" href="store.jsp">Store</a></li>
-
-					<c:if test="${sessionScope.userVO==null}">
-						<li class="nav-item px-lg-4"><a
-							class="nav-link text-uppercase" href="login.jsp"
-							onclick="mypageFn()"
-							style="background-color: #e6a756; border-radius: 80px/40px;">마이페이지</a></li>
-					</c:if>
-
-					<c:if test="${sessionScope.userVO!=null}">
-						<li class="nav-item px-lg-4"><a
-							class="nav-link text-uppercase" href="mypage.jsp"
-							style="background-color: #e6a756; border-radius: 80px/40px;">마이페이지</a></li>
-					</c:if>
-
-					<c:if test="${sessionScope.userVO==null}">
-						<li class="nav-item px-lg-4"><a
-							class="nav-link text-uppercase" href="login.jsp">로그인</a></li>
-					</c:if>
-
-					<c:if test="${sessionScope.userVO!=null}">
-						<li class="nav-item px-lg-4"><a
-							class="nav-link text-uppercase" href="index.jsp"
-							onclick="logoutFn()"> ${sessionScope.userVO.user_name}님 로그아웃</a></li>
-					</c:if>
-
+					<jsp:include page="menu.jsp">
+                    	<jsp:param name="pageSelection" value="9" />
+                    </jsp:include>
 
 				</ul>
 			</div>
@@ -98,48 +56,86 @@
 				<div class="col-xl-9 mx-auto">
 					<div class="cta-inner bg-faded text-center rounded">
 						<!-- mypage 내용 들어갈 곳 -->
-						<div class="sh_group">
-							<div class="sh_header">
-								<h2>프로필</h2>
-								<a href="javascript:toggle('profile');"
-									onclick="clickcr(this,'imn.prfhelp','','',event);"
-									class="link_help">
-									<i id="i_profile" class="spico ico_arr3_dn">도움말</i></a>
-								<!-- [D] 감추기 보이기 dislay:none/block -->
-								<p id="p_profile" class="contxt" style="display: none">
-									네이버에서의 <em>&#39;나&#39;를 표현하는 프로필</em> 정보입니다. <br> 수정 화면에서
-									프로필 사진과 별명을 변경하세요.
+
+						<div id="container">
+							<!-- CONTENTS -->
+							<!-- CONTENTS -->
+							<div id="content" class="section_home">
+								<div class="column">
+									<!-- 프로필 설정 -->
+									<div class="sh_group">
+										<div>
+											<div class="sh_header">
+												<h2>프로필</h2>
+												<br>
+												<!-- [D] 감추기 보이기 dislay:none/block -->
+												<p id="p_profile" class="contxt" style="display: none">
+													네이버에서의 <em>&#39;나&#39;를 표현하는 프로필</em> 정보입니다. <br> 수정
+													화면에서 프로필 사진과 별명을 변경하세요.
+												</p>
+											</div>
+											<div class="sh_content">
+												<dl class="sh_lst">
+													<dt class="blind">프로필 사진</dt>
+													<dd class="pic_desc">
+														<a href="#"
+															onclick="changeImage();clickcr(this,'imn.prfmodify','','',event);">
+															<img
+															src="https://phinf.pstatic.net/contact/20210603_281/1622703170569ft61p_PNG/%C4%F5%C4%AB.png?type=s160"
+															width="80" height="80" alt=""> <span
+															class="spimg img_frame"></span>
+														</a>
+													</dd>
+													<dt class="blind">&nbsp;</dt>
+													<dd class="intro_desc">&nbsp;</dd>
+													<dt class="nic_tit">아이디</dt>
+													<dt class="nic_tit">별명</dt>
+													<dd class="nic_desc">Imyourjack</dd>
+												</dl>
+											</div>
+											<p class="btn_area_btm">
+												<a href="#"
+													onclick="changeImage();clickcr(this,'imn.prfmodify','','',event);"
+													class="btn_model"><b class="btn2">수정</b></a>
+											</p>
+										</div>
+									</div>
+								</div>
+								<div class="column">
+									<!-- 지역 설정 -->
+									<div class="sh_group">
+										<div class="sh_header">
+											<h2>지역 설정</h2>
+											<br>
+										</div>
+										<div class="sh_content">
+											<dl class="sh_lst2">
+												<dt>관심지 1</dt>
+												<dd>광주광역시 북구 누문동</dd>
+											</dl>
+										</div>
+										<p class="btn_area_btm">
+											<a href="/user2/help/region?menu=nid&lang=ko_KR"
+												onclick="clickcr(this,'imn.regmodify','','',event);"
+												class="btn_model"><b class="btn2">설정하기</b></a>
+										</p>
+									</div>
+								</div>
+								<p class="desc_sub">
+									저희 서비스를 더 이상 이용하지 않는다면 <a
+										href="/user2/help/leaveId?menu=nid&lang=ko_KR"
+										onclick="clickcr(this,'imn.memberout','','',event);"
+										class="more">회원탈퇴 바로가기</a>
 								</p>
 							</div>
-							<div class="sh_content">
-								<dl class="sh_lst">
-									<dt class="blind">프로필 사진</dt>
-									<dd class="pic_desc">
-										<a href="#"
-											onclick="changeImage();clickcr(this,'imn.prfmodify','','',event);">
-											<img
-											src="https://phinf.pstatic.net/contact/20210603_281/1622703170569ft61p_PNG/%C4%F5%C4%AB.png?type=s160"
-											width="80" height="80" alt=""> <span
-											class="spimg img_frame"></span>
-										</a>
-									</dd>
-									<dt class="blind">&nbsp;</dt>
-									<dd class="intro_desc">&nbsp;</dd>
-									<dt class="nic_tit">별명</dt>
-									<dd class="nic_desc">Imyourjack</dd>
-								</dl>
-							</div>
-							<p class="btn_area_btm">
-								<a href="#"
-									onclick="changeImage();clickcr(this,'imn.prfmodify','','',event);"
-									class="btn_model"><b class="btn2">수정</b></a>
-							</p>
-						</div>
 
+
+
+
+						</div>
 					</div>
 				</div>
 			</div>
-		</div>
 	</section>
 	<footer class="footer text-faded text-center py-5">
 		<div class="container">

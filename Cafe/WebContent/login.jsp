@@ -47,49 +47,10 @@
 				<ul class="navbar-nav mx-auto">
 				
 				
-					<li class="nav-item px-lg-4"><a
-						class="nav-link text-uppercase" href="index.jsp">카페</a></li>
-
-					<li class="nav-item px-lg-4"><a
-						class="nav-link text-uppercase" href="recommend.jsp">원두추천</a></li>
-
-					<li class="nav-item px-lg-4"><a
-						class="nav-link text-uppercase" href="search.jsp">원두정보</a></li>
-
-					<li class="nav-item px-lg-4"><a
-						class="nav-link text-uppercase" href="about.jsp">About</a></li>
-
-					<li class="nav-item px-lg-4"><a
-						class="nav-link text-uppercase" href="products.jsp">Products</a></li>
-
-					<li class="nav-item px-lg-4"><a
-						class="nav-link text-uppercase" href="store.jsp">Store</a></li>
-
-					<c:if test="${sessionScope.userVO==null}">
-						<li class="nav-item px-lg-4"><a
-							class="nav-link text-uppercase" href="login.jsp"
-							onclick="mypageFn()">마이페이지</a></li>
-					</c:if>
-
-					<c:if test="${sessionScope.userVO!=null}">
-						<li class="nav-item px-lg-4"><a
-							class="nav-link text-uppercase" href="mypage.jsp">마이페이지</a></li>
-					</c:if>
-
-					<c:if test="${sessionScope.userVO==null}">
-						<li class="nav-item px-lg-4"><a
-							class="nav-link text-uppercase" href="login.jsp"
-							style="background-color:#e6a756; border-radius: 80px / 40px;">로그인</a></li>
-					</c:if>
-
-					<c:if test="${sessionScope.userVO!=null}">
-						<li class="nav-item px-lg-4"><a
-							class="nav-link text-uppercase" href="index.jsp"
-							onclick="logoutFn()"
-							style="background-color:#e6a756; border-radius: 80px / 40px;"> ${sessionScope.userVO.user_name}님 로그아웃</a></li>
-					</c:if>
-
-
+					<jsp:include page="menu.jsp">
+                    	<jsp:param name="pageSelection" value="10" />
+                    </jsp:include>
+				
 
 				</ul>
 			</div>

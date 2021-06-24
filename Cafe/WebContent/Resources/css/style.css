@@ -33,7 +33,6 @@ input[type="radio"] {
     background: #fff;
     padding: 5px;
     overflow: hidden;
-    color: yrllow;
 }
 .button-wrap {
     width: 250px;
@@ -84,6 +83,18 @@ input[type="radio"] {
     background: transparent;
 }
 .registersubmit {
+    width: 85%;
+    padding: 10px 30px;
+    cursor: pointer;
+    display: block;
+    margin: 30px auto;
+    background: linear-gradient(to right, #ff105f, #ffad06);
+    border: 0;
+    outline: none;
+    border-radius: 30px;
+}
+
+.recosubmit {
     width: 85%;
     padding: 10px 30px;
     cursor: pointer;

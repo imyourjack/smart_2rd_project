@@ -11041,9 +11041,29 @@ p {
     min-height: 185px;
 }
 
+.section_home .column {
+    /* float: inherit; */
+    width: 100%;
+}
 
-
-
+.sh_group, .sh_group2, .sh_group3, .sh_group4 {
+    margin: 16px 8px 0;
+    padding: 32px 29px 30px;
+    text-align: left;
+    border: 1px solid #dadada;
+    border-radius: 2px;
+    background: #fff;
+    display: flex;
+    /* align-items: center; */
+    justify-content: center;
+}
+.sh_lst .nic_desc {
+    font-size: 14px;
+    line-height: 21px;
+    margin-top: 8px;
+    letter-spacing: -1px;
+    color: #666;
+}
 
 
 
