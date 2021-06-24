@@ -9,7 +9,7 @@
    content="width=device-width, initial-scale=1, shrink-to-fit=no" />
 <meta name="description" content="" />
 <meta name="author" content="" />
-<title>로그인</title>
+<title>카페</title>
 <link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
 <!-- Font Awesome icons (free version)-->
 <script src="./Resources/js/all.js" crossorigin="anonymous"></script>
@@ -22,8 +22,6 @@
 <link rel="stylesheet" href="./Resources/css/style.css" />
 <script
    src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-
-   
 
 </head>
 <body>
@@ -47,62 +45,24 @@
          <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav mx-auto">
 
-
-               <li class="nav-item px-lg-4"><a
-                  class="nav-link text-uppercase" href="index.jsp">카페</a></li>
-
-               <li class="nav-item px-lg-4"><a
-                  class="nav-link text-uppercase" href="recommend.jsp">원두추천</a></li>
-
-               <li class="nav-item px-lg-4"><a
-                  class="nav-link text-uppercase" href="search.jsp">원두정보</a></li>
-
-               <li class="nav-item px-lg-4"><a
-                  class="nav-link text-uppercase" href="about.jsp">About</a></li>
-
-               <li class="nav-item px-lg-4"><a
-                  class="nav-link text-uppercase" href="products.jsp">Products</a></li>
-
-               <li class="nav-item px-lg-4"><a
-                  class="nav-link text-uppercase" href="store.jsp">Store</a></li>
-
-               <c:if test="${sessionScope.userVO==null}">
-                  <li class="nav-item px-lg-4"><a
-                     class="nav-link text-uppercase" href="login.jsp"
-                     onclick="mypageFn()">마이페이지</a></li>
-               </c:if>
-
-               <c:if test="${sessionScope.userVO!=null}">
-                  <li class="nav-item px-lg-4"><a
-                     class="nav-link text-uppercase" href="mypage.jsp">마이페이지</a></li>
-               </c:if>
-
-               <c:if test="${sessionScope.userVO==null}">
-                  <li class="nav-item px-lg-4"><a
-                     class="nav-link text-uppercase" href="login.jsp">로그인</a></li>
-               </c:if>
-
-               <c:if test="${sessionScope.userVO!=null}">
-                  <li class="nav-item px-lg-4"><a
-                     class="nav-link text-uppercase" href="index.jsp"
-                     onclick="logoutFn()"> ${sessionScope.userVO.user_name}님 로그아웃</a></li>
-               </c:if>
+               <jsp:include page="menu.jsp">
+                       <jsp:param name="pageSelection" value="2" />
+                    </jsp:include>
+               
             </ul>
          </div>
       </div>
    </nav>
 
    <!-- 내용 넣을 곳 -->
-   <form action="http://127.0.0.1:5003/wondu" method="get">
    <section class="page-section about-heading">
       <div class="container">
          <div class="about-heading-content">
             <div class="row">
                <div class="col-xl-9 col-lg-10 mx-auto">
                   <div class="form-wrap2">
-                  
+
                      <br> <br> <br> <br>
-                     <div>
                      <p style="font-size: 2.0em; color: black;">&nbsp;&nbsp;&nbsp;커피 추천 설문지</p>
                      <br> <br>
                      <p style="font-size: 1.0em; color: #3F0000;">
@@ -111,29 +71,28 @@
                         &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;그 어떤 개인정보도 외부로 유출되지 않으니 안심하셔도 됩니다.<br>
                         &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;설문은 1분 정도 소요될 것입니다.
                      </p>
-                     </div>
+                     
                      <br> <br>
-                     <div>
+                  
                      <p style="font-size: 1.0em; color: black;">
                         &nbsp;&nbsp;◆ 커피의 어떤 향기를 선호합니까?<br> <br>
-                        <input type="radio" name="chk_info1" value="과일향">과일향<br>
-                        <input type="radio" name="chk_info1" value="꽃향">꽃향<br>
-                        <input type="radio" name="chk_info1" value="초콜릿향">초콜릿향<br>
-                        <input type="radio" name="chk_info1" value="카라멜향">카라멜향<br>
-                        <input type="radio" name="chk_info1" value="견과류향">견과류향
+                        <input type="radio" name="chk_info1" value="fruit">과일향<br>
+                        <input type="radio" name="chk_info1" value="flower">꽃향<br>
+                        <input type="radio" name="chk_info1" value="choco">초콜릿향<br>
+                        <input type="radio" name="chk_info1" value="caramel">카라멜향<br>
+                        <input type="radio" name="chk_info1" value="nut">견과류향
                      </p>
-                     </div>
                      <br>
 
                      <p style="font-size: 1.0em; color: black;">
                         &nbsp;&nbsp;◆ 어떤 로스팅 정도를 선호합니까?<br><br>
-                        <input type="radio" name="chk_info2" value="미디움로스팅">미디움 : 연한 아메리카노 정도입니다.<br>
-                        <input type="radio" name="chk_info2" value="시티로스팅">시티 : 가장 표준적인 로스팅 정도입니다.<br>
-                        <input type="radio" name="chk_info2" value="풀시티로스팅">풀시티 : 산미보다 쓴맛이 강하고 구수한 맛이 특징입니다.<br>
-                        <input type="radio" name="chk_info2" value="하이로스팅">하이 : 쓴맛이 특징입니다.
+                        <input type="radio" name="chk_info2" value="medium">미디움 : 연한 아메리카노 정도입니다.<br>
+                        <input type="radio" name="chk_info2" value="city">시티 : 가장 표준적인 로스팅 정도입니다.<br>
+                        <input type="radio" name="chk_info2" value="fcity">풀 시티 : 산미보다 쓴맛이 강하고 구수한 맛이 특징입니다.<br>
+                        <input type="radio" name="chk_info2" value="high">하이 : 쓴맛이 특징입니다.
                      </p>
                      <br>
-					
+
                      <p style="font-size: 1.0em; color: black;">
                         &nbsp;&nbsp;◆ 어떤 산미 정도를 선호합니까? (1 - 약함 5 - 강함)<br> <br>
                         <input
@@ -144,31 +103,31 @@
                            type="radio" name="chk_info3" value="5">5
                      </p>
                      <br>
-                    
+
                      <p style="font-size: 1.0em; color: black;">
                         &nbsp;&nbsp;◆ 어떤 단맛 정도를 선호합니까? (1 - 약함 5 - 강함)<br> <br>
                         <input
-                           type="radio"  value="1">1<br> <input
-                           type="radio"  value="2">2<br> <input
-                           type="radio"  value="3">3<br> <input
-                           type="radio"  value="4">4<br> <input
-                           type="radio"  value="5">5
+                           type="radio" name="chk_info4" value="1">1<br> <input
+                           type="radio" name="chk_info4" value="2">2<br> <input
+                           type="radio" name="chk_info4" value="3">3<br> <input
+                           type="radio" name="chk_info4" value="4">4<br> <input
+                           type="radio" name="chk_info4" value="5">5
                      </p>
                      <br>
-                     
-                    <p style="font-size: 1.0em; color: black;">
+
+                     <p style="font-size: 1.0em; color: black;">
                         &nbsp;&nbsp;◆ 어떤 쓴맛 정도를 선호합니까? (1 - 약함 5 - 강함)<br> <br>
                         <input
-                           type="radio"  value="1">1<br> <input
-                           type="radio"  value="2">2<br> <input
-                           type="radio"  value="3">3<br> <input
-                           type="radio"  value="4">4<br> <input
-                           type="radio"  value="5">5
+                           type="radio" name="chk_info5" value="1">1<br> <input
+                           type="radio" name="chk_info5" value="2">2<br> <input
+                           type="radio" name="chk_info5" value="3">3<br> <input
+                           type="radio" name="chk_info5" value="4">4<br> <input
+                           type="radio" name="chk_info5" value="5">5
                      </p>
                      <br>
-                     
+                  
                      <button type="submit" class="recosubmit"
-                        onclick="recoregisterFn()">추천받을래요</button>
+                        onclick="recoregisterFn()">register</button>
                      <!-- 버튼 css 그대로 들어가면 클래스 이름 바꿔주고 꾸미기로 하기. -->
                      <br>
 
@@ -180,7 +139,7 @@
          </div>
       </div>
    </section>
-   </form>
+
 
    <footer class="footer text-faded text-center py-5">
       <div class="container">
