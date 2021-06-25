@@ -135,18 +135,7 @@ input[type="radio"] {
     outline: none;
     border-radius: 30px;
 }
-.recooutbtn{
-	width: 100px;
-    padding: 15px 25px;
-    cursor: pointer;
-    display: block;
-    margin: 30px auto;
-    background:linear-gradient(to right, #2F170F, #2F170F9C);
-    color:white;
-    border: 0;
-    outline: none;
-    border-radius: 30px;
-}
+
 .reco-img{
 	width: 20px; height: 20px;
     background-size: contain;
