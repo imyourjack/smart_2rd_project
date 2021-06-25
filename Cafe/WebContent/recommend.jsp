@@ -55,6 +55,7 @@
    </nav>
 
    <!-- 내용 넣을 곳 -->
+   <form action="http://127.0.0.1:5003" method="post">  <!-- wondu -->
    <section class="page-section about-heading">
       <div class="container">
          <div class="about-heading-content">
@@ -74,22 +75,23 @@
                      
                      <br> <br>
                   
-                     <p style="font-size: 1.0em; color: black;">
+                     <p style="font-size: 1.0em; color: 
+                     black;">
                         &nbsp;&nbsp;◆ 커피의 어떤 향기를 선호합니까?<br> <br>
-                        <input type="radio" name="chk_info1" value="fruit">과일향<br>
-                        <input type="radio" name="chk_info1" value="flower">꽃향<br>
-                        <input type="radio" name="chk_info1" value="choco">초콜릿향<br>
-                        <input type="radio" name="chk_info1" value="caramel">카라멜향<br>
-                        <input type="radio" name="chk_info1" value="nut">견과류향
+                        <input type="radio" name="chk_info1" value="과일향">과일향<br>
+                        <input type="radio" name="chk_info1" value="꽃향">꽃향<br>
+                        <input type="radio" name="chk_info1" value="초콜릿향">초콜릿향<br>
+                        <input type="radio" name="chk_info1" value="카라멜향">카라멜향<br>
+                        <input type="radio" name="chk_info1" value="견과류향">견과류향
                      </p>
                      <br>
 
                      <p style="font-size: 1.0em; color: black;">
                         &nbsp;&nbsp;◆ 어떤 로스팅 정도를 선호합니까?<br><br>
-                        <input type="radio" name="chk_info2" value="medium">미디움 : 연한 아메리카노 정도입니다.<br>
-                        <input type="radio" name="chk_info2" value="city">시티 : 가장 표준적인 로스팅 정도입니다.<br>
-                        <input type="radio" name="chk_info2" value="fcity">풀 시티 : 산미보다 쓴맛이 강하고 구수한 맛이 특징입니다.<br>
-                        <input type="radio" name="chk_info2" value="high">하이 : 쓴맛이 특징입니다.
+                        <input type="radio" name="chk_info2" value="미디움로스팅">미디움 : 연한 아메리카노 정도입니다.<br>
+                        <input type="radio" name="chk_info2" value="시티로스팅">시티 : 가장 표준적인 로스팅 정도입니다.<br>
+                        <input type="radio" name="chk_info2" value="풀시티로스팅">풀 시티 : 산미보다 쓴맛이 강하고 구수한 맛이 특징입니다.<br>
+                        <input type="radio" name="chk_info2" value="하이로스팅">하이 : 쓴맛이 특징입니다.
                      </p>
                      <br>
 
@@ -126,8 +128,7 @@
                      </p>
                      <br>
                   
-                     <button type="submit" class="recosubmit"
-                        onclick="recoregisterFn()">register</button>
+                     <button type="submit" class="recosubmit">register</button>
                      <!-- 버튼 css 그대로 들어가면 클래스 이름 바꿔주고 꾸미기로 하기. -->
                      <br>
 
@@ -139,7 +140,7 @@
          </div>
       </div>
    </section>
-
+   </form>
 
    <footer class="footer text-faded text-center py-5">
       <div class="container">

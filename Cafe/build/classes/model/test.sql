@@ -13,7 +13,7 @@ DROP TABLE reco_tbl CASCADE;
 insert into user_tbl values('admin','admin','관리자');
 insert into user_tbl values('min', '12345','아가형민');
 
-select * from reco_tbl;
+select * from review_tbl;
 
 
 create table wondu_tbl(
@@ -41,6 +41,7 @@ create table wondu_good(
   FOREIGN KEY (wondu_n) REFERENCES wondu_tbl (wondu_n)
 ); 
 select * from reco_tbl;
+TRUNCATE reco_tbl;
 create table reco_tbl(
   reco_index int not null auto_increment,
   wondu_n varchar(100) not null,
