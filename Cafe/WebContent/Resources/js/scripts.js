@@ -14,7 +14,18 @@ function regisgerFn() {
          var nickname = $("#nickname").val();
          var gender = $("#gender").val();
       }
-      
+      function pageQuery() {
+
+          // window 객체의 location.search 속성으로 쿼리스트링 가져오기
+          var sQuery = location.search;
+
+            // 쿼리스트링이 있는지 조건문으로 체크
+            if ( sQuery ) {
+              document.getElementById('chk_info1').innerHTML = sQuery;
+            } else {
+              document.getElementById('chk_info1').innerHTML = '현재 페이지 URL에 쿼리정보가 없습니다.';
+            }
+         }
       function loginFn() {
          var user_id = $("#user_id").val(); //id하나만 가지고 오기위해서 val을 씀
          var password = $("#password").val(); //serialize는 다 가져오는것              

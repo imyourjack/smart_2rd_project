@@ -40,7 +40,7 @@ public class FrontController extends HttpServlet {
 		view = controller.requestHandler(request, response);
 		if(view!=null) {
 			if(view.indexOf("redirect:/")!=-1) { //.indexOf : 문자열에 특정 문자가 있는지 확인
-				//response.sendRedirect(view.split(":/")[1]); // view=redirect://list.do   / 리다이렉트
+				response.sendRedirect(view.split(":/")[1]); // view=redirect://list.do   / 리다이렉트
 			}
 			else {
 				//RequestDispatcher rd = request.getRequestDispatcher(ViewResolver.makeUrl(view)); // WEB-INF/views/boardList -> boardList
