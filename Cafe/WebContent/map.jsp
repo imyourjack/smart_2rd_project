@@ -75,11 +75,12 @@
 <body>
 <!-- 지도 맵의 크기 css 형식입니다 수정 가능 합니다 !  -->
 
-<div id="map" style="width:45%;height:400px;margin-left:450px;"></div>
+<div id="map" style="width:65%;height:700px;margin-left:450px;"></div>
 
 <script>
 
 /* var map = new naver.maps.Map('map', {
+	
     center: new naver.maps.LatLng(35.149741, 126.920007),
     zoom: 19
 });
@@ -95,87 +96,197 @@ var marker = new naver.maps.Marker({
  var HOME_PATH = window.HOME_PATH || '.';
  var HOME_PATH1 = window.HOME_PATH || '.';
  
-var smart = new naver.maps.LatLng(35.149865, 126.919843);
+var smart = new naver.maps.LatLng(35.14974300888751, 126.91985737111838);
 var map = new naver.maps.Map('map', {
      center: smart,
      zoom: 18
     
  });
  
+ //C:\Users\21SMT61\git\coffee\Cafe
  //스마트 인재 개발원 
     var marker = new naver.maps.Marker({
          map: map,
          position: smart,
-         title:'스마트 인재 개발원'
+         title:'스마트 인재 개발원',
+         icon: {
+             url:'./Resources/assets/img/mark4.png',
+             iconsize:'90'
+         },
+         
+         animation: naver.maps.Animation.DROP,
+         
      });
     markers.push(marker);
+    
+    naver.maps.Event.addListener(marker, 'click', function() {
+        if (marker.getAnimation() !== null) {
+            marker.setAnimation(null);
+        } else {
+            marker.setAnimation(naver.maps.Animation.BOUNCE);
+        }
+    });
+    
+  /*   icon: {
+        content: [
+                    '<div class="cs_mapbridge">',
+                        '<div class="map_group _map_group">',
+                            '<div class="map_marker _marker tvhp tvhp_big">',
+                                '<span class="ico _icon"></span>',
+                                '<span class="shd"></span>',
+                            '</div>',
+                        '</div>',
+                    '</div>'
+                ].join(''),
+        size: new naver.maps.Size(38, 58),
+        
+        anchor: new naver.maps.Point(19, 58),
+    }
+pinkMarker.setTitle('Pink Hot');
+}); */
+
   //카페 젬마
 	var jemma = new naver.maps.LatLng(35.149662823887816, 126.92011596361931);	 	 
 	var marker4 = new naver.maps.Marker({
 	     map: map,
 	     position: jemma,
-	     title:'카페 젬마'
+	     title:'카페 젬마',
+	     animation: naver.maps.Animation.DROP,
+	     
+	     
 	 });
 	 markers.push(marker4);
+	 
+	 naver.maps.Event.addListener(marker4, 'click', function() {
+	        if (marker4.getAnimation() !== null) {
+	            marker4.setAnimation(null);
+	        } else {
+	            marker4.setAnimation(naver.maps.Animation.BOUNCE);
+	        }
+	    });
+	 
 	// 풀 카페
 	 var full = new naver.maps.LatLng(35.1501188,126.919876);
 	 var marker2 = new naver.maps.Marker({
 	     map: map,
 	     position: full,
-	     title:'카페 풀'
+	     title:'카페 풀',
+	     animation: naver.maps.Animation.DROP
+	     
 	 });
 	 markers.push(marker2);
+	 
+	 naver.maps.Event.addListener(marker2, 'click', function() {
+	        if (marker2.getAnimation() !== null) {
+	            marker2.setAnimation(null);
+	        } else {
+	            marker2.setAnimation(naver.maps.Animation.BOUNCE);
+	        }
+	    });
 	//모어레스 4
 	var moreless = new naver.maps.LatLng(35.14913468310194, 126.91915854029897);	 	 
 	var	marker3 = new naver.maps.Marker({
 	     map: map,
 	     position: moreless,
-	     title: '카페 모어레스'
+	     title: '카페 모어레스',
+	     animation: naver.maps.Animation.DROP
 	 });
 	 markers.push(marker3);
+	 
+	 naver.maps.Event.addListener(marker3, 'click', function() {
+	        if (marker3.getAnimation() !== null) {
+	            marker3.setAnimation(null);
+	        } else {
+	            marker3.setAnimation(naver.maps.Animation.BOUNCE);
+	        }
+	    });
 	//카페 소쿱5
 		var socupe = new naver.maps.LatLng(35.149896701720486, 126.92122022491797);	 	 
 		var	marker5 = new naver.maps.Marker({
 		     map: map,
 		     position: socupe,
-		     title: '카페 소쿱'
+		     title: '카페 소쿱',
+		     animation: naver.maps.Animation.DROP
 		 });
 		 markers.push(marker5);
+		 
+		 naver.maps.Event.addListener(marker5, 'click', function() {
+		        if (marker5.getAnimation() !== null) {
+		            marker5.setAnimation(null);
+		        } else {
+		            marker5.setAnimation(naver.maps.Animation.BOUNCE);
+		        }
+		    });
 		//카페 휘핑디에그 6
 		var egg = new naver.maps.LatLng(35.150397891639514, 126.92099195025475);	 	 
 		var	marker6 = new naver.maps.Marker({
 		    map: map,
-		    position: egg,
-		    
-		    title: '카페 휘핑디에그'
+		    position: egg,		    
+		    title: '카페 휘핑디에그',
+		    animation: naver.maps.Animation.DROP
 		 });
 	 		 markers.push(marker6);
+	 		 
+	 		 naver.maps.Event.addListener(marker6, 'click', function() {
+	 	        if (marker6.getAnimation() !== null) {
+	 	            marker6.setAnimation(null);
+	 	        } else {
+	 	            marker6.setAnimation(naver.maps.Animation.BOUNCE);
+	 	        }
+	 	    });
 	 //카페 카페 얀 7
 		var yann = new naver.maps.LatLng(35.15043763093851, 126.92206380287202);	 	 
 		var	marker7 = new naver.maps.Marker({
  	    map: map,
 	    position: yann,
- 	    title: '카페 얀'
+ 	    title: '카페 얀',
+ 	   animation: naver.maps.Animation.DROP
 		 });
  	 markers.push(marker7);
+ 	 
+ 	 naver.maps.Event.addListener(marker7, 'click', function() {
+         if (marker7.getAnimation() !== null) {
+             marker7.setAnimation(null);
+         } else {
+             marker7.setAnimation(naver.maps.Animation.BOUNCE);
+         }
+     });
 
  	//카페 우드라이크8
 		var Woodlike = new naver.maps.LatLng(35.15020281109344, 126.92139915922496);	 	 
 		var	marker8 = new naver.maps.Marker({
 	    map: map,
 	    position: Woodlike,
-	    title: '카페 우드라이크'
+	    title: '카페 우드라이크',
+	    animation: naver.maps.Animation.DROP
 		 });
-	 markers.push(marker8);		
+	 markers.push(marker8);	
+	 
+	 naver.maps.Event.addListener(marker8, 'click', function() {
+	        if (marker8.getAnimation() !== null) {
+	            marker8.setAnimation(null);
+	        } else {
+	            marker8.setAnimation(naver.maps.Animation.BOUNCE);
+	        }
+	    });
 	 
 	//카페 인더플레인9
 		var Intheplane = new naver.maps.LatLng(35.148996404393785, 126.91893982382395);	 	 
 		var	marker9 = new naver.maps.Marker({
 	    map: map,
 	    position: Intheplane,
-	    title: '카페 인더플레인'
+	    title: '카페 인더플레인',
+	    animation: naver.maps.Animation.DROP
 		 });
-	 markers.push(marker9);		
+	 markers.push(marker9);
+	 
+	 naver.maps.Event.addListener(marker9, 'click', function() {
+	        if (marker9.getAnimation() !== null) {
+	            marker9.setAnimation(null);
+	        } else {
+	            marker9.setAnimation(naver.maps.Animation.BOUNCE);
+	        }
+	    });
 	 
 	 	
 	//카페 그란데 10
@@ -183,18 +294,36 @@ var map = new naver.maps.Map('map', {
 		var	marker10 = new naver.maps.Marker({
 	    map: map,
 	    position: Grande,
-	    title: '카페 그란데'
+	    title: '카페 그란데',
+	    animation: naver.maps.Animation.DROP
 		 });
-	 markers.push(marker10);	
+	 markers.push(marker10);
+	 
+	 naver.maps.Event.addListener(marker10, 'click', function() {
+	        if (marker10.getAnimation() !== null) {
+	            marker10.setAnimation(null);
+	        } else {
+	            marker10.setAnimation(naver.maps.Animation.BOUNCE);
+	        }
+	    });
 	 
 	//카페 커피니 11
 		var Coffeenii = new naver.maps.LatLng(35.14964840757344, 126.91881202316961);	 	 
 		var	marker11 = new naver.maps.Marker({
 	    map: map,
 	    position: Coffeenii,
-	    title: '카페 커피니'
+	    title: '카페 커피니',
+	    animation: naver.maps.Animation.DROP
 		 });
-	 markers.push(marker11);	
+	 markers.push(marker11);
+	 
+	 naver.maps.Event.addListener(marker11, 'click', function() {
+	        if (marker11.getAnimation() !== null) {
+	            marker11.setAnimation(null);
+	        } else {
+	            marker11.setAnimation(naver.maps.Animation.BOUNCE);
+	        }
+	    });
 	 
 	 
 	//카페 청자다방 12
@@ -202,36 +331,72 @@ var map = new naver.maps.Map('map', {
 		var	marker12 = new naver.maps.Marker({
 	    map: map,
 	    position: 청자다방,
-	    title: '카페 청자다방'
+	    title: '카페 청자다방',
+	    animation: naver.maps.Animation.DROP
 		 });
 	 markers.push(marker12);
+	 
+	 naver.maps.Event.addListener(marker12, 'click', function() {
+	        if (marker12.getAnimation() !== null) {
+	            marker12.setAnimation(null);
+	        } else {
+	            marker12.setAnimation(naver.maps.Animation.BOUNCE);
+	        }
+	    });
 	 
 	//카페 꽃분이 13
 		var 꽃분이 = new naver.maps.LatLng(35.150511614363715, 126.92121352484905);	 	 
 		var	marker13 = new naver.maps.Marker({
 	    map: map,
 	    position: 꽃분이,
-	    title: '카페 꽃분이'
+	    title: '카페 꽃분이',
+	    animation: naver.maps.Animation.DROP
 		 });
-	 markers.push(marker13);	
+	 markers.push(marker13);
+	 
+	 naver.maps.Event.addListener(marker13, 'click', function() {
+	        if (marker13.getAnimation() !== null) {
+	            marker13.setAnimation(null);
+	        } else {
+	            marker13.setAnimation(naver.maps.Animation.BOUNCE);
+	        }
+	    });
 	 
 	//카페 Cystem
 		var Cystem = new naver.maps.LatLng(35.15050672385635, 126.92239364009318);	 	 
 		var	marker14 = new naver.maps.Marker({
 	    map: map,
 	    position: Cystem,
-	    title: '카페 Cystem'
+	    title: '카페 Cystem',
+	    animation: naver.maps.Animation.DROP
 		 });
 	 markers.push(marker14);
+	 
+	 naver.maps.Event.addListener(marker14, 'click', function() {
+	        if (marker14.getAnimation() !== null) {
+	            marker14.setAnimation(null);
+	        } else {
+	            marker14.setAnimation(naver.maps.Animation.BOUNCE);
+	        }
+	    });
 	 
 		//카페 비비드
 		var vivid = new naver.maps.LatLng(35.1497877485537, 126.9231817071001);	 	 
 		var	marker15 = new naver.maps.Marker({
 	    map: map,
 	    position: vivid,
-	    title: '카페 vivid'
+	    title: '카페 vivid',
+	    animation: naver.maps.Animation.DROP
 		 });
-	 markers.push(marker15);	
+	 markers.push(marker15);
+	 
+	 naver.maps.Event.addListener(marker15, 'click', function() {
+	        if (marker15.getAnimation() !== null) {
+	            marker15.setAnimation(null);
+	        } else {
+	            marker15.setAnimation(naver.maps.Animation.BOUNCE);
+	        }
+	    });
 // 여기서부터 각 마커에 대한 정보를 입력하는 공간 입니다 . 
 // 스마트 인재 개발원
 var contentString1 = [
@@ -510,8 +675,7 @@ var contentString1 = [
  infoWindows.push(infowindow15);
  
  
- 
- 
+
  function getClickHandler(seq) {
 	    return function(e) {
 		     if (infoWindows[seq].getMap()) {
@@ -520,11 +684,14 @@ var contentString1 = [
 		    	 infoWindows[seq].open(map, markers[seq]);
 		     }
 		 }
+	    
  }
  
  for (var i=0,ii=markers.length; i<ii; i++) {
-	 naver.maps.Event.addListener(markers[i], "click", getClickHandler(i));  
+	 naver.maps.Event.addListener(markers[i], "click", getClickHandler(i));	 
+	 
  }
+ 
  
  
 
