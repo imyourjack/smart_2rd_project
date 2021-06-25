@@ -68,7 +68,7 @@
 	
 	<section>
 	<br>
-	<input type="text" id="coffeebean" name="coffeebean" placeholder="원두의 이름을 입력하세요">&nbsp;
+	<input type="text" id="coffeebean" name="coffeebean" placeholder="원두의 이름을 입력하세요">
 	<input type="submit"  value="검색하기" onclick="searchbeanFn()">
 	<br>
 	</section>

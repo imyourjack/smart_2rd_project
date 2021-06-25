@@ -7,13 +7,29 @@
 
 
 
-function regisgerFn() {
-         var user_id = $("#user_id").val();
-         var password = $("#password").val();
-         var password = $("#password").val();
-         var nickname = $("#nickname").val();
-         var gender = $("#gender").val();
-      }
+function registerFn() {
+    var user_id = $("#user_id").val();
+    var password = $("#password").val();
+    var nickname = $("#nickname").val();
+    $.ajax({
+       type : "post",
+       data : {
+          "user_id" : user_id,
+          "password" : password,
+          "nickname" : nickname
+       }, //"파라메터":벨류값
+       success : function(data) {
+          if (data == "NO") {
+             alert("회원 가입에 실패하였습니다.");
+          } else {
+             location.href = "login.jsp"; //로그인 성공하면 메인화면으로
+          }
+       }, //처리가 성공하면 바로 list를 뽑아준다
+       error : function() {
+          alert("error");
+       }
+    });
+ }
       function pageQuery() {
 
           // window 객체의 location.search 속성으로 쿼리스트링 가져오기

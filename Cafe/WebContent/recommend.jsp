@@ -20,9 +20,7 @@
 <!-- Core theme CSS (includes Bootstrap)-->
 <link href="./Resources/css/styles.css" rel="stylesheet" />
 <link rel="stylesheet" href="./Resources/css/style.css" />
-<script
-	src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 </head>
 <body>
 	<header>
@@ -31,11 +29,12 @@
 				alone</span> <span class="site-heading-lower">home comming</span>
 		</h1>
 	</header>
+	
 	<!-- Navigation-->
 	<nav class="navbar navbar-expand-lg navbar-dark py-lg-4" id="mainNav">
 		<div class="container">
 			<a class="navbar-brand text-uppercase fw-bold d-lg-none"
-				href="index.jsp">카페</a>
+				href="index.html">카페</a>
 			<button class="navbar-toggler" type="button"
 				data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
 				aria-controls="navbarSupportedContent" aria-expanded="false"
@@ -46,8 +45,8 @@
 				<ul class="navbar-nav mx-auto">
 
 					<jsp:include page="menu.jsp">
-						<jsp:param name="pageSelection" value="2" />
-					</jsp:include>
+                    	<jsp:param name="pageSelection" value="9" />
+                    </jsp:include>
 
 				</ul>
 			</div>
@@ -57,17 +56,13 @@
 	<!-- 내용 넣을 곳 -->
 	<section class="page-section cta">
 		<div class="container">
-			<!-- 밑에 한 줄 없애도 잘 돌아감. -->
-			<div class="about-heading-content">
 				<div class="row">
-					<div class="col-xl-9 col-lg-10 mx-auto">
-						<div class="form-wrap2">
-
-							<br> <br> <br> <br>
+					<div class="col-xl-9 mx-auto">
+						<div class="form-wrap2" name="" action="">
 							<div class="gray-line-head">
 								<br>
-								<p style="font-size: 2.0em; color: black;">&nbsp;&nbsp;&nbsp;<img class="reco-img-head" src="./Resources/assets/img/bean.png" alt="..." /> 커피
-									추천 설문지</p>
+								<p style="font-size: 2.5em; color: #3F0000;">&nbsp;&nbsp;&nbsp;<img class="reco-img-head" src="./Resources/assets/img/bean.png" alt="..." />
+								커피 추천 설문지</p>
 								<br> <br>
 								<p style="font-size: 1.0em; color: #3F0000;">
 									&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;안녕하세요, 카페 커피입니다.<br>
@@ -80,12 +75,13 @@
 
 							<div class="gray-line">
 								<p style="font-size: 1.0em; color: black;">
-									<br> &nbsp;&nbsp;◆ 커피의 어떤 향기를 선호합니까? <img class="reco-img" src="./Resources/assets/img/smell.png" alt="..." /><br> <br>
-									<input type="radio" name="chk_info1" value="fruit">과일향<br>
-									<input type="radio" name="chk_info1" value="flower">꽃향<br>
-									<input type="radio" name="chk_info1" value="choco">초콜릿향<br>
-									<input type="radio" name="chk_info1" value="caramel">카라멜향<br>
-									<input type="radio" name="chk_info1" value="nut">견과류향
+								<div class="gray-line2">
+									<br><strong><h5> &nbsp;&nbsp;◆ 커피의 어떤 향기를 선호합니까?</strong> <img class="reco-img" src="./Resources/assets/img/smell.png" alt="..." /></h5><br></div> <br>
+									&nbsp;&nbsp;<input type="radio" name="chk_info1" value="fruit">과일향<br>
+									&nbsp;&nbsp;<input type="radio" name="chk_info1" value="flower">꽃향<br>
+									&nbsp;&nbsp;<input type="radio" name="chk_info1" value="choco">초콜릿향<br>
+									&nbsp;&nbsp;<input type="radio" name="chk_info1" value="caramel">카라멜향<br>
+									&nbsp;&nbsp;<input type="radio" name="chk_info1" value="nut">견과류향
 								</p>
 							</div>
 							
@@ -93,70 +89,70 @@
 
 							<div class="gray-line">
 								<p style="font-size: 1.0em; color: black;">
-									<br> &nbsp;&nbsp;◆ 어떤 로스팅 정도를 선호합니까? <img class="reco-img" src="./Resources/assets/img/roasting.png" alt="..." /><br> <br>
-									<input
-										type="radio" name="chk_info2" value="medium">미디움 : 연한
-									아메리카노 정도입니다.<br> <input type="radio" name="chk_info2"
-										value="city">시티 : 가장 표준적인 로스팅 정도입니다.<br> <input
-										type="radio" name="chk_info2" value="fcity">풀 시티 :
-									산미보다 쓴맛이 강하고 구수한 맛이 특징입니다.<br> <input type="radio"
-										name="chk_info2" value="high">하이 : 쓴맛이 특징입니다.
+								<div class="gray-line2">
+									<br> <strong><h5>&nbsp;&nbsp;◆ 어떤 로스팅 정도를 선호합니까?</strong> <img class="reco-img" src="./Resources/assets/img/roasting.png" alt="..." /></h5><br></div> <br>
+									&nbsp;&nbsp;<input type="radio" name="chk_info2" value="medium">미디움 로스팅 : 연한 아메리카노 정도입니다.<br>
+									&nbsp;&nbsp;<input type="radio" name="chk_info2" value="city">시티 로스팅 : 가장 표준적인 로스팅 정도입니다.<br>
+									&nbsp;&nbsp;<input type="radio" name="chk_info2" value="fcity">풀 시티 로스팅 : 산미보다 쓴맛이 강하고 고소한 맛이 특징입니다.<br>
+									&nbsp;&nbsp;<input type="radio" name="chk_info2" value="high">하이 로스팅: 쓴맛이 특징입니다.
 								</p>
 							</div>
 							<br>
 
 							<div class="gray-line">
 								<p style="font-size: 1.0em; color: black;">
-									<br> &nbsp;&nbsp;◆ 어떤 산미 정도를 선호합니까? <img class="reco-img" src="./Resources/assets/img/sour.png" alt="..." /> (1 - 약함 5 - 강함)<br>
-									<br> <input type="radio" name="chk_info3" value="1">1<br>
-									<input type="radio" name="chk_info3" value="2">2<br>
-									<input type="radio" name="chk_info3" value="3">3<br>
-									<input type="radio" name="chk_info3" value="4">4<br>
-									<input type="radio" name="chk_info3" value="5">5
+								<div class="gray-line2">
+									<br> <strong><h5>&nbsp;&nbsp;◆ 어떤 산미 정도를 선호합니까?</strong> <img class="reco-img" src="./Resources/assets/img/sour.png" alt="..." /> (1 - 약함 5 - 강함)</h5><br> </div><br>
+									&nbsp;&nbsp;<input type="radio" name="chk_info3" value="1">1<br>
+									&nbsp;&nbsp;<input type="radio" name="chk_info3" value="2">2<br>
+									&nbsp;&nbsp;<input type="radio" name="chk_info3" value="3">3<br>
+									&nbsp;&nbsp;<input type="radio" name="chk_info3" value="4">4<br>
+									&nbsp;&nbsp;<input type="radio" name="chk_info3" value="5">5
 								</p>
 							</div>
 							<br>
 
 							<div class="gray-line">
 								<p style="font-size: 1.0em; color: black;">
-									<br> &nbsp;&nbsp;◆ 어떤 단맛 정도를 선호합니까? <img class="reco-img" src="./Resources/assets/img/sweet.png" alt="..." /> (1 - 약함 5 - 강함)<br>
-									<br> <input type="radio" name="chk_info4" value="1">1<br>
-									<input type="radio" name="chk_info4" value="2">2<br>
-									<input type="radio" name="chk_info4" value="3">3<br>
-									<input type="radio" name="chk_info4" value="4">4<br>
-									<input type="radio" name="chk_info4" value="5">5
+								<div class="gray-line2">
+									<br> <strong><h5>&nbsp;&nbsp;◆ 어떤 단맛 정도를 선호합니까?</strong> <img class="reco-img" src="./Resources/assets/img/sweet.png" alt="..." /> (1 - 약함 5 - 강함)</h5><br></div><br>
+									&nbsp;&nbsp;<input type="radio" name="chk_info4" value="1">1<br>
+									&nbsp;&nbsp;<input type="radio" name="chk_info4" value="2">2<br>
+									&nbsp;&nbsp;<input type="radio" name="chk_info4" value="3">3<br>
+									&nbsp;&nbsp;<input type="radio" name="chk_info4" value="4">4<br>
+									&nbsp;&nbsp;<input type="radio" name="chk_info4" value="5">5
 								</p>
 							</div>
 							<br>
 
 							<div class="gray-line">
 								<p style="font-size: 1.0em; color: black;">
-									<br> &nbsp;&nbsp;◆ 어떤 쓴맛 정도를 선호합니까? <img class="reco-img" src="./Resources/assets/img/bitter.png" alt="..." /> (1 - 약함 5 - 강함)<br>
-									<br> <input type="radio" name="chk_info5" value="1">1<br>
-									<input type="radio" name="chk_info5" value="2">2<br>
-									<input type="radio" name="chk_info5" value="3">3<br>
-									<input type="radio" name="chk_info5" value="4">4<br>
-									<input type="radio" name="chk_info5" value="5">5
+								<div class="gray-line2">
+									<br> <strong><h5>&nbsp;&nbsp;◆ 어떤 쓴맛 정도를 선호합니까?</strong> <img class="reco-img" src="./Resources/assets/img/bitter.png" alt="..." /> (1 - 약함 5 - 강함)</h5><br></div><br>
+									&nbsp;&nbsp;<input type="radio" name="chk_info5" value="1">1<br>
+									&nbsp;&nbsp;<input type="radio" name="chk_info5" value="2">2<br>
+									&nbsp;&nbsp;<input type="radio" name="chk_info5" value="3">3<br>
+									&nbsp;&nbsp;<input type="radio" name="chk_info5" value="4">4<br>
+									&nbsp;&nbsp;<input type="radio" name="chk_info5" value="5">5
 								</p>
 							</div>
 							<br>
 							
-							<button type="submit" class="recosubmit"
-							onclick="recoregisterFn()">보내기</button>
+							<button type="submit" class="recosubmit">보내기</button>
 						<!-- 버튼 css 그대로 들어가면 클래스 이름 바꿔주고 꾸미기로 하기. -->
 
 						</div>
 						
 					</div>
 				</div>
-			</div>
+			
 		</div>
 	</section>
 
 
 	<footer class="footer text-faded text-center py-5">
 		<div class="container">
-			<p class="m-0 small">Copyright &copy; Your Website 2021</p>
+			<p class="m-0 small">Copyright &copy; Cafe Coffee Website 2022</p>
 		</div>
 	</footer>
 	<!-- Bootstrap core JS-->
