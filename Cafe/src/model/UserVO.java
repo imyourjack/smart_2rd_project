@@ -5,6 +5,7 @@ public class UserVO {
    private String password;
    private String user_name;
    private String wondu_n;
+
 public String getUser_id() {
 	return user_id;
 }
@@ -29,7 +30,5 @@ public String getWondu_n() {
 public void setWondu_n(String wondu_n) {
 	this.wondu_n = wondu_n;
 }
-
-   
-   
 }
+

@@ -12,6 +12,8 @@
 #searchbean{
 	align:center;
 }
+
+
 .gray-line-head{
 	 background: #FFF2E6;
 	 color:#583E32;
@@ -24,6 +26,9 @@
 	 color:#583E32;
 	 border: 2px solid black;
   	border-radius: 8px;
+}
+.gray-line2{
+	border-bottom: 2px solid #583E32!important;
 }
 
 input[type="radio"] {
@@ -50,7 +55,7 @@ input[type="radio"] {
 }
 .form-wrap2 {
     width: 600px;
-    height: 1850px;
+    height: 2050px;
     position: relative;
     margin: 6% auto;
     background: none;
@@ -124,20 +129,26 @@ input[type="radio"] {
     cursor: pointer;
     display: block;
     margin: 30px auto;
-    background: green;
+    background:linear-gradient(to right, #2F170F, #2F170F9C);
     color:white;
     border: 0;
     outline: none;
     border-radius: 30px;
 }
+
 .reco-img{
 	width: 20px; height: 20px;
     background-size: contain;
 }
 .reco-img-head{
-	width: 30px; height: 35px;
+	width: 40px; height: 45px;
     background-size: contain;
 }
+.recooutput-img{
+	width: 180px; height: 180px;
+    background-size: contain;
+}
+
 .loginsubmit {
     width: 85%;
     padding: 10px 30px;
