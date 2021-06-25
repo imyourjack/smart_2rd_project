@@ -11081,10 +11081,6 @@ b.btn_jun1 {
     margin-left: -3%;
     margin-right: 3%;
 }
-/* 필요없음 */
-b.btn_jun2 {
-	
-}
 
 p.btn_area_btm1 {
     margin-left: 84%;
@@ -11099,3 +11095,4 @@ button#bt_mypage_jun {
     color: rgba(47, 23, 15, 0.9);
     border-radius: 15px;
 }
+

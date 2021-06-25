@@ -136,8 +136,10 @@ function updateFn(){
 												<input
 													type = "button"
 													onclick="updateFn()"
-													class="btn_model" id="bt_mypage_jun" value = "수정">
-													<b class="btn_jun1"></b>
+													value = "수정" style="
+   													 background-color: #e6a756;
+   													 color: rgba(47, 23, 15, 0.9);
+   													 border-radius: 15px;">
 												<button
 													type="reset"
 													class="btn_model" id="bt_mypage_jun">
