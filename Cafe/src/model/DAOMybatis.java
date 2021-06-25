@@ -1,7 +1,6 @@
 package model;
 
 import java.io.InputStream;
-import java.util.List;
 
 import org.apache.ibatis.io.Resources;
 import org.apache.ibatis.session.SqlSession;
@@ -39,7 +38,13 @@ public class DAOMybatis {
 		sqlSession.close();
 		return vo;
 	}
-	
+	public int Update(UserVO vo) {
+		 SqlSession sqlSession=sqlSessionFactory.openSession();
+			int cnt = sqlSession.update("Update", vo);
+			sqlSession.commit();//완료
+			sqlSession.close();//반납
+			return cnt;
+	 }
 	
 	
 	

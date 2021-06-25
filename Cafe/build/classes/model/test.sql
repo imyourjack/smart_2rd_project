@@ -1,3 +1,10 @@
+
+DROP TABLE user_tbl CASCADE;
+DROP TABLE wondu_tbl CASCADE;
+DROP TABLE wondu_good CASCADE;
+DROP TABLE review_tbl CASCADE;
+DROP TABLE reco_tbl CASCADE;
+
 create table user_tbl(
    user_id varchar(30) not null,
    password varchar(30) not null,
@@ -5,15 +12,16 @@ create table user_tbl(
    primary key(user_id)
 );
 
-DROP TABLE user_tbl CASCADE;
-DROP TABLE wondu_tbl CASCADE;
-DROP TABLE wondu_good CASCADE;
-DROP TABLE review_tbl CASCADE;
-DROP TABLE reco_tbl CASCADE;
 insert into user_tbl values('admin','admin','관리자');
 insert into user_tbl values('min', '12345','아가형민');
 
+
 select * from review_tbl;
+
+select * from user_tbl;
+select * from reco_tbl;
+select * from wondu_tbl;
+
 
 
 create table wondu_tbl(
@@ -41,7 +49,11 @@ create table wondu_good(
   FOREIGN KEY (wondu_n) REFERENCES wondu_tbl (wondu_n)
 ); 
 select * from reco_tbl;
+
 TRUNCATE reco_tbl;
+
+
+
 create table reco_tbl(
   reco_index int not null auto_increment,
   wondu_n varchar(100) not null,
@@ -50,7 +62,8 @@ create table reco_tbl(
    FOREIGN KEY (wondu_n) REFERENCES wondu_tbl (wondu_n),
    FOREIGN KEY (user_id) REFERENCES user_tbl (user_id)
 ); 
-select * from wondu_tbl;
+select * from user_tbl;
+
 insert into user_tbl values('babo', '1234','아가채원');
 insert into user_tbl values('babo2', '12345','아가채원');
 

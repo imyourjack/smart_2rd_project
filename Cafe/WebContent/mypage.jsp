@@ -19,6 +19,26 @@
 <link href="stylesheet" rel="stylesheet" />
 <!-- Core theme CSS (includes Bootstrap)-->
 <link href="./Resources/css/styles.css" rel="stylesheet" />
+
+
+<script type="text/javascript">
+
+function updateFn(){
+	var formData= $("#ufrm").serialize();
+	 $.ajax({
+	      url : "ajaxupdate.do",
+	      type: "post",
+	      data: formData,
+	      success: list,
+	      error: function() { alert("error");   }
+	   
+	   });
+}
+
+
+</script>
+
+
 </head>
 <body>
 	<header>
@@ -64,6 +84,10 @@
 								<div class="column">
 									<!-- 프로필 설정 -->
 									<div class="sh_group">
+									<br>
+									
+									<form action="">
+									
 										<div>
 											<div class="sh_header">
 												<h2>프로필</h2>
@@ -79,25 +103,51 @@
 													<dt class="blind">프로필 사진</dt>
 													<dd class="pic_desc">
 														<a href="#"
-															onclick="changeImage();clickcr(this,'imn.prfmodify','','',event);">
+															onclick="">
 															<img
 															src="https://phinf.pstatic.net/contact/20210603_281/1622703170569ft61p_PNG/%C4%F5%C4%AB.png?type=s160"
-															width="80" height="80" alt=""> <span
+															width="200" height="200" alt=""> <span
 															class="spimg img_frame"></span>
 														</a>
 													</dd>
 													<dt class="blind">&nbsp;</dt>
 													<dd class="intro_desc">&nbsp;</dd>
-													<dt class="nic_tit">아이디</dt>
-													<dt class="nic_tit">별명</dt>
-													<dd class="nic_desc">Imyourjack</dd>
-												</dl>
+													
+													
+													<dt class="nic_tit">아이디 : ${sessionScope.userVO.user_id}
+													<dt><br></dt>
+													
+													<dt class="nic_tit">
+													<label for="fname">이름  : </label>
+  													<input type="text" value="${sessionScope.userVO.user_name}">
+  													<br></dt>
+  													
+  													<dt><br></dt>
+  													
+													<dt class="nic_tit">
+													<label for="fname">비밀번호 :</label>
+  													<input type="password" value="${sessionScope.userVO.password}">
+  													<br></dt>
+  												</dl>
+  													
 											</div>
-											<p class="btn_area_btm">
-												<a href="#"
-													onclick="changeImage();clickcr(this,'imn.prfmodify','','',event);"
-													class="btn_model"><b class="btn2">수정</b></a>
+											<div>
+											<p class="btn_area_btm1">
+												<input
+													type = "button"
+													onclick="updateFn()"
+													class="btn_model" id="bt_mypage_jun" value = "수정">
+													<b class="btn_jun1"></b>
+												<button
+													type="reset"
+													class="btn_model" id="bt_mypage_jun">
+													<b class="btn_jun2">취소</b>
+												</button >
 											</p>
+											</div>
+											</div>
+										</form>
+											
 										</div>
 									</div>
 								</div>
@@ -105,8 +155,7 @@
 									<!-- 지역 설정 -->
 									<div class="sh_group">
 										<div class="sh_header">
-											<h2>지역 설정</h2>
-											<br>
+											<h2>지역 설정("추천받은 내역 보기" 넣을 곳)</h2>
 										</div>
 										<div class="sh_content">
 											<dl class="sh_lst2">
@@ -116,7 +165,7 @@
 										</div>
 										<p class="btn_area_btm">
 											<a href="/user2/help/region?menu=nid&lang=ko_KR"
-												onclick="clickcr(this,'imn.regmodify','','',event);"
+												onclick=""
 												class="btn_model"><b class="btn2">설정하기</b></a>
 										</p>
 									</div>
@@ -124,7 +173,7 @@
 								<p class="desc_sub">
 									저희 서비스를 더 이상 이용하지 않는다면 <a
 										href="/user2/help/leaveId?menu=nid&lang=ko_KR"
-										onclick="clickcr(this,'imn.memberout','','',event);"
+										onclick=""
 										class="more">회원탈퇴 바로가기</a>
 								</p>
 							</div>
