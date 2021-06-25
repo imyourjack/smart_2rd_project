@@ -139,7 +139,7 @@
                      </div>
                      <br>
                      
-                     <button type="submit" class="recosubmit">보내기</button>
+                     <button type="submit" class="recosubmit">추천 받을래요</button>
                   <!-- 버튼 css 그대로 들어가면 클래스 이름 바꿔주고 꾸미기로 하기. -->
 
                   </div>

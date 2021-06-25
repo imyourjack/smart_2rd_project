@@ -11,12 +11,14 @@ import javax.servlet.http.HttpSession;
 
 import model.DAOMybatis;
 import model.UserVO;
+import model.wonduVO;
 //@WebServlet("/recocoffee.do")
 public class AjaxCoffeeController implements Controller {
     
 	@Override
 	public String requestHandler(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
+		
 		response.setContentType("text/json;charset=euc-kr");
 		request.setCharacterEncoding("utf-8");
 		DAOMybatis dao = new DAOMybatis();
@@ -25,6 +27,13 @@ public class AjaxCoffeeController implements Controller {
 		UserVO userVO = (UserVO)session.getAttribute("userVO");
 		
 		//String aroma = request.getParameter("chk_info1");
+		//int cnt = dao.coffeeContents(userVO);
+//		PrintWriter out = response.getWriter();
+//		out.println(data);
+		
+		
+//		response.sendRedirect("./recodata.jsp");
+		
 		//String rosting = request.getParameter("chk_info2");
 		String data = request.getParameter("result");
 		
@@ -36,15 +45,15 @@ public class AjaxCoffeeController implements Controller {
 		vo.setUser_id(userVO.getUser_id());
 	    
 		dao.coffeeContents(vo);
+		// 그럼 아직 추천받은 커피를 꺼내는건 안되있는건가요?네!sql은 작성해줚는뎅 사용을 못하고 있어요 어디에 작성했나요
 		
+		session.setAttribute("wonduInfo", data);
 		
-		//int cnt = dao.coffeeContents(userVO);
-//		PrintWriter out = response.getWriter();
-//		out.println(data);
-		
-    
-//		response.sendRedirect("./recodata.jsp");
-		
+		/*
+		 * UserVO wondu_name = (UserVO)session.getAttribute("userVO"); wonduVO wonduVO =
+		 * new wonduVO(); // 예 전화통화 가능 핫;ㄴ가용 ??01046115278 dao.wondu_name();
+		 * wonduVO.getWondu_n();
+		 */
 		
 		return "redirect:/recodata.jsp";
 	}
