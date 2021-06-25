@@ -41,7 +41,7 @@ public class UserDAO {
 		  vo.setUser_id(user_id);
 		  vo.setPassword(password);
 		  vo.setUser_name(user_name);
-		  vo.setwondu_n(wondu_n);
+		  vo.setWondu_n(wondu_n);
 		  
 		  //이전 수업에 했던 부분
 //		  vo.setCount(count);

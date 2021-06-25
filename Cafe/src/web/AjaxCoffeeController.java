@@ -11,7 +11,7 @@ import javax.servlet.http.HttpSession;
 
 import model.DAOMybatis;
 import model.UserVO;
-@WebServlet("/recocoffee.do")
+//@WebServlet("/recocoffee.do")
 public class AjaxCoffeeController implements Controller {
     
 	@Override
@@ -20,24 +20,33 @@ public class AjaxCoffeeController implements Controller {
 		response.setContentType("text/json;charset=euc-kr");
 		request.setCharacterEncoding("utf-8");
 		DAOMybatis dao = new DAOMybatis();
+		 
+		HttpSession session = request.getSession();
+		UserVO userVO = (UserVO)session.getAttribute("userVO");
 		
-		 HttpSession session = request.getSession();
-		 UserVO userVO = new UserVO();		
-		session.setAttribute("userVO", userVO);
-		String aroma = request.getParameter("chk_info1");
-		String rosting = request.getParameter("chk_info2");
-		String san = request.getParameter("chk_info3");
+		//String aroma = request.getParameter("chk_info1");
+		//String rosting = request.getParameter("chk_info2");
+		String data = request.getParameter("result");
 		
 		
+		UserVO vo = new UserVO();
+		
+		
+		vo.setWondu_n(data);
+		vo.setUser_id(userVO.getUser_id());
 	    
-		int cnt = dao.coffeeContents(userVO);
-		PrintWriter out = response.getWriter();
-		out.println(cnt);
-		response.sendRedirect("/recodata.jsp");
+		dao.coffeeContents(vo);
 		
 		
+		//int cnt = dao.coffeeContents(userVO);
+//		PrintWriter out = response.getWriter();
+//		out.println(data);
 		
-		return null;
+    
+//		response.sendRedirect("./recodata.jsp");
+		
+		
+		return "redirect:/recodata.jsp";
 	}
 
 }
