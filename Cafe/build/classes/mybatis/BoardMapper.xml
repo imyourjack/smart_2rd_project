@@ -18,7 +18,7 @@
     
     <update id="Update">
       <!-- 파라메터가 여러개인 경우 vo로 묶여있기 때문에 생략 불가능하다. -->
-      update user_tbl set user_id = #{user_id}, user_name = #{user_name}, password = #{password}
+      update user_tbl set user_name = #{user_name}, password = #{password} where user_id = #{user_id}
     </update>
     
     

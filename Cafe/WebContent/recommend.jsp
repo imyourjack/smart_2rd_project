@@ -48,7 +48,7 @@
 
 
                <jsp:include page="menu.jsp">
-                       <jsp:param name="pageSelection" value="9" />
+                       <jsp:param name="pageSelection" value="2" />
                     </jsp:include>
 
             </ul>
@@ -67,7 +67,7 @@
                      <div class="gray-line-head">
                         <br>
                         <p style="font-size: 2.5em; color: #3F0000;">&nbsp;&nbsp;&nbsp;<img class="reco-img-head" src="./Resources/assets/img/bean.png" alt="..." />
-                        커피 추천 설문지</p>
+                        	커피 추천 설문지</p>
                         <br> <br>
                         <p style="font-size: 1.0em; color: #3F0000;">
                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;안녕하세요, 카페 커피입니다.<br>

@@ -22,19 +22,27 @@
 
 
 <script type="text/javascript">
-
+/* ajaxupdate.do 페이지 보여주세요 */
 function updateFn(){
-	var formData= $("#ufrm").serialize();
+	
+	var value1 = document.getElementsByClassName('change1')[0].value;
+	var value2 = document.getElementsByClassName('change1')[1].value;
+	var value3 = document.getElementsByClassName('change1')[2].value;
+	//alert(value1 +"/"+value2+"/"+value3);
 	 $.ajax({
-	      url : "ajaxupdate.do",
+	      url : "ajaxupdate.do?user_id="+value1+"&user_name="+value2+"&password="+value3,
 	      type: "post",
-	      data: formData,
-	      success: list,
-	      error: function() { alert("error");   }
-	   
-	   });
-}
+	      dataType : "JSON",
+	      success: function(data) {
 
+	    	   document.getElementsByClassName('change1')[1].value = data.user_name;
+	    	   document.getElementsByClassName('change1')[2] = data.password;
+	    	   alert("수정 성공");
+        },
+	      error: function() { alert("error");  }
+	   });
+	 
+}
 
 </script>
 
@@ -86,17 +94,12 @@ function updateFn(){
 									<div class="sh_group">
 									<br>
 									
-									<form action="">
+									<form>
 									
 										<div>
-											<div class="sh_header">
+											<div class="sh_header" method="post">
 												<h2>프로필</h2>
 												<br>
-												<!-- [D] 감추기 보이기 dislay:none/block -->
-												<p id="p_profile" class="contxt" style="display: none">
-													네이버에서의 <em>&#39;나&#39;를 표현하는 프로필</em> 정보입니다. <br> 수정
-													화면에서 프로필 사진과 별명을 변경하세요.
-												</p>
 											</div>
 											<div class="sh_content">
 												<dl class="sh_lst">
@@ -116,30 +119,29 @@ function updateFn(){
 													
 													<dt class="nic_tit">아이디 : ${sessionScope.userVO.user_id}
 													<dt><br></dt>
-													
+													<input class="change1" type="hidden" value="${sessionScope.userVO.user_id}" readonly = "readonly">
 													<dt class="nic_tit">
 													<label for="fname">이름  : </label>
-  													<input type="text" value="${sessionScope.userVO.user_name}">
+  													<input class="change1" type="text" value="${sessionScope.userVO.user_name}">
   													<br></dt>
   													
   													<dt><br></dt>
   													
 													<dt class="nic_tit">
 													<label for="fname">비밀번호 :</label>
-  													<input type="password" value="${sessionScope.userVO.password}">
+  													<input class="change1" type="password" value="${sessionScope.userVO.password}">
   													<br></dt>
   												</dl>
-  													
 											</div>
 											<div>
 											<p class="btn_area_btm1">
-												<input
+												<button
 													type = "button"
 													onclick="updateFn()"
-													value = "수정" style="
-   													 background-color: #e6a756;
+													value = "수정"
+   													 style= "background-color: #e6a756;
    													 color: rgba(47, 23, 15, 0.9);
-   													 border-radius: 15px;">
+   													 border-radius: 15px;">수정</button>
 												<button
 													type="reset"
 													class="btn_model" id="bt_mypage_jun">
@@ -154,27 +156,37 @@ function updateFn(){
 									</div>
 								</div>
 								<div class="column">
-									<!-- 지역 설정 -->
+									<!-- 추천내역 -->
 									<div class="sh_group">
 										<div class="sh_header">
-											<h2>지역 설정("추천받은 내역 보기" 넣을 곳)</h2>
+											<h2>추천 내역</h2>
 										</div>
 										<div class="sh_content">
 											<dl class="sh_lst2">
-												<dt>관심지 1</dt>
-												<dd>광주광역시 북구 누문동</dd>
+												<dt>리스트 넣을 곳</dt>
 											</dl>
 										</div>
-										<p class="btn_area_btm">
-											<a href="/user2/help/region?menu=nid&lang=ko_KR"
-												onclick=""
-												class="btn_model"><b class="btn2">설정하기</b></a>
-										</p>
+										<div>
+											<p class="btn_area_btm1">
+												<button
+													type = "button"
+													onclick=""
+													value = "수정"
+   													 style= "background-color: #e6a756;
+   													 color: rgba(47, 23, 15, 0.9);
+   													 border-radius: 15px;">수정</button>
+												<button
+													type = "button"
+													class="btn_model" id="bt_mypage_jun">
+													<b class="btn_jun2">삭제</b>
+												</button >
+											</p>
+											</div>
 									</div>
 								</div>
 								<p class="desc_sub">
 									저희 서비스를 더 이상 이용하지 않는다면 <a
-										href="/user2/help/leaveId?menu=nid&lang=ko_KR"
+										href=""
 										onclick=""
 										class="more">회원탈퇴 바로가기</a>
 								</p>
