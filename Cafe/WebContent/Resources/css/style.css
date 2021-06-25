@@ -25,6 +25,9 @@
 	 border: 2px solid black;
   	border-radius: 8px;
 }
+.gray-line2{
+	border-bottom: 2px solid #583E32!important;
+}
 
 input[type="radio"] {
   margin-right: 0;
@@ -50,7 +53,7 @@ input[type="radio"] {
 }
 .form-wrap2 {
     width: 600px;
-    height: 1850px;
+    height: 2050px;
     position: relative;
     margin: 6% auto;
     background: none;
@@ -124,7 +127,7 @@ input[type="radio"] {
     cursor: pointer;
     display: block;
     margin: 30px auto;
-    background: green;
+    background:linear-gradient(to right, #2F170F, #2F170F9C);
     color:white;
     border: 0;
     outline: none;
@@ -135,7 +138,7 @@ input[type="radio"] {
     background-size: contain;
 }
 .reco-img-head{
-	width: 30px; height: 35px;
+	width: 40px; height: 45px;
     background-size: contain;
 }
 .loginsubmit {

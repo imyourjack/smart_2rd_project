@@ -32,9 +32,9 @@ public class DAOMybatis {
 		sqlSession.close();//반납
 		return cnt;
 	}
-	public UserVO wondu_name(UserVO vo) {
+	public UserVO wondu_name(String user_id) {
 		SqlSession sqlSession = sqlSessionFactory.openSession();
-		vo = sqlSession.selectOne("wondu_name", vo);
+		UserVO vo = sqlSession.selectOne("wondu_name", user_id);
 		sqlSession.close();
 		return vo;
 	}
@@ -45,6 +45,7 @@ public class DAOMybatis {
 			sqlSession.close();//반납
 			return cnt;
 	 }
+	
 	
 	
 }

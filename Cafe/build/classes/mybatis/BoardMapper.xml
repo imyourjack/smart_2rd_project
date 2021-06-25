@@ -7,6 +7,14 @@
     <select id="loginMember" resultType="userVO">
         select * from user_tbl where user_id=#{user_id} and password=#{password}
     </select>
+
+    <insert id="coffeeContents" >
+        insert into reco_tbl(wondu_n, user_id) values(#{wondu_n},#{user_id})
+    </insert>
+    <select id="wondu_name" resultType="userVO">
+        select wondu_n from reco_tbl where user_id=#{user_id}
+    </select>
+
     
     <update id="Update">
       <!-- 파라메터가 여러개인 경우 vo로 묶여있기 때문에 생략 불가능하다. -->

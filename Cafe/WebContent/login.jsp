@@ -30,7 +30,7 @@
 			<span class="site-heading-upper text-primary mb-3"> <!-- A Free Bootstrap Business Theme -->
 			</span> <span class="site-heading-lower"> <!-- Business Casual -->
 			</span>
-		</h1>
+		</h1> 
 	</header>
 	<!-- Navigation-->
 	<nav class="navbar navbar-expand-lg navbar-dark py-lg-4" id="mainNav">
@@ -83,7 +83,7 @@
 
 							<c:if test="${sessionScope.userVO!=null}">
 									${sessionScope.userVO.user_name}님 방문을 환영합니다.
-									<button type="submit" class="loginsubmit" onclick="logoutFn()">Logout</button>
+									<input type="button" class="loginsubmit" onclick="logoutFn()" value="logout">
 							</c:if>
 
 
