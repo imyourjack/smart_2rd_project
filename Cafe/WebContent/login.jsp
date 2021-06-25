@@ -77,7 +77,7 @@
 										type="password" class="input-field" id="password"
 										name="password" placeholder="Password" required>
 									<!-- <input type="checkbox" class="checkbox"><span>Remember Password</span> -->
-									<button type="submit" class="loginsubmit" onclick="loginFn()">Login</button>
+									<input type="button" class="loginsubmit" onclick="loginFn()" value="login">
 								</form>
 							</c:if>
 

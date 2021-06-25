@@ -11066,9 +11066,36 @@ p {
     letter-spacing: -1px;
     color: #666;
 }
-
 .sh_lst .nic_tit {
-    margin: 12px 8px 0 40%;
+    margin: 12px 180px 0 40%;
+}
+.sh_lst .pic_desc {
+    position: absolute;
+   /*  top: 3px;
+    left: 0; */
+    width: 80px;
 }
 
+/* 마이페이지 수정버튼 & 취소버튼 위치 조정 css */
+b.btn_jun1 {
+    margin-left: -3%;
+    margin-right: 3%;
+}
+/* 필요없음 */
+b.btn_jun2 {
+	
+}
 
+p.btn_area_btm1 {
+    margin-left: 84%;
+}
+/* '프로필사진' 글자 위치 */
+dt.blind {
+    margin-left: 9%;
+}
+
+button#bt_mypage_jun {
+    background-color: #e6a756;
+    color: rgba(47, 23, 15, 0.9);
+    border-radius: 15px;
+}
