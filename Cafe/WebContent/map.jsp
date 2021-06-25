@@ -112,7 +112,7 @@
 			title : '스마트 인재 개발원',
 			icon : {
 				url : './Resources/assets/img/mark4.png',
-				iconsize : '90'
+				iconsize : '91'
 			},
 
 			animation : naver.maps.Animation.DROP,
