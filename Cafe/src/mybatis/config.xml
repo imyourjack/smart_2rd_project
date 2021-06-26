@@ -6,8 +6,8 @@
   <properties resource="mybatis/db.properties"/>
   <typeAliases>
       <typeAlias type="model.UserVO" alias="userVO"/>
-<!--       <typeAlias type="model.wonduVO" alias="wonduVO"/>
-      <typeAlias type="model.wonduCVO" alias="wonduCVO"/> -->
+      <typeAlias type="model.wonduVO" alias="wonduVO"/>
+      <typeAlias type="model.wonduCVO" alias="wonduCVO"/> 
   </typeAliases> 
   <environments default="development">
     <environment id="development">

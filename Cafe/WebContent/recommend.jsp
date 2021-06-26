@@ -22,6 +22,24 @@
 <link rel="stylesheet" href="./Resources/css/style.css" />
 <script
 	src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+	<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script type="text/javascript">
+function wonduContent(data) {  //위에 callContent callback 함수 만들기
+	/* $("#bc").css("display", "block"); 
+	$("#bf").css("display", "none"); */
+	var wondu_c=data.wondu_c;
+	$.ajax({
+		  url : "ajaxcontents.do",
+		  type : "get",
+		  data : {"wondu_c" : wondu_c},
+		  datatype : "json",
+		  success : wonduContent, //콜백
+		  error : function () {alert("error");}			
+	});
+	//$("#cidx").val(idx);   
+	
+}
+</script>
 </head>
 <body>
 
@@ -191,7 +209,7 @@
 							</div>
 							<br>
 
-							<button type="submit" class="recosubmit">보내기</button>
+							<button type="submit" class="recosubmit" onclick="wonduContent()">보내기</button>
 							<!-- 버튼 css 그대로 들어가면 클래스 이름 바꿔주고 꾸미기로 하기. -->
 
 
