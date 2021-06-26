@@ -11139,10 +11139,6 @@ b.btn_jun1 {
     margin-left: -3%;
     margin-right: 3%;
 }
-/* 필요없음 */
-b.btn_jun2 {
-	
-}
 
 p.btn_area_btm1 {
     margin-left: 84%;
@@ -11151,9 +11147,26 @@ p.btn_area_btm1 {
 dt.blind {
     margin-left: 9%;
 }
-
 button#bt_mypage_jun {
     background-color: #e6a756;
     color: rgba(47, 23, 15, 0.9);
     border-radius: 15px;
 }
+
+/* 추천 내역 리스트 삭제버튼 */
+p.btn_area_btm2{
+	margin-left: 91%;
+}
+
+
+/* 마이페이지 추천내역 css */
+.recommendTable {
+  font-family: arial, sans-serif;
+  border-collapse: collapse;
+  width: 100%;
+}
+
+
+
+
+

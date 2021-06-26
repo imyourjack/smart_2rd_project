@@ -25,12 +25,14 @@
 </head>
 <body>
 
+
 	<header>
 		<h1 class="site-heading text-center text-faded d-none d-lg-block">
 			<span class="site-heading-upper text-primary mb-3">Let's me
 				alone</span> <span class="site-heading-lower">home comming</span>
 		</h1>
 	</header>
+
 
 	<!-- Navigation-->
 	<nav class="navbar navbar-expand-lg navbar-dark py-lg-4" id="mainNav">
@@ -58,8 +60,9 @@
 	</nav>
 
 
+
 	<!-- 내용 넣을 곳 -->
-	<form action="http://127.0.0.1:5003" method="post">
+	<form action="http://127.0.0.1:5003" method="get">
 		<section class="page-section cta">
 			<div class="container">
 				<div class="row">
@@ -82,6 +85,7 @@
 							</div>
 							<br>
 
+
 							<div class="gray-line">
 								<p style="font-size: 1.0em; color: black;">
 								<div class="gray-line2">
@@ -93,8 +97,8 @@
 									<br>
 								</div>
 								<br> &nbsp;&nbsp;<input type="radio" name="chk_info1"
-									value="과일향">과일향<br> &nbsp;&nbsp;<input
-									type="radio" name="chk_info1" value="꽃향">꽃향<br>
+									value="과일향">과일향<br> 
+								&nbsp;&nbsp;<input type="radio" name="chk_info1" value="꽃향">꽃향<br>
 								&nbsp;&nbsp;<input type="radio" name="chk_info1" value="초콜릿향">초콜릿향<br>
 								&nbsp;&nbsp;<input type="radio" name="chk_info1" value="카라멜향">카라멜향<br>
 								&nbsp;&nbsp;<input type="radio" name="chk_info1" value="견과류향">견과류향
@@ -113,8 +117,9 @@
 									</h5>
 									<br>
 								</div>
-								<br> &nbsp;&nbsp;<input type="radio" name="chk_info2"
-									value="미디움로스팅">미디움 로스팅 : 연한 아메리카노 정도입니다.<br>
+								<br> 
+								&nbsp;&nbsp;<input type="radio" name="chk_info2"
+										value="미디움로스팅">미디움 로스팅 : 연한 아메리카노 정도입니다.<br>
 								&nbsp;&nbsp;<input type="radio" name="chk_info2" value="시티로스팅">시티
 								로스팅 : 가장 표준적인 로스팅 정도입니다.<br> &nbsp;&nbsp;<input
 									type="radio" name="chk_info2" value="풀시티로스팅">풀 시티 로스팅 :

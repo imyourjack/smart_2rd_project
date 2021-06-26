@@ -9,11 +9,23 @@
     </select>
 
     <insert id="coffeeContents" >
-        insert into reco_tbl(wondu_n, user_id) values(#{wondu_n},#{user_id})
+        insert into recos_tbl(wondu_n, user_id) values(#{wondu_n},#{user_id})
     </insert>
-    <select id="wondu_name" resultType="userVO">
-        select wondu_n from reco_tbl where user_id=#{user_id}
+    <!-- 아래에 있는 이건가요?네 잘했는데 뭐가 문제가 있나여? 이걸 이제 뿌려주는걸 못하고 있습니다.
+    	이거 실행하면 userVO 타입으로 돌려주게 해놨는데 UserVO 에는 reco_index와 wondu_n 그리고 user_id가 아니지 않아요?맞아요..맞ㄴ[ㅇ....
+    	그럼 새로운 reco_tbl VO 만들어서 3개 필드 정한다음 에 넣어서 실행하면 끝날거 같은데요 아이디만 넣어서
+    	select로 ㅋ습ㅋㄴ ㅣ다..그래요 나도 코드로 해결해주고 싶은데 이게 JSP&Servlet이 아니라 스프링으로 되어있넹 메이븐에;;
+    	박매일 부장님 스타일 같은데..해도썜 스타일입니다 그러쿤요 넵 감사하비다 썜 혹시 죄송한데 이준혁 자리로 한번만 부탁드립니다....?감사합니다..않되면 또 홀
+     -->
+    <select id="wondu_name" resultType="wonduVO">
+        select wondu_n,wondu_c,pricefrom wondu_tbl where wondu_n=#{wondu_n}
     </select>
 
+    
+    <update id="Update">
+      <!-- 파라메터가 여러개인 경우 vo로 묶여있기 때문에 생략 불가능하다. -->
+      update user_tbl set user_name = #{user_name}, password = #{password} where user_id = #{user_id}
+    </update>
+    
     
 </mapper>

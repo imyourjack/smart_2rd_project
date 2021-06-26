@@ -8,7 +8,7 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 import model.DAOMybatis;
-import model.WonduCVO;
+//import model.WonduCVO;
 
 public class AjaxSearchController implements Controller {
 
@@ -21,19 +21,19 @@ public class AjaxSearchController implements Controller {
 		String price = request.getParameter("price");
 		String cafe = request.getParameter("cafe");
 
-		WonduCVO vo = new WonduCVO();// 객체만들기
-		vo.setWondu_n(wondu_n);
-		vo.setWondu_c(wondu_c);
-		vo.setPrice(price);
-		vo.setCafe(cafe);
-		String view=null;
-//		BoardDAO dao=new BoardDAO();
-		DAOMybatis dao=new DAOMybatis();
-		WonduCVO wonducVO = dao.search(vo);
-		
-		int cnt = dao.Search(vo);
-		PrintWriter out = response.getWriter();
-		out.println(cnt);
+//		WonduCVO vo = new WonduCVO();// 객체만들기
+//		vo.setWondu_n(wondu_n);
+//		vo.setWondu_c(wondu_c);
+//		vo.setPrice(price);
+//		vo.setCafe(cafe);
+//		String view=null;
+////		BoardDAO dao=new BoardDAO();
+//		DAOMybatis dao=new DAOMybatis();
+//		WonduCVO wonducVO = dao.search(vo);
+//		
+//		int cnt = dao.Search(vo);
+//		PrintWriter out = response.getWriter();
+//		out.println(cnt);
 		
 		return null;
 	}

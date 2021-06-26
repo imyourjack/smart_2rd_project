@@ -26,18 +26,21 @@ public class DAOMybatis {
 		return vo;
 	}
 	public int coffeeContents(UserVO vo ) {
+		System.out.println(vo.getUser_id());
+		System.out.println(vo.getWondu_n());
+		
 		SqlSession sqlSession = sqlSessionFactory.openSession();
 		int cnt = sqlSession.insert("coffeeContents", vo);
 		sqlSession.commit();//완료  insert, update, delete는 commit을 해줘야함
 		sqlSession.close();//반납
 		return cnt;
 	}
-	public UserVO wondu_name(String user_id) {
-		SqlSession sqlSession = sqlSessionFactory.openSession();
-		UserVO vo = sqlSession.selectOne("wondu_name", user_id);
-		sqlSession.close();
-		return vo;
-	}
+//	public wonduCVO wondu_name(String wondu_n) {
+//	      SqlSession sqlSession = sqlSessionFactory.openSession();
+//	      wonduCVO vo = sqlSession.selectOne("wondu_name", wondu_n);
+//	      sqlSession.close();
+//	      return vo;
+//	   }
 	public int Update(UserVO vo) {
 		 SqlSession sqlSession=sqlSessionFactory.openSession();
 			int cnt = sqlSession.update("Update", vo);
@@ -46,12 +49,13 @@ public class DAOMybatis {
 			return cnt;
 	 }
 	
-	public WonduCVO search(WonduCVO vo) {
-		SqlSession sqlSession=sqlSessionFactory.openSession();
-		WonduCVO wonducvo = sqlSession.selectOne("wondu_n", wondu_n);
-		sqlSession.close();
-		return vo;
-	}
+//	public WonduCVO search(WonduCVO vo) {
+//		SqlSession sqlSession=sqlSessionFactory.openSession();
+//		WonduCVO wonducvo = sqlSession.selectOne("wondu_n", wondu_n);
+//		sqlSession.close();
+//		return vo;
+//	}
+	
 	
 	
 	
