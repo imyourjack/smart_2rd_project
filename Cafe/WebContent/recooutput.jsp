@@ -1,3 +1,5 @@
+<%@page import="model.wonduCVO"%>
+<%@page import="model.DAOMybatis"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
 <%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
@@ -74,7 +76,7 @@
 							<li class="list-unstyled-item list-hours-item d-flex">
 							<!-- li 글 쓰고 밑에 옅은 회색 줄 생김 -->
 								<!-- 여기 왼쪽 글씨 쓰는 부분 한글 안 먹힘 -->
-								<h4><br><br>아라비카 원두 </h4></li><br>
+								<h4><br><br>${sessionScope.wonduInfo }(이) 추천되었습니다.<br>견과류 특유의 향과 고소함 밀크초콜릿의 바디감 달콤하고 부드러운 산미의 커피</h4></li><br>
 								
 								<span class="ms-auto">ClosedLorem ipsum dolor sit amet, consectetur adipiscing elit.
 				Maecenas sit amet pretium urna. Vivamus venenatis velit nec neque

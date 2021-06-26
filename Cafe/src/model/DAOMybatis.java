@@ -26,18 +26,21 @@ public class DAOMybatis {
 		return vo;
 	}
 	public int coffeeContents(UserVO vo ) {
+		System.out.println(vo.getUser_id());
+		System.out.println(vo.getWondu_n());
+		
 		SqlSession sqlSession = sqlSessionFactory.openSession();
 		int cnt = sqlSession.insert("coffeeContents", vo);
 		sqlSession.commit();//완료  insert, update, delete는 commit을 해줘야함
 		sqlSession.close();//반납
 		return cnt;
 	}
-	public wonduVO wondu_name(wonduVO wondu_n) {
-		SqlSession sqlSession = sqlSessionFactory.openSession();
-		 wonduVO vo = sqlSession.selectOne("wondu_name", wondu_n);
-		sqlSession.close();
-		return vo;
-	}
+	public wonduCVO wondu_name(String wondu_n) {
+	      SqlSession sqlSession = sqlSessionFactory.openSession();
+	      wonduCVO vo = sqlSession.selectOne("wondu_name", wondu_n);
+	      sqlSession.close();
+	      return vo;
+	   }
 	public int Update(UserVO vo) {
 		 SqlSession sqlSession=sqlSessionFactory.openSession();
 			int cnt = sqlSession.update("Update", vo);
@@ -45,6 +48,7 @@ public class DAOMybatis {
 			sqlSession.close();//반납
 			return cnt;
 	 }
+	
 	
 	
 	
