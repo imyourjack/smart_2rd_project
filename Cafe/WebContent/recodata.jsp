@@ -1,4 +1,4 @@
-<%@page import="model.wonduVO"%>
+<%-- <%@page import="model.wonduVO"%> --%>
 <%@page import="com.google.gson.Gson"%>
 <%@page import="com.google.gson.annotations.JsonAdapter"%>
 <%@page import="model.UserVO"%>

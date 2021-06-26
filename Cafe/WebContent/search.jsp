@@ -105,7 +105,7 @@ function searchbeanFn() {
     	<br>
     	<% 
     	for(int i=1; i<=51; i++){
-    		
+    		  
     	}
     	 %>
       <div class="searchcolumn">
