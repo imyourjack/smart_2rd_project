@@ -20,7 +20,7 @@ select * from review_tbl;
 
 select * from user_tbl;
 select * from reco_tbl;
-select * from review_tbl;
+select * from wondu_tbl;
 
 
 
