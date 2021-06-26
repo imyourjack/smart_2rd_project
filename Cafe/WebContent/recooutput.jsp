@@ -1,4 +1,4 @@
-<%@page import="model.wonduCVO"%>
+<%-- <%@page import="model.wonduCVO"%> --%>
 <%@page import="model.DAOMybatis"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
@@ -108,10 +108,11 @@ function wonduContent(data) {  //위에 callContent callback 함수 만들기
 						<!-- 다시 하기 버튼 => recommend.jsp -->
 						<!-- 홈으로 가기 버튼 => index.jsp -->
 						<div>
+						<p>
 						<button type="button" class="recooutbtn">다시하기</button>
 						<button type="button" class="recooutbtn">홈으로</button>
+						</p>
 						</div>
-						
 					</div>
 				</div>
 			</div>

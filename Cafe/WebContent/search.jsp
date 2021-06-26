@@ -24,13 +24,37 @@
 
 <script type="text/javascript" src="./script.js"></script>
 <style type="text/css">
-.column {
-	float: left;
-	width: 25%;
-	padding: 15px;
-	color: white;
-}
+
 </style>
+<script type="text/javascript">
+function searchbeanFn() {
+	//var formData= $("#ufrm").serialize();
+    var wondu_n = $("#wondu_n").val(); //id하나만 가지고 오기위해서 val을 씀
+    var wondu_c = $("#wondu_c").val(); //serialize는 다 가져오는것 
+    var price = $("#wondu_c").val();
+    $.ajax({
+       url : "ajaxsearch.do", //글쓰기 버튼을 누르면 serialize을 가지고ajaxregister여기로 연결해서 처리해주고
+       type : "get",
+       data : {
+          "wondu_n" : wondu_n,
+          "wondu_c" : wondu_c,
+          "price" : price
+       }, //"파라메터":벨류값
+       success : function(data) {
+          if (data == "NO") {
+             alert("검색을 실패하셨습니다.");
+          } else {
+             selectWondu; //search 성공하면 같은 
+          }
+       }, //처리가 성공하면 바로 list를 뽑아준다
+       error : function() {alert("search error");}
+    });
+ }
+ function selectWondu(){
+	 
+ }
+
+</script>
 </head>
 <body>
 	<header>
@@ -65,49 +89,118 @@
 	</nav>
 	<div class="searchbean">
 	<!-- 여기 원두 검색 -->
-	
+	</div>
+	<form>
+	<br>
+	<br>
+	<div class="searchbar">
+	<input type="text" id="coffeebean" name="coffeebean" placeholder="원두 이름">&nbsp;&nbsp;
+	<input type="button"  class="searchbtn" value="검색하기" onclick="searchbeanFn()">
+	</div>
+	<br>
+	<br>
+	</form>
 	<section>
-	<br>
-	<input type="text" id="coffeebean" name="coffeebean" placeholder="원두의 이름을 입력하세요">
-	<input type="submit"  value="검색하기" onclick="searchbeanFn()">
-	<br>
-	</section>
+  <searchnav>
+    	<br>
+    	<% 
+    	for(int i=1; i<=51; i++){
+    		  
+    	}
+    	 %>
+      <div class="searchcolumn">
+			<h2>원두 이름1</h2>
+			<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+				Maecenas sit amet pretium urna. Vivamus venenatis velit nec neque
+				ultricies, eget elementum magna tristique. Quisque vehicula, risus
+				eget aliquam placerat, purus leo tincidunt eros, eget luctus quam
+				orci in velit. Praesent scelerisque tortor sed accumsan convallis.</p>
+		</div>
+      <div class="searchcolumn">
+			<h2>원두 이름2</h2>
+			<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+				Maecenas sit amet pretium urna. Vivamus venenatis velit nec neque
+				ultricies, eget elementum magna tristique. Quisque vehicula, risus
+				eget aliquam placerat, purus leo tincidunt eros, eget luctus quam
+				orci in velit. Praesent scelerisque tortor sed accumsan convallis.</p>
+                
+		</div>
+        <div class="searchcolumn">
+			<h2>원두 이름3</h2>
+			<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+				Maecenas sit amet pretium urna. Vivamus venenatis velit nec neque
+				ultricies, eget elementum magna tristique. Quisque vehicula, risus
+				eget aliquam placerat, purus leo tincidunt eros, eget luctus quam
+				orci in velit. Praesent scelerisque tortor sed accumsan convallis.</p>
+		</div>
+        <div class="searchcolumn">
+			<h2>원두 이름4</h2>
+			<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+				Maecenas sit amet pretium urna. Vivamus venenatis velit nec neque
+				ultricies, eget elementum magna tristique. Quisque vehicula, risus
+				eget aliquam placerat, purus leo tincidunt eros, eget luctus quam
+				orci in velit. Praesent scelerisque tortor sed accumsan convallis.</p>
+		</div>
+		<div class="searchcolumn">
+			<h2>원두 이름5</h2>
+			<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+				Maecenas sit amet pretium urna. Vivamus venenatis velit nec neque
+				ultricies, eget elementum magna tristique. Quisque vehicula, risus
+				eget aliquam placerat, purus leo tincidunt eros, eget luctus quam
+				orci in velit. Praesent scelerisque tortor sed accumsan convallis.</p>
+		</div>
+		<div class="searchcolumn">
+			<h2>원두 이름6</h2>
+			<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+				Maecenas sit amet pretium urna. Vivamus venenatis velit nec neque
+				ultricies, eget elementum magna tristique. Quisque vehicula, risus
+				eget aliquam placerat, purus leo tincidunt eros, eget luctus quam
+				orci in velit. Praesent scelerisque tortor sed accumsan convallis.</p>
+		</div>
+		<div class="searchcolumn">
+			<h2>원두 이름7</h2>
+			<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+				Maecenas sit amet pretium urna. Vivamus venenatis velit nec neque
+				ultricies, eget elementum magna tristique. Quisque vehicula, risus
+				eget aliquam placerat, purus leo tincidunt eros, eget luctus quam
+				orci in velit. Praesent scelerisque tortor sed accumsan convallis.</p>
+		</div>
+		<div class="searchcolumn">
+			<h2>원두 이름8</h2>
+			<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+				Maecenas sit amet pretium urna. Vivamus venenatis velit nec neque
+				ultricies, eget elementum magna tristique. Quisque vehicula, risus
+				eget aliquam placerat, purus leo tincidunt eros, eget luctus quam
+				orci in velit. Praesent scelerisque tortor sed accumsan convallis.</p>
+		</div>
+      
+   <br>
+    <br>
+  </searchnav>
+  
+  <searchranking>
+  <br>
+    <h1>&nbsp;&nbsp;인 기 목 록</h1>
+    <br>
+    <h3>&nbsp;&nbsp;&nbsp;&nbsp;1. 원두1</h3>
+    <h3>&nbsp;&nbsp;&nbsp;&nbsp;2. 원두2</h3>
+    <h3>&nbsp;&nbsp;&nbsp;&nbsp;3. 원두3</h3>
+    <h3>&nbsp;&nbsp;&nbsp;&nbsp;4. 원두4</h3>
+    <h3>&nbsp;&nbsp;&nbsp;&nbsp;5. 원두5</h3>
+    <h3>&nbsp;&nbsp;&nbsp;&nbsp;6. 원두6</h3>
+    <h3>&nbsp;&nbsp;&nbsp;&nbsp;7. 원두7</h3>
+    <h3>&nbsp;&nbsp;&nbsp;&nbsp;8. 원두8</h3>
+    <h3>&nbsp;&nbsp;&nbsp;&nbsp;9. 원두9</h3>
+    <h3>&nbsp;&nbsp;&nbsp;&nbsp;10. 원두10</h3>
+    <br>
+    <br>
+    <p>블라블라 임의 할말 없으면 br</p>
+  </searchranking>
+</section>
 	
 	
-	</div>
 
-	<div class="row">
-		<div class="column">
-			<h2>Column</h2>
-			<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-				Maecenas sit amet pretium urna. Vivamus venenatis velit nec neque
-				ultricies, eget elementum magna tristique. Quisque vehicula, risus
-				eget aliquam placerat, purus leo tincidunt eros, eget luctus quam
-				orci in velit. Praesent scelerisque tortor sed accumsan convallis.</p>
-		</div>
-
-		<div class="column">
-			<h2>Column</h2>
-			<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-				Maecenas sit amet pretium urna. Vivamus venenatis velit nec neque
-				ultricies, eget elementum magna tristique. Quisque vehicula, risus
-				eget aliquam placerat, purus leo tincidunt eros, eget luctus quam
-				orci in velit. Praesent scelerisque tortor sed accumsan convallis.</p>
-		</div>
-
-		<div class="column">
-			<h2>Column</h2>
-			<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-				Maecenas sit amet pretium urna. Vivamus venenatis velit nec neque
-				ultricies, eget elementum magna tristique. Quisque vehicula, risus
-				eget aliquam placerat, purus leo tincidunt eros, eget luctus quam
-				orci in velit. Praesent scelerisque tortor sed accumsan convallis.</p>
-		</div>
-	<br>
-	<br>
-		
-	</div>
-
+	
 	<footer class="footer text-faded text-center py-5">
 		<div class="container">
 			<p class="m-0 small">Copyright &copy; Your Website 2021</p>

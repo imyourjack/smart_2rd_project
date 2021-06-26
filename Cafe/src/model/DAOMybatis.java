@@ -39,6 +39,7 @@ public class DAOMybatis {
 		sqlSession.close();//반납
 		return cnt;
 	}
+
 	public wonduCVO wondu_name(String wondu_n) {
 		  System.out.println("원두이름 : " + wondu_n); //확인해보려고 출력문
 	      SqlSession sqlSession = sqlSessionFactory.openSession();
@@ -46,6 +47,14 @@ public class DAOMybatis {
 	      sqlSession.close();
 	      return vo;
 	 }
+
+//	public wonduCVO wondu_name(String wondu_n) {
+//	      SqlSession sqlSession = sqlSessionFactory.openSession();
+//	      wonduCVO vo = sqlSession.selectOne("wondu_name", wondu_n);
+//	      sqlSession.close();
+//	      return vo;
+//	   }
+
 	public int Update(UserVO vo) {
 		 SqlSession sqlSession=sqlSessionFactory.openSession();
 			int cnt = sqlSession.update("Update", vo);
@@ -59,6 +68,14 @@ public class DAOMybatis {
 		sqlSession.close();
 		return vo;
 	}
+	
+//	public WonduCVO search(WonduCVO vo) {
+//		SqlSession sqlSession=sqlSessionFactory.openSession();
+//		WonduCVO wonducvo = sqlSession.selectOne("wondu_n", wondu_n);
+//		sqlSession.close();
+//		return vo;
+//	}
+	
 	
 	
 	
