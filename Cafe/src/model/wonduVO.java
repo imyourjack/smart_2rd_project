@@ -1,16 +1,16 @@
 package model;
 
-public class wonduVO {
-     
-	private int reco_index;
-	private String wondu_n;
-	private String user_idx;
+public class wonduVO {   //원두 VO
+    
+	private int reco_idx;  // 추천 인덱스
+	private String wondu_n; // 원두 네임
+	private String user_idx;  //유저 번호
 	
-	public int getReco_index() {
-		return reco_index;
+	public int getReco_idx() {
+		return reco_idx;
 	}
-	public void setReco_index(int reco_index) {
-		this.reco_index = reco_index;
+	public void setReco_idx(int reco_idx) {
+		this.reco_idx = reco_idx;
 	}
 	public String getWondu_n() {
 		return wondu_n;
@@ -24,8 +24,6 @@ public class wonduVO {
 	public void setUser_idx(String user_idx) {
 		this.user_idx = user_idx;
 	}
-	
-	
 	
 	
 }

@@ -83,7 +83,7 @@ input[type="radio"] {
     position: absolute;
     width: 130px;
     height: 100%;
-    background: linear-gradient(to right, #ff105f, #ffad06);
+    background: linear-gradient(to right, #e6a756, #ebb877);
     border-radius: 30px;
     transition: .5s;
 }
@@ -110,13 +110,15 @@ input[type="radio"] {
     outline: none;
     background: transparent;
 }
+/* 회원가입 보내기 버튼*/
 .registersubmit {
     width: 85%;
     padding: 10px 30px;
     cursor: pointer;
     display: block;
     margin: 30px auto;
-    background: linear-gradient(to right, #ff105f, #ffad06);
+    color:white;
+    background: linear-gradient(to right, #e6a756, #ebb877);
     border: 0;
     outline: none;
     border-radius: 30px;
@@ -149,13 +151,15 @@ input[type="radio"] {
     background-size: contain;
 }
 
+/* 로그인 보내기 버튼*/
 .loginsubmit {
     width: 85%;
     padding: 10px 30px;
     cursor: pointer;
     display: block;
     margin: 200px auto;
-    background: linear-gradient(to right, #ff105f, #ffad06);
+    color:white;
+    background: linear-gradient(to right, #e6a756, #ebb877);
     border: 0;
     outline: none;
     border-radius: 30px;
@@ -167,7 +171,7 @@ span {
     color: #777;
     font-size: 12px;
     bottom: 68px;
-    position: absolute;
+    /* position: absolute; */
 }
 #login {
     left: 50px;

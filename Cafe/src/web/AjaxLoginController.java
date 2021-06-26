@@ -19,6 +19,8 @@ public class AjaxLoginController implements Controller {
 		 String user_id = request.getParameter("user_id");
 	     String password = request.getParameter("password");
 		
+	     System.out.println(user_id);
+	     
 	     UserVO vo = new UserVO();
 	     vo.setUser_id(user_id);
 		 vo.setPassword(password);

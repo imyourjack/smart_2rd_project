@@ -22,8 +22,27 @@
 <link rel="stylesheet" href="./Resources/css/style.css" />
 <script
 	src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+	<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script type="text/javascript">
+function wonduContent(data) {  //위에 callContent callback 함수 만들기
+	/* $("#bc").css("display", "block"); 
+	$("#bf").css("display", "none"); */
+	var wondu_c=data.wondu_c;
+	$.ajax({
+		  url : "ajaxcontents.do",
+		  type : "get",
+		  data : {"wondu_c" : wondu_c},
+		  datatype : "json",
+		  success : wonduContent, //콜백
+		  error : function () {alert("error");}			
+	});
+	//$("#cidx").val(idx);   
+	
+}
+</script>
 </head>
 <body>
+
 
 	<header>
 		<h1 class="site-heading text-center text-faded d-none d-lg-block">
@@ -31,6 +50,7 @@
 				alone</span> <span class="site-heading-lower">home comming</span>
 		</h1>
 	</header>
+
 
 	<!-- Navigation-->
 	<nav class="navbar navbar-expand-lg navbar-dark py-lg-4" id="mainNav">
@@ -95,8 +115,8 @@
 									<br>
 								</div>
 								<br> &nbsp;&nbsp;<input type="radio" name="chk_info1"
-									value="과일향">과일향<br> &nbsp;&nbsp;<input
-									type="radio" name="chk_info1" value="꽃향">꽃향<br>
+									value="과일향">과일향<br> 
+								&nbsp;&nbsp;<input type="radio" name="chk_info1" value="꽃향">꽃향<br>
 								&nbsp;&nbsp;<input type="radio" name="chk_info1" value="초콜릿향">초콜릿향<br>
 								&nbsp;&nbsp;<input type="radio" name="chk_info1" value="카라멜향">카라멜향<br>
 								&nbsp;&nbsp;<input type="radio" name="chk_info1" value="견과류향">견과류향
@@ -115,8 +135,9 @@
 									</h5>
 									<br>
 								</div>
-								<br> &nbsp;&nbsp;<input type="radio" name="chk_info2"
-									value="미디움로스팅">미디움 로스팅 : 연한 아메리카노 정도입니다.<br>
+								<br> 
+								&nbsp;&nbsp;<input type="radio" name="chk_info2"
+										value="미디움로스팅">미디움 로스팅 : 연한 아메리카노 정도입니다.<br>
 								&nbsp;&nbsp;<input type="radio" name="chk_info2" value="시티로스팅">시티
 								로스팅 : 가장 표준적인 로스팅 정도입니다.<br> &nbsp;&nbsp;<input
 									type="radio" name="chk_info2" value="풀시티로스팅">풀 시티 로스팅 :
@@ -188,7 +209,7 @@
 							</div>
 							<br>
 
-							<button type="submit" class="recosubmit">보내기</button>
+							<button type="submit" class="recosubmit" onclick="wonduContent()">보내기</button>
 							<!-- 버튼 css 그대로 들어가면 클래스 이름 바꿔주고 꾸미기로 하기. -->
 
 

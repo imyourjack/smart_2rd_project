@@ -12,8 +12,8 @@
  */
  
  .recooutbtn{
-	width: 150px;
-    padding: 15px 25px;
+	width: 120px;
+    padding: 13px 20px;
     cursor: pointer;
     display: block;
     margin: 30px auto;
@@ -23,6 +23,51 @@
     outline: none;
     border-radius: 30px;
 }
+
+/*여기 4개부터 search 페이지*/
+/* Create two columns/boxes that floats next to each other */
+searchnav {
+  float: left;
+  width: 75%;
+  height: auto; 
+  /* only for demonstration, should be removed 
+  기본값 300px였는데 auto로 했다. 여기 말 보니까 지워도 될 듯*/
+  background: none;
+  padding: 10px;
+}
+
+/* Style the list inside the menu */
+searchnavul {
+  list-style-type: none;
+  padding: 0;
+}
+
+searchranking {
+  float: left;
+  padding: 20px;
+  width: 25%;
+  
+  background-color: rgba(246, 225, 197, 0.8);
+  /*아주 옅은 회색*/
+  height: auto; /* only for demonstration, should be removed */
+}
+.searchcolumn {
+	float: left;
+	width: 32%;
+	padding: 10px;
+	color: white;
+}
+
+/* Clear floats after the columns */
+section::after {
+  content: "";
+  display: table;
+  clear: both;
+}
+.searchbar{
+	margin-left: 33%;
+}
+
 :root {
   --bs-blue: #0d6efd;
   --bs-indigo: #6610f2;
@@ -10955,7 +11000,7 @@ p {
 .cta {
   padding-top: 5rem;
   padding-bottom: 5rem;
-  background-color: rgba(230, 167, 86, 0.9);
+  background-color: rgba(230, 167, 86, 0.8);
 }
 .cta .cta-inner {
   position: relative;
@@ -11094,10 +11139,6 @@ b.btn_jun1 {
     margin-left: -3%;
     margin-right: 3%;
 }
-/* 필요없음 */
-b.btn_jun2 {
-	
-}
 
 p.btn_area_btm1 {
     margin-left: 84%;
@@ -11106,9 +11147,26 @@ p.btn_area_btm1 {
 dt.blind {
     margin-left: 9%;
 }
-
 button#bt_mypage_jun {
     background-color: #e6a756;
     color: rgba(47, 23, 15, 0.9);
     border-radius: 15px;
 }
+
+/* 추천 내역 리스트 삭제버튼 */
+p.btn_area_btm2{
+	margin-left: 91%;
+}
+
+
+/* 마이페이지 추천내역 css */
+.recommendTable {
+  font-family: arial, sans-serif;
+  border-collapse: collapse;
+  width: 100%;
+}
+
+
+
+
+
