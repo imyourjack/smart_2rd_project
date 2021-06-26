@@ -12,6 +12,8 @@
 #searchbean{
 	align:center;
 }
+
+
 .gray-line-head{
 	 background: #FFF2E6;
 	 color:#583E32;
@@ -133,6 +135,7 @@ input[type="radio"] {
     outline: none;
     border-radius: 30px;
 }
+
 .reco-img{
 	width: 20px; height: 20px;
     background-size: contain;
@@ -141,6 +144,11 @@ input[type="radio"] {
 	width: 40px; height: 45px;
     background-size: contain;
 }
+.recooutput-img{
+	width: 180px; height: 180px;
+    background-size: contain;
+}
+
 .loginsubmit {
     width: 85%;
     padding: 10px 30px;
