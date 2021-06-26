@@ -88,10 +88,11 @@
 						<!-- 다시 하기 버튼 => recommend.jsp -->
 						<!-- 홈으로 가기 버튼 => index.jsp -->
 						<div>
+						<p>
 						<button type="button" class="recooutbtn">다시하기</button>
 						<button type="button" class="recooutbtn">홈으로</button>
+						</p>
 						</div>
-						
 					</div>
 				</div>
 			</div>

@@ -61,29 +61,5 @@ public class UserDAO {
 		 int cnt=ps.executeUpdate();//실행
 		 return cnt;
 	}
-//	// userDelete()
-//	public int userDelete(int idx) throws Exception {
-//		 Connection conn=getConnect();
-//		 String SQL="delete from user_tbl where user_id=?";
-//		 ps=conn.prepareStatement(SQL);
-//		 ps.setString(1, user_id); //여기 user_id 들어가면 되지 않나? 왜 에러?
-//		 int cnt=ps.executeUpdate(); //실행
-//		 return cnt;
-//	}
-	
-//	// userUpdate()
-//    public int userUpdate(UserVO vo) throws Exception {
-//    	Connection conn=getConnect();
-//    	String SQL="update user_tbl set user_id = ?, password = ? where idx = ?";
-	
-	//여기에는 idx가 없는데 무슨 값으로 하지? 그냥 where 빼고 user_id를 넣워줘야 하나??
-	//이렇게? => String SQL="update user_tbl set password = ?, user_name = ? where user_id = ?";
-	
-//    	ps=conn.prepareStatement(SQL);
 
-//    	ps.setString(2, vo.getPassword());
-//    	ps.setString(2, vo.getUser_name());
-//    	int cnt=ps.executeUpdate();//실행
-//    	return cnt;
-//    }
 }

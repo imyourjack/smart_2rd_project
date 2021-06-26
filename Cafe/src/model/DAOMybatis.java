@@ -46,6 +46,14 @@ public class DAOMybatis {
 			return cnt;
 	 }
 	
+	public WonduCVO search(WonduCVO vo) {
+		SqlSession sqlSession=sqlSessionFactory.openSession();
+		WonduCVO wonducvo = sqlSession.selectOne("wondu_n", wondu_n);
+		sqlSession.close();
+		return vo;
+	}
+	
+	
 	
 	
 }
