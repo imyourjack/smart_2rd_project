@@ -32,12 +32,12 @@ public class DAOMybatis {
 		sqlSession.close();//반납
 		return cnt;
 	}
-	public wonduVO wondu_name(wonduVO wondu_n) {
-		SqlSession sqlSession = sqlSessionFactory.openSession();
-		 wonduVO vo = sqlSession.selectOne("wondu_name", wondu_n);
-		sqlSession.close();
-		return vo;
-	}
+	public wonduCVO wondu_name(String wondu_n) {
+	      SqlSession sqlSession = sqlSessionFactory.openSession();
+	      wonduCVO vo = sqlSession.selectOne("wondu_name", wondu_n);
+	      sqlSession.close();
+	      return vo;
+	   }
 	public int Update(UserVO vo) {
 		 SqlSession sqlSession=sqlSessionFactory.openSession();
 			int cnt = sqlSession.update("Update", vo);

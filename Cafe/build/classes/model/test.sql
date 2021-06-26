@@ -21,8 +21,9 @@ select * from review_tbl;
 select * from user_tbl;
 select * from reco_tbl;
 select * from review_tbl;
+insert into reco_tbl(wondu_n, user_id) values('과테말라 안티구아','admin')
 
-
+select * from reco_tbl
 
 create table wondu_tbl(
    wondu_n varchar(100) not null,

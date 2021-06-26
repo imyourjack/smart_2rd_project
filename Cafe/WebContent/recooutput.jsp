@@ -74,7 +74,7 @@
 							<li class="list-unstyled-item list-hours-item d-flex">
 							<!-- li 글 쓰고 밑에 옅은 회색 줄 생김 -->
 								<!-- 여기 왼쪽 글씨 쓰는 부분 한글 안 먹힘 -->
-								<h4><br><br>아라비카 원두 </h4></li><br>
+								<h4><br><br>${sessionScope.wonduInfo }시팔 </h4></li><br>
 								
 								<span class="ms-auto">ClosedLorem ipsum dolor sit amet, consectetur adipiscing elit.
 				Maecenas sit amet pretium urna. Vivamus venenatis velit nec neque

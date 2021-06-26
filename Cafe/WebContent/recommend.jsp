@@ -60,7 +60,7 @@
 
 
 	<!-- 내용 넣을 곳 -->
-	<form action="http://127.0.0.1:5003" method="post">
+	<form action="http://127.0.0.1:5003" method="get">
 		<section class="page-section cta">
 			<div class="container">
 				<div class="row">
