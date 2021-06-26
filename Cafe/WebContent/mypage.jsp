@@ -184,25 +184,25 @@ tr:nth-child(even) {
 													<th>가격</th>
 												</tr>
 												<tr>
-													<th><input type="radio"></th>
+													<th><input type="radio" name="o"></th>
 													<td>에티오피아 아리차 내추럴 g1</td>
 													<td>은은한 꽃향과 상큼한 베리향의 프리미엄 커피</td>
 													<td>7500</td>
 												</tr>
 												<tr>
-													<th><input type="radio"></th>
+													<th><input type="radio" name="o"></th>
 													<td>인도 마이소르 너깃 엑스트라 볼드</td>
 													<td>견과류 특유의 향과 고소함 밀크초콜릿의 바디감 달콤하고 부드러운 산미의 커피</td>
 													<td>8000</td>
 												</tr>
 												<tr>
-													<th><input type="radio"></th>
+													<th><input type="radio" name="o"></th>
 													<td>인도네시아 만델링 g1</td>
 													<td>밀크초콜릿의 부드러움 초콜릿같은 풍미 묵직한 바디감의 커피</td>
 													<td>9500</td>
 												</tr>
 												<tr>
-													<th><input type="radio"></th>
+													<th><input type="radio"name="o"></th>
 													<td>르완다 버번</td>
 													<td>감귤류의 달콤함 허브의 향 다크초콜릿의 쌉쌉름한 커피</td>
 													<td>7500</td>

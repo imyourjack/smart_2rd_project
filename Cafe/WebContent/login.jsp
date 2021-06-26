@@ -73,8 +73,8 @@
 							<c:if test="${sessionScope.userVO==null}">
 								<form id="login" class="input-group" method="post">
 									<input type="text" class="input-field" id="user_id"
-										name="user_id" placeholder="User ID" required> <input
-										type="password" class="input-field" id="password"
+										name="user_id" placeholder="User ID" required> 
+									<input type="password" class="input-field" id="password"
 										name="password" placeholder="Password" required>
 									<!-- <input type="checkbox" class="checkbox"><span>Remember Password</span> -->
 									<input type="button" class="loginsubmit" onclick="loginFn()" value="login">

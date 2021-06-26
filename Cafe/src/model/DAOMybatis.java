@@ -7,6 +7,8 @@ import org.apache.ibatis.session.SqlSession;
 import org.apache.ibatis.session.SqlSessionFactory;
 import org.apache.ibatis.session.SqlSessionFactoryBuilder;
 
+
+
 public class DAOMybatis {
 	private static SqlSessionFactory sqlSessionFactory;
 	static { // 초기화 블록
@@ -20,8 +22,10 @@ public class DAOMybatis {
 	}
 	
 	public UserVO loginMember(UserVO vo) {
-		SqlSession sqlSession = sqlSessionFactory.openSession();
+		SqlSession sqlSession = sqlSessionFactory.openSession();//XML접근
+		
 		vo = sqlSession.selectOne("loginMember", vo);
+		
 		sqlSession.close();
 		return vo;
 	}
@@ -30,17 +34,18 @@ public class DAOMybatis {
 		System.out.println(vo.getWondu_n());
 		
 		SqlSession sqlSession = sqlSessionFactory.openSession();
-		int cnt = sqlSession.insert("coffeeContents", vo);
+		int cnt = sqlSession.insert("coffeeContents", vo);     //커피컨텐츠(정보) 를 넣는 sql문 ->boardmapper
 		sqlSession.commit();//완료  insert, update, delete는 commit을 해줘야함
 		sqlSession.close();//반납
 		return cnt;
 	}
 	public wonduCVO wondu_name(String wondu_n) {
+		  System.out.println("원두이름 : " + wondu_n); //확인해보려고 출력문
 	      SqlSession sqlSession = sqlSessionFactory.openSession();
-	      wonduCVO vo = sqlSession.selectOne("wondu_name", wondu_n);
+	      wonduCVO vo = sqlSession.selectOne("wondu_name", wondu_n);   // 원두 이름이라는 sql문
 	      sqlSession.close();
 	      return vo;
-	   }
+	 }
 	public int Update(UserVO vo) {
 		 SqlSession sqlSession=sqlSessionFactory.openSession();
 			int cnt = sqlSession.update("Update", vo);
@@ -48,6 +53,12 @@ public class DAOMybatis {
 			sqlSession.close();//반납
 			return cnt;
 	 }
+	public wonduCVO wonduContent(wonduCVO cvo){
+		SqlSession sqlSession = sqlSessionFactory.openSession();	
+		wonduCVO vo = sqlSession.selectOne("wonduContent", cvo);  // 원두 컨텐츠 뽑는 sql문
+		sqlSession.close();
+		return vo;
+	}
 	
 	
 	

@@ -1,10 +1,10 @@
 package model;
 
-public class wonduVO {
+public class wonduVO {   //원두 VO
     
-	private int reco_idx;
-	private String wondu_n;
-	private String user_idx;
+	private int reco_idx;  // 추천 인덱스
+	private String wondu_n; // 원두 네임
+	private String user_idx;  //유저 번호
 	public int getReco_idx() {
 		return reco_idx;
 	}

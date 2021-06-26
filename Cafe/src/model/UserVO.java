@@ -4,7 +4,7 @@ public class UserVO {
    private String user_id;
    private String password;
    private String user_name;
-   private String wondu_n;
+   private String wondu_n; //원두 이름
 
 public String getUser_id() {
 	return user_id;

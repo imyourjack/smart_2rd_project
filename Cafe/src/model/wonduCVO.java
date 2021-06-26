@@ -1,10 +1,10 @@
 package model;
 
-public class wonduCVO {
-    private String wondu_n;
-    private String wondu_c;
-    private String price;
-    private String Cafe;
+public class wonduCVO {  //원두컨텐츠 VO
+    private String wondu_n; //원두네임
+    private String wondu_c; //원두 컨텐츠
+    private String price;    // 가격
+    private String Cafe;    // 카페
 	
 	public String getWondu_n() {
 		return wondu_n;
