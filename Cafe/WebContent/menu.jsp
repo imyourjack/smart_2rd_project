@@ -48,50 +48,48 @@
 	>커피맵</a>
 </li>
 
-						
+<li class="nav-item px-lg-4">
+	<a class="nav-link text-uppercase" href="content.jsp"
+		<%
+			if(num.equals("5")){
+		%>
+			style="color:#e6a756;"
+		<% } %>
+	>자유게시판</a>
+</li>
 
-					<li class="nav-item px-lg-4"><a
-						class="nav-link text-uppercase" href="about.jsp">About</a></li>
-
-					<li class="nav-item px-lg-4"><a
-						class="nav-link text-uppercase" href="products.jsp">Products</a></li>
-
-					<li class="nav-item px-lg-4"><a
-						class="nav-link text-uppercase" href="store.jsp">Store</a></li>
-						
-						
 <c:if test="${sessionScope.userVO==null}">
 <li class="nav-item px-lg-4">
 	<a class="nav-link text-uppercase" href="login.jsp" onclick="mypageFn()"
 		<%
-			if(num.equals("9")){
+			if(num.equals("6")){
 		%>
 	   		
 			style="color:#e6a756;"
 		<% } %>
 	>마이페이지</a>
 </li>
-</c:if>			
+</c:if>
 
 
 <c:if test="${sessionScope.userVO!=null}">
 <li class="nav-item px-lg-4">
 	<a class="nav-link text-uppercase" href="mypage.jsp"
 		<%
-			if(num.equals("9")){
+			if(num.equals("6")){
 		%>
 			
 			style="color:#e6a756;"
 		<% } %>
 	>마이페이지</a>
 </li>
-</c:if>			
+</c:if>
 
 <c:if test="${sessionScope.userVO==null}">
 <li class="nav-item px-lg-4">
 	<a class="nav-link text-uppercase" href="login.jsp"
 		<%
-			if(num.equals("10")){
+			if(num.equals("7")){
 		%>
 			style="color:#e6a756;"
 		<% } %>
@@ -104,7 +102,7 @@
 	<a class="nav-link text-uppercase" href="index.jsp"
 	   onclick="logoutFn()"
 		<%
-			if(num.equals("10")){
+			if(num.equals("7")){
 		%>
 			style="color:#e6a756;"
 		<% } %>

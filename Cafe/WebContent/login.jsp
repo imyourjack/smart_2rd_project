@@ -49,7 +49,7 @@
 				
 				
 					<jsp:include page="menu.jsp">
-                    	<jsp:param name="pageSelection" value="10" />
+                    	<jsp:param name="pageSelection" value="7" />
                     </jsp:include>
 				
 

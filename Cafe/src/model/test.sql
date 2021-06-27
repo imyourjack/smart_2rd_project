@@ -1,9 +1,18 @@
 
 DROP TABLE user_tbl CASCADE;
 DROP TABLE wondu_tbl CASCADE;
-DROP TABLE wondu_good CASCADE;
-DROP TABLE review_tbl CASCADE;
-DROP TABLE recos_tbl CASCADE;
+DROP TABLE wondu_good CASCADE; --만족도
+DROP TABLE review_tbl CASCADE; --자유게시판
+DROP TABLE recos_tbl CASCADE; --추천받은 원두
+
+--무적 테이블 뿌수기
+SET foreign_key_checks = 0;
+drop table wondu_tbl CASCADE;
+SET foreign_key_checks = 1;
+
+select * from wondu_tbl;
+select * from recos_tbl;
+select * from user_tbl;
 
 create table user_tbl(
    user_id varchar(30) not null,
@@ -12,16 +21,11 @@ create table user_tbl(
    primary key(user_id)
 );
 
-insert into recos_tbl(wondu_n, user_id) values('디카페인 과테말라' , 'admin');
+--insert into recos_tbl(wondu_n, user_id) values('디카페인 과테말라' , 'admin');
  
 insert into user_tbl values('admin','admin','관리자');
 insert into user_tbl values('min', '12345','아가형민');
-
-
-select * from wondu_tbl;
-
-select * from user_tbl;
-
+insert into user_tbl values('jun', '12345','준짱');
 
 create table wondu_tbl(
    wondu_idx int not null,
@@ -32,15 +36,23 @@ create table wondu_tbl(
    primary key(wondu_n)
 );
 
+insert into recos_tbl(wondu_n, user_id) values('멕시코 치아파스','admin');
+insert into recos_tbl(wondu_n, user_id) values('멕시코 치아파스','jun');
+
+select * from recos_tbl;
+select * from recos_tbl;
+
 create table review_tbl(
    r_idx int not null auto_increment,
    wondu_r varchar(500) not null,
    wondu_n varchar(100) not null,
-   user_id varchar(30) not null, 
+   user_id varchar(30) not null, --name?
    primary key(r_idx),
    FOREIGN KEY (wondu_n) REFERENCES wondu_tbl (wondu_n),
    FOREIGN KEY (user_id) REFERENCES user_tbl (user_id)
 );
+
+insert into review_tbl values(1,'상큼한 베리향이 정말 좋아요!','멕시코 치아파스','jun');
 
 create table wondu_good(
   good_index int not null auto_increment,
@@ -49,11 +61,8 @@ create table wondu_good(
   primary key(good_index),
   FOREIGN KEY (wondu_n) REFERENCES wondu_tbl (wondu_n)
 );
-select * from wondu_tbl;
 
 TRUNCATE reco_tbl;
-
-
 
 create table recos_tbl(
   reco_index int not null auto_increment,
@@ -63,10 +72,6 @@ create table recos_tbl(
    FOREIGN KEY (wondu_n) REFERENCES wondu_tbl (wondu_n),
    FOREIGN KEY (user_id) REFERENCES user_tbl (user_id)
 ); 
-select * from wondu_tbl;
-
-insert into user_tbl values('babo', '1234','아가채원');
-insert into user_tbl values('babo2', '12345','아가채원');
 
 
 insert into wondu_tbl values('1','에티오피아 아리차 내추럴 g1','은은한 꽃향과 상큼한 베리향의 프리미엄 커피','7500','카페 젬마');
