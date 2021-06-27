@@ -9,11 +9,21 @@
     </select>
 
     <insert id="coffeeContents" >
-        insert into reco_tbl(wondu_n, user_id) values(#{wondu_n},#{user_id})
+        insert into recos_tbl(wondu_n, user_id) values(#{wondu_n},#{user_id})
     </insert>
-    <select id="wondu_name" resultType="userVO">
-        select wondu_n from reco_tbl where user_id=#{user_id}
+    
+    <select id="wondu_name" resultType="wonduCVO">
+        select wondu_n,wondu_c,price from wondu_tbl where wondu_n=#{wondu_n}
     </select>
 
+    
+    <update id="Update">
+      <!-- 파라메터가 여러개인 경우 vo로 묶여있기 때문에 생략 불가능하다. -->
+      update user_tbl set user_name = #{user_name}, password = #{password} where user_id = #{user_id}
+    </update>
+    
+    <select id="wonduContent" resultType="wonduCVO"> <!-- vo로 묶어주고 idx로 파라미터값을 불러옴 -->
+        select wondu_c from wondu_tbl where wondu_n = #{wondu_n}				
+    </select>
     
 </mapper>

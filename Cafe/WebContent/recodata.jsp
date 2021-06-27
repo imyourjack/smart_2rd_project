@@ -1,3 +1,4 @@
+<%-- <%@page import="model.wonduVO"%> --%>
 <%@page import="com.google.gson.Gson"%>
 <%@page import="com.google.gson.annotations.JsonAdapter"%>
 <%@page import="model.UserVO"%>
@@ -6,25 +7,8 @@
 	pageEncoding="EUC-KR"%>
 
 <%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
-<%-- <% 
-			session.getId();
-			DAOMybatis dao = new DAOMybatis();
-			UserVO vo = new UserVO();
-			dao.wondu_name(vo);
-			String data = vo.getWondu_n();
-%> --%>
-	  <% 
-		    String wondu= (String)session.getAttribute("user_id");
-			DAOMybatis dao = new DAOMybatis();
-			UserVO vo = new UserVO();
-		  
-			UserVO min  = (UserVO)dao.wondu_name(vo.getUser_id());
-			String data = vo.getWondu_n();
-            
-            //System.out.println(data);
-            //System.out.println(wondu);
-            
-       %>   
+
+	    
 
 <!DOCTYPE html>
 <html>
@@ -43,7 +27,12 @@
 	
 </script>
 <body>
-헤으으응..
-      <%=data %>
+	
+	${sessionScope.wonduInfo}(이) 추천되었습니다 ??
+     
+      <%-- <h1></h1><c:if test="${sessionScope.userVO!=null }">
+      ${sessionScope.userVO.password}헤으응
+      </c:if></h1> --%>
+   
 </body>
 </html>

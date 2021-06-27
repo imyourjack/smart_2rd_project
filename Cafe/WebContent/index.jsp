@@ -21,6 +21,13 @@
         <link href="./Resources/css/styles.css" rel="stylesheet" />
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 		
+		<script type="text/javascript">
+		function junFn() {
+			alert("힝 속았찌~");
+		}
+		
+		</script>
+		
     </head>
     <body>
         <header>
@@ -55,7 +62,7 @@
                             <span class="section-heading-lower">Worth Drinking</span>
                         </h2>
                         <p class="mb-3">Every cup of our quality artisan coffee starts with locally sourced, hand picked ingredients. Once you try it, our coffee will be a blissful addition to your everyday morning routine - we guarantee it!</p>
-                        <div class="intro-button mx-auto"><a class="btn btn-primary btn-xl" href="#!">안녕</a></div>
+                        <div class="intro-button mx-auto"><a class="btn btn-primary btn-xl" href="#!" onclick="junFn()">추천받으러 가기</a></div>
                     </div>
                 </div>
             </div>

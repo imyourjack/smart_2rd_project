@@ -27,8 +27,9 @@
 <body>
 	<header>
 		<h1 class="site-heading text-center text-faded d-none d-lg-block">
-			<span class="site-heading-upper text-primary mb-3"> <!-- A Free Bootstrap Business Theme -->
-			</span> <span class="site-heading-lower"> <!-- Business Casual -->
+			<span class="site-heading-upper text-primary mb-3">Let's me
+				alone
+			</span> <span class="site-heading-lower"> home comming
 			</span>
 		</h1> 
 	</header>
@@ -73,8 +74,8 @@
 							<c:if test="${sessionScope.userVO==null}">
 								<form id="login" class="input-group" method="post">
 									<input type="text" class="input-field" id="user_id"
-										name="user_id" placeholder="User ID" required> <input
-										type="password" class="input-field" id="password"
+										name="user_id" placeholder="User ID" required> 
+									<input type="password" class="input-field" id="password"
 										name="password" placeholder="Password" required>
 									<!-- <input type="checkbox" class="checkbox"><span>Remember Password</span> -->
 									<input type="button" class="loginsubmit" onclick="loginFn()" value="login">
