@@ -94,7 +94,11 @@ function wonduContent(data) {  //위에 callContent callback 함수 만들기
 							<li class="list-unstyled-item list-hours-item d-flex">
 							<!-- li 글 쓰고 밑에 옅은 회색 줄 생김 -->
 								<!-- 여기 왼쪽 글씨 쓰는 부분 한글 안 먹힘 -->
-								<h4><br><br><strong>${sessionScope.wonduInfo }</strong>(이) 추천되었습니다.<br>원두정보:${sessionScope.vo2.wondu_c}<br>가격:${sessionScope.vo2.price }</h4></li><br>
+								<h4><br><br><strong>${sessionScope.wonduInfo }</strong><br><br>
+								<p style= color:#2F170F align="left">
+								<br>원두 정보 : ${sessionScope.vo2.wondu_c}
+								<br><br>가격 : ${sessionScope.vo2.price }</h4></li><br>
+								</p>
 								
 								<span class="ms-auto">ClosedLorem ipsum dolor sit amet, consectetur adipiscing elit.
 				Maecenas sit amet pretium urna. Vivamus venenatis velit nec neque

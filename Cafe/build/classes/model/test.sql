@@ -27,6 +27,12 @@ insert into user_tbl values('admin','admin','관리자');
 insert into user_tbl values('min', '12345','아가형민');
 insert into user_tbl values('jun', '12345','준짱');
 
+
+select * from wondu_tbl;
+insert into reco_tbl(wondu_n, user_id) values('과테말라 안티구아','admin')
+
+select * from reco_tbl
+
 create table wondu_tbl(
    wondu_idx int not null,
    wondu_n varchar(100) not null,
@@ -35,6 +41,7 @@ create table wondu_tbl(
    Cafe varchar(100) not null,
    primary key(wondu_n)
 );
+select * from wondu_tbl;
 
 insert into recos_tbl(wondu_n, user_id) values('멕시코 치아파스','admin');
 insert into recos_tbl(wondu_n, user_id) values('멕시코 치아파스','jun');

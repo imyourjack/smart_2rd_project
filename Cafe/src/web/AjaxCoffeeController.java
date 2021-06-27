@@ -11,33 +11,26 @@ import model.DAOMybatis;
 import model.UserVO;
 import model.wonduCVO;
 
-
 //@WebServlet("/recocoffee.do")
 public class AjaxCoffeeController implements Controller {
-    
+
 	@Override
 	public String requestHandler(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
-		
+
 		response.setContentType("text/json;charset=euc-kr");
 		request.setCharacterEncoding("utf-8");
 		DAOMybatis dao = new DAOMybatis();
-		 
+
 		HttpSession session = request.getSession();
 		UserVO userVO = (UserVO)session.getAttribute("userVO");
 		
 
 		String data = request.getParameter("result");
-		//System.out.println(data+"확인");
-		
-		
 		UserVO vo = new UserVO();
-		
-		
 		
 		vo.setWondu_n(data);
 		vo.setUser_id(userVO.getUser_id());
-	     
 		dao.coffeeContents(vo);
 		
 		//wonduCVO cvo = new wonduCVO();
@@ -57,8 +50,6 @@ public class AjaxCoffeeController implements Controller {
 		session.setAttribute("vo2", vo2); // 세션에 가격, 원두 컨텐츠를 담아주자
 		session.setAttribute("wonduInfo", data);
 	    
-		
-		
 		return "redirect:/recooutput.jsp";
 	}
 
