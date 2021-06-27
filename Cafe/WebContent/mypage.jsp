@@ -22,15 +22,13 @@
 
 
 <script type="text/javascript">
-	/* ajaxupdate.do 페이지 보여주세요 */
 	function updateFn() {
 
 		var value1 = document.getElementsByClassName('change1')[0].value;
 		var value2 = document.getElementsByClassName('change1')[1].value;
 		var value3 = document.getElementsByClassName('change1')[2].value;
 		//alert(value1 +"/"+value2+"/"+value3);
-		$
-				.ajax({
+		$.ajax({
 					url : "ajaxupdate.do?user_id=" + value1 + "&user_name="
 							+ value2 + "&password=" + value3,
 					type : "post",
@@ -184,25 +182,25 @@ tr:nth-child(even) {
 													<th>가격</th>
 												</tr>
 												<tr>
-													<th><input type="radio" name="o"></th>
+													<th><input type="checkbox"></th>
 													<td>에티오피아 아리차 내추럴 g1</td>
 													<td>은은한 꽃향과 상큼한 베리향의 프리미엄 커피</td>
 													<td>7500</td>
 												</tr>
 												<tr>
-													<th><input type="radio" name="o"></th>
+													<th><input type="checkbox"></th>
 													<td>인도 마이소르 너깃 엑스트라 볼드</td>
 													<td>견과류 특유의 향과 고소함 밀크초콜릿의 바디감 달콤하고 부드러운 산미의 커피</td>
 													<td>8000</td>
 												</tr>
 												<tr>
-													<th><input type="radio" name="o"></th>
+													<th><input type="checkbox"></th>
 													<td>인도네시아 만델링 g1</td>
 													<td>밀크초콜릿의 부드러움 초콜릿같은 풍미 묵직한 바디감의 커피</td>
 													<td>9500</td>
 												</tr>
 												<tr>
-													<th><input type="radio"name="o"></th>
+													<th><input type="checkbox"></th>
 													<td>르완다 버번</td>
 													<td>감귤류의 달콤함 허브의 향 다크초콜릿의 쌉쌉름한 커피</td>
 													<td>7500</td>
@@ -214,6 +212,39 @@ tr:nth-child(even) {
 										<p class="btn_area_btm2">
 											<button type="button" class="btn_model" id="bt_mypage_jun">
 												<b class="btn_jun2">삭제</b>
+											</button>
+										</p>
+									</div>
+								</div>
+							</div>
+							<div class="column">
+								<!-- 추천내역 -->
+								<div class="sh_group">
+									<div class="sh_header">
+										<h2>${sessionScope.userVO.user_name}님이 작성한 리뷰</h2>
+									</div>
+									<div class="sh_content">
+										<dl class="sh_lst2">
+											<table class=recommendTable>
+												<tr class=recommendTr>
+													<th >선택</th>
+													<th>원두 이름</th>
+													<th>리뷰내역</th>
+												</tr>
+												<tr>
+													<th><input type="checkbox"></th>
+													<td>에티오피아 아리차 내추럴 g1</td>
+													<td>상큼한 베리향이 정말 좋아요!</td>
+												</tr>
+											</table>
+										</dl>
+									</div>
+									<div>
+										<p class="btn_area_btm1">
+											<button type="button" onclick="reviewUpdateFn()" value="수정"
+													style="background-color: #e6a756; color: rgba(47, 23, 15, 0.9); border-radius: 15px;">수정</button>
+											<button type="button" onclick="reviewDeleteFn()" class="btn_model" id="bt_mypage_jun">
+													<b class="btn_jun2">삭제</b>
 											</button>
 										</p>
 									</div>

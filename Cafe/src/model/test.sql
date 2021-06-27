@@ -21,7 +21,15 @@ insert into user_tbl values('min', '12345','아가형민');
 select * from wondu_tbl;
 
 select * from user_tbl;
+<<<<<<< HEAD
+select * from reco_tbl;
+select * from review_tbl;
+insert into reco_tbl(wondu_n, user_id) values('과테말라 안티구아','admin')
 
+select * from reco_tbl
+=======
+
+>>>>>>> branch 'master' of https://github.com/2021-SMHRD-KDT-Bigdata-4/coffee.git
 
 create table wondu_tbl(
    wondu_idx int not null,
@@ -69,11 +77,8 @@ select * from wondu_tbl;
 insert into user_tbl values('babo', '1234','아가채원');
 insert into user_tbl values('babo2', '12345','아가채원');
 
-select * from recos_tbl;
 
-
-insert into wondu_tbl values('1','에티오피아 아리차 내추럴 g1','은은한 꽃향과 상큼한 베리향의 프리미엄 커피','
-7500','카페 젬마');
+insert into wondu_tbl values('1','에티오피아 아리차 내추럴 g1','은은한 꽃향과 상큼한 베리향의 프리미엄 커피','7500','카페 젬마');
 insert into wondu_tbl values('2','인도 마이소르 너깃 엑스트라 볼드','견과류 특유의 향과 고소함 밀크초콜릿의 바디감 달콤하고 부드러운 산미의 커피','8000','카페 풀');
 insert into wondu_tbl values('3','인도네시아 만델링 g1','밀크초콜릿의 부드러움 초콜릿같은 풍미 묵직한 바디감의 커피','9500','카페 모어레스');
 insert into wondu_tbl values('4','르완다 버번','감귤류의 달콤함 허브의 향 다크초콜릿의 쌉쌉름한 커피','7500','카페 소쿱');
@@ -128,8 +133,6 @@ insert into wondu_tbl values('52','케냐 키리냐가','견과류의 고소함�
 insert into wondu_tbl values('53','에티오피아 구지 고메로','은은 견과류향이 특징인 커피','6500','카페 그란데');
 insert into wondu_tbl values('54','브라질 세하도 파인컵 NY2','견과류 향미 사탕수수의 달콤함과 고소함의 커피','6500','카페 그란데');
 insert into wondu_tbl values('55','에티오피아 코케허니 G1 스페셜','견과류 향미 사탕수수의 달콤함과 고소함의 커피','6500','카페 그란데');
-
-
 
 
 DESCRIBE recos_tbl;
