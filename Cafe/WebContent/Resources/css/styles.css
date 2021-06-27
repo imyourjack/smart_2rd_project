@@ -11099,3 +11099,10 @@ button#bt_mypage_jun {
     color: rgba(47, 23, 15, 0.9);
     border-radius: 15px;
 }
+
+/* map css */
+.iw_inner img.thumbYoung{
+    float: right;
+    border: solid 1px #aeaeae;
+}
+
