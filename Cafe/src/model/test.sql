@@ -31,6 +31,7 @@ create table wondu_tbl(
    Cafe varchar(100) not null,
    primary key(wondu_n)
 );
+select * from wondu_tbl;
 
 create table review_tbl(
    r_idx int not null auto_increment,
