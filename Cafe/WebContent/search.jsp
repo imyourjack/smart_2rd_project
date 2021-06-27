@@ -53,6 +53,22 @@ function searchbeanFn() {
  function selectWondu(){
 	 
  }
+ 
+ $(document).ready(()=>{
+		list();
+	});
+ 
+ function wondulist() {
+		$("#bc").css("display","none")
+		$("#bf").css("display","none")
+		$.ajax({     //서버로 요청하기위해 꼭 써야됨
+		  	url : "ajaxlist.do",      //여기로 보내주셈
+		  	type : "get",             //JSON = dic : {"idx":1,"name":"홍길동"}
+		  	success : callBack,     //성공하면 콜백함수로
+		  	dataType : "json",
+		  	error : function() { error("error");}
+	  });
+	}
 
 </script>
 </head>
@@ -103,11 +119,7 @@ function searchbeanFn() {
 	<section>
   <searchnav>
     	<br>
-    	<% 
-    	for(int i=1; i<=51; i++){
-    		  
-    	}
-    	 %>
+    <div id="attach1">
       <div class="searchcolumn">
 			<h2>원두 이름1</h2>
 			<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.
@@ -149,31 +161,7 @@ function searchbeanFn() {
 				eget aliquam placerat, purus leo tincidunt eros, eget luctus quam
 				orci in velit. Praesent scelerisque tortor sed accumsan convallis.</p>
 		</div>
-		<div class="searchcolumn">
-			<h2>원두 이름6</h2>
-			<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-				Maecenas sit amet pretium urna. Vivamus venenatis velit nec neque
-				ultricies, eget elementum magna tristique. Quisque vehicula, risus
-				eget aliquam placerat, purus leo tincidunt eros, eget luctus quam
-				orci in velit. Praesent scelerisque tortor sed accumsan convallis.</p>
 		</div>
-		<div class="searchcolumn">
-			<h2>원두 이름7</h2>
-			<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-				Maecenas sit amet pretium urna. Vivamus venenatis velit nec neque
-				ultricies, eget elementum magna tristique. Quisque vehicula, risus
-				eget aliquam placerat, purus leo tincidunt eros, eget luctus quam
-				orci in velit. Praesent scelerisque tortor sed accumsan convallis.</p>
-		</div>
-		<div class="searchcolumn">
-			<h2>원두 이름8</h2>
-			<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-				Maecenas sit amet pretium urna. Vivamus venenatis velit nec neque
-				ultricies, eget elementum magna tristique. Quisque vehicula, risus
-				eget aliquam placerat, purus leo tincidunt eros, eget luctus quam
-				orci in velit. Praesent scelerisque tortor sed accumsan convallis.</p>
-		</div>
-      
    <br>
     <br>
   </searchnav>

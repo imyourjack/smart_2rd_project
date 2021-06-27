@@ -5,6 +5,10 @@ DROP TABLE wondu_good CASCADE;
 DROP TABLE review_tbl CASCADE;
 DROP TABLE recos_tbl CASCADE;
 
+SET foreign_key_checks = 0;
+drop table user_tbl CASCADE;
+SET foreign_key_checks = 1;
+
 create table user_tbl(
    user_id varchar(30) not null,
    password varchar(30) not null,
@@ -21,15 +25,15 @@ insert into user_tbl values('min', '12345','아가형민');
 select * from wondu_tbl;
 
 select * from user_tbl;
-<<<<<<< HEAD
+
 select * from reco_tbl;
 select * from review_tbl;
 insert into reco_tbl(wondu_n, user_id) values('과테말라 안티구아','admin')
 
 select * from reco_tbl
-=======
 
->>>>>>> branch 'master' of https://github.com/2021-SMHRD-KDT-Bigdata-4/coffee.git
+
+
 
 create table wondu_tbl(
    wondu_idx int not null,
@@ -70,7 +74,7 @@ create table recos_tbl(
    primary key(reco_index),
    FOREIGN KEY (wondu_n) REFERENCES wondu_tbl (wondu_n),
    FOREIGN KEY (user_id) REFERENCES user_tbl (user_id)
-); 
+); `
 select * from wondu_tbl;
 
 insert into user_tbl values('babo', '1234','아가채원');
