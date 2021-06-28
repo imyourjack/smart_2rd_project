@@ -60,8 +60,10 @@ function WondulistCallBack(data){
        view += "<br>";
        view += "</div>";   
     });
+
     $("#attach").html(view);
 }
+
 
 
 
@@ -90,6 +92,7 @@ function WondulistCallBack(data){
             <ul class="navbar-nav mx-auto">
 
 
+<<<<<<< HEAD
                <jsp:include page="menu.jsp">
                   <jsp:param name="pageSelection" value="3" />
                </jsp:include>
@@ -144,6 +147,101 @@ function WondulistCallBack(data){
       <h3>&nbsp;&nbsp;&nbsp;&nbsp;10. 과테말라 안티구아</h3>
       <br>
       <br>
+=======
+					<jsp:include page="menu.jsp">
+                    	<jsp:param name="pageSelection" value="3" />
+                    </jsp:include>
+                    
+                    
+				</ul>
+			</div>
+		</div>
+	</nav>
+	<div class="searchbean">
+	<!-- 여기 원두 검색 -->
+	</div>
+	<form>
+	<br>
+	<br>
+	<div class="searchbar">
+	<input type="text" id="coffeebean" name="coffeebean" placeholder="원두 이름">&nbsp;&nbsp;
+	<input type="button"  class="searchbtn" value="검색하기" onclick="searchbeanFn()">
+	</div>
+	<br>
+	<br>
+	</form>
+	<section>
+  <searchnav>
+    	<br>
+    <div id="attach1">
+      <div class="searchcolumn">
+			<h2>원두 이름1</h2>
+			<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+				Maecenas sit amet pretium urna. Vivamus venenatis velit nec neque
+				ultricies, eget elementum magna tristique. Quisque vehicula, risus
+				eget aliquam placerat, purus leo tincidunt eros, eget luctus quam
+				orci in velit. Praesent scelerisque tortor sed accumsan convallis.</p>
+		</div>
+      <div class="searchcolumn">
+			<h2>원두 이름2</h2>
+			<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+				Maecenas sit amet pretium urna. Vivamus venenatis velit nec neque
+				ultricies, eget elementum magna tristique. Quisque vehicula, risus
+				eget aliquam placerat, purus leo tincidunt eros, eget luctus quam
+				orci in velit. Praesent scelerisque tortor sed accumsan convallis.</p>
+                
+		</div>
+        <div class="searchcolumn">
+			<h2>원두 이름3</h2>
+			<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+				Maecenas sit amet pretium urna. Vivamus venenatis velit nec neque
+				ultricies, eget elementum magna tristique. Quisque vehicula, risus
+				eget aliquam placerat, purus leo tincidunt eros, eget luctus quam
+				orci in velit. Praesent scelerisque tortor sed accumsan convallis.</p>
+		</div>
+        <div class="searchcolumn">
+			<h2>원두 이름4</h2>
+			<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+				Maecenas sit amet pretium urna. Vivamus venenatis velit nec neque
+				ultricies, eget elementum magna tristique. Quisque vehicula, risus
+				eget aliquam placerat, purus leo tincidunt eros, eget luctus quam
+				orci in velit. Praesent scelerisque tortor sed accumsan convallis.</p>
+		</div>
+		<div class="searchcolumn">
+			<h2>원두 이름5</h2>
+			<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+				Maecenas sit amet pretium urna. Vivamus venenatis velit nec neque
+				ultricies, eget elementum magna tristique. Quisque vehicula, risus
+				eget aliquam placerat, purus leo tincidunt eros, eget luctus quam
+				orci in velit. Praesent scelerisque tortor sed accumsan convallis.</p>
+		</div>
+		</div>
+   <br>
+    <br>
+  </searchnav>
+  
+  <searchranking>
+  <br>
+    <h1>&nbsp;&nbsp;인 기 목 록</h1>
+    <br>
+    <h3>&nbsp;&nbsp;&nbsp;&nbsp;1. 원두1</h3>
+    <h3>&nbsp;&nbsp;&nbsp;&nbsp;2. 원두2</h3>
+    <h3>&nbsp;&nbsp;&nbsp;&nbsp;3. 원두3</h3>
+    <h3>&nbsp;&nbsp;&nbsp;&nbsp;4. 원두4</h3>
+    <h3>&nbsp;&nbsp;&nbsp;&nbsp;5. 원두5</h3>
+    <h3>&nbsp;&nbsp;&nbsp;&nbsp;6. 원두6</h3>
+    <h3>&nbsp;&nbsp;&nbsp;&nbsp;7. 원두7</h3>
+    <h3>&nbsp;&nbsp;&nbsp;&nbsp;8. 원두8</h3>
+    <h3>&nbsp;&nbsp;&nbsp;&nbsp;9. 원두9</h3>
+    <h3>&nbsp;&nbsp;&nbsp;&nbsp;10. 원두10</h3>
+    <br>
+    <br>
+    <p>블라블라 임의 할말 없으면 br</p>
+  </searchranking>
+</section>
+	
+	
+>>>>>>> branch 'master' of https://github.com/2021-SMHRD-KDT-Bigdata-4/coffee.git
 
       </div>
       </searchranking>

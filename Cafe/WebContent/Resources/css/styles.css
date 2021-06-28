@@ -11196,6 +11196,11 @@ button#bt_mypage_jun {
     border-radius: 15px;
 }
 
+/* map css */
+.iw_inner img.thumbYoung{
+    float: right;
+    border: solid 1px #aeaeae;
+}
 /* 추천 내역 리스트 삭제버튼 */
 p.btn_area_btm2{
 	margin-left: 91%;
@@ -11208,8 +11213,4 @@ p.btn_area_btm2{
   border-collapse: collapse;
   width: 100%;
 }
-
-
-
-
 

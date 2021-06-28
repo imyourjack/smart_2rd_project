@@ -69,7 +69,13 @@ public class DAOMybatis {
 		sqlSession.close();
 		return vo;
 	}
-	
+	public List<GoodVO> good(){
+	      SqlSession sqlSession=sqlSessionFactory.openSession();
+	      List<GoodVO> list=sqlSession.selectList("good");//MAPPER이름 맞춰주기.
+	      sqlSession.close();//반납
+	      return list;
+	   }
+
 //	public WonduCVO search(WonduCVO vo) {
 //		SqlSession sqlSession=sqlSessionFactory.openSession();
 //		WonduCVO wonducvo = sqlSession.selectOne("wondu_n", wondu_n);
@@ -85,12 +91,6 @@ public class DAOMybatis {
 		sqlSession.commit();//완료  insert, update, delete는 commit을 해줘야함
 		sqlSession.close();//반납
 		return cnt;
-	}
-	public List<GoodVO> good(){
-	    SqlSession sqlSession=sqlSessionFactory.openSession();
-	    List<GoodVO> list=sqlSession.selectList("good");//MAPPER이름 맞춰주기.
-	    sqlSession.close();//반납
-	    return list;
 	}
 	public GoodVO goods(GoodVO vo) {
 		 SqlSession sqlSession=sqlSessionFactory.openSession();
