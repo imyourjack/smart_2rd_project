@@ -11214,3 +11214,22 @@ p.btn_area_btm2{
   width: 100%;
 }
 
+/* 메인 페이지 폰트 */
+@font-face {
+   font-family: 'Gmarket Sans';    font-style: normal;    font-weight: 500;
+   src: local('Gmarket Sans Medium'), local('GmarketSans-Medium'),
+   url('http://script.ebay.co.kr/fonts/GmarketSansMedium.woff2') format('woff2'), /* Chrome 26+, Opera 23+, Firefox 39+ */
+   url('http://script.ebay.co.kr/fonts/GmarketSansMedium.woff') format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+}
+
+.youngmain{
+	font-family: 'Gmarket Sans';
+	font-size: 70px;
+}
+.youngmiddle{
+	font-family: 'Gmarket Sans';
+	font-size: 20px;
+}
+
+
+
