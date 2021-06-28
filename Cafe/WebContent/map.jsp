@@ -109,7 +109,7 @@
 
       //C:\Users\21SMT61\git\coffee\Cafe
       //스마트 인재 개발원 
-      var marker= new naver.maps.Marker({
+      var marker1= new naver.maps.Marker({
          map : map,
          position : smart,
          title : '스마트 인재 개발원',
@@ -122,14 +122,14 @@
          animation : naver.maps.Animation.DROP,
 
       });
-      markers.push(marker);
+      markers.push(marker1);
       
 
-      naver.maps.Event.addListener(marker, 'click', function() {
-         if (marker.getAnimation() !== null) {
-            marker.setAnimation(null);
+      naver.maps.Event.addListener(marker1, 'click', function() {
+         if (marker1.getAnimation() !== null) {
+            marker1.setAnimation(null);
          } else {
-            marker.setAnimation(naver.maps.Animation.BOUNCE);
+            marker1.setAnimation(naver.maps.Animation.BOUNCE);
          }
       });
       
@@ -157,30 +157,11 @@
       //카페 젬마
       var jemma = new naver.maps.LatLng(35.149662823887816,
             126.92011596361931);
-      var marker4 = new naver.maps.Marker({
+      var marker2 = new naver.maps.Marker({
          map : map,
          position : jemma,
          title : '카페 젬마',
          animation : naver.maps.Animation.DROP,
-
-      });
-      markers.push(marker4);
-
-      naver.maps.Event.addListener(marker4, 'click', function() {
-         if (marker4.getAnimation() !== null) {
-            marker4.setAnimation(null);
-         } else {
-            marker4.setAnimation(naver.maps.Animation.BOUNCE);
-         }
-      });
-
-      // 풀 카페
-      var full = new naver.maps.LatLng(35.1501188, 126.919876);
-      var marker2 = new naver.maps.Marker({
-         map : map,
-         position : full,
-         title : '카페 풀',
-         animation : naver.maps.Animation.DROP
 
       });
       markers.push(marker2);
@@ -192,14 +173,15 @@
             marker2.setAnimation(naver.maps.Animation.BOUNCE);
          }
       });
-      //모어레스 4
-      var moreless = new naver.maps.LatLng(35.14913468310194,
-            126.91915854029897);
+
+      // 풀 카페
+      var full = new naver.maps.LatLng(35.1501188, 126.919876);
       var marker3 = new naver.maps.Marker({
          map : map,
-         position : moreless,
-         title : '카페 모어레스',
+         position : full,
+         title : '카페 풀',
          animation : naver.maps.Animation.DROP
+
       });
       markers.push(marker3);
 
@@ -208,6 +190,24 @@
             marker3.setAnimation(null);
          } else {
             marker3.setAnimation(naver.maps.Animation.BOUNCE);
+         }
+      });
+      //모어레스 4
+      var moreless = new naver.maps.LatLng(35.14913468310194,
+            126.91915854029897);
+      var marker4 = new naver.maps.Marker({
+         map : map,
+         position : moreless,
+         title : '카페 모어레스',
+         animation : naver.maps.Animation.DROP
+      });
+      markers.push(marker4);
+
+      naver.maps.Event.addListener(marker4, 'click', function() {
+         if (marker4.getAnimation() !== null) {
+            marker4.setAnimation(null);
+         } else {
+            marker4.setAnimation(naver.maps.Animation.BOUNCE);
          }
       });
       //카페 소쿱5
@@ -413,7 +413,7 @@
       });
       // 여기서부터 각 마커에 대한 정보를 입력하는 공간 입니다 . 
       // 스마트 인재 개발원
-      var contentString1 = [
+      var contentString = [
             '<div class="iw_inner">',
             '   <h3>스마트 인재 개발원</h3>',
             '   <p>광주 동구 예술길 31-16 스마트인재개발원 <br />',
@@ -423,7 +423,7 @@
             '   </p>', '</div>' ].join('');
 
       var infowindow1 = new naver.maps.InfoWindow({
-         content : contentString1
+         content : contentString
       });
       infoWindows.push(infowindow1);
       
@@ -673,19 +673,25 @@
       
    /*    function markerBounce(targetMarker){
          targetMarker.setAnimation(naver.maps.Animation.BOUNCE);
+         infoWindows[targetMarker].open(map, markers[targetMarker-1]);
       }
        */
       
       // 이게 지금 정보창은 14번을 불러오고 마커는 13번을 불러옴 근데 그게 같은 VIVID 카페임.
       // 14번 VIVID마커와 14번 VIVID 인포윈도우를 불러옴. 
-      infoWindows[14].open(map, markers[13]);
-      marker14.setAnimation(naver.maps.Animation.BOUNCE);
-      marker.setAnimation(naver.maps.Animation.BOUNCE);
+      infoWindows[
+    	  4].open(map, markers[4]);
+      marker1.setAnimation(naver.maps.Animation.BOUNCE);
+      marker5.setAnimation(naver.maps.Animation.BOUNCE);
       
+      /* return function(e){
+      if (DBnum==infowindows[seq]){
+    	  
+      } */
    </script>
 
 <div class="row">
-   <!-- 내용 넣을 곳 -->
+  
 
    <img src = "./Resources/assets/img/" width = "40">
 
