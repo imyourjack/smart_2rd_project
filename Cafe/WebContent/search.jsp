@@ -16,7 +16,6 @@
 <!-- ./Resources/js/all.min.js -->
 <!-- Google fonts-->
 <link href="stylesheet" rel="stylesheet" />
-<link href="stylesheet" rel="stylesheet" />
 <!-- Core theme CSS (includes Bootstrap)-->
 <link href="./Resources/css/styles.css" rel="stylesheet" />
 
@@ -27,8 +26,6 @@
  $(document).ready(()=>{
    Wondulist();
 }); 
-
-
 
 //원두 리스트 뽑아준다
 function Wondulist() {

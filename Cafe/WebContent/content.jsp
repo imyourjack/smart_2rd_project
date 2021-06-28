@@ -18,7 +18,6 @@
         <link href="stylesheet" rel="stylesheet" />
         <!-- Core theme CSS (includes Bootstrap)-->
         <link href="./Resources/css/styles.css" rel="stylesheet" />
-
 <style>
 td, th {
    border: 1px solid #dddddd;
@@ -89,12 +88,7 @@ tr:nth-child(even) {
                               </p>
                            </div>
                         </div>
-                       
-                       
-                       
-                       
-                       
-                            
+                                                 
                         </div>
                     </div>
                 </div>
