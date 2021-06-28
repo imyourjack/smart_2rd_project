@@ -10,7 +10,43 @@
  * Copyright 2011-2021 Twitter, Inc.
  * Licensed under MIT (https://github.com/twbs/bootstrap/blob/main/LICENSE)
  */
- 
+ .recooutput-img{
+  width: 200px;
+  height: 200px;
+ }
+.btn-reco{
+	margin-left:5%;
+	background:linear-gradient(to right, #2F170F, #2F170F9C);
+    color:white;
+}
+.btn-reco:hover {
+    color: #000;
+    background-color: rgba(230, 167, 86, 0.8);
+    border-color: rgba(230, 167, 86, 0.8);
+}
+ .bg-fade{
+  background-color : whitesmoke;
+ }
+ .reco-imgs{
+  width: 20px; height: 20px;
+    background-size: contain;
+ }
+ .sh_content{
+  height: 500px;
+ }
+ .wd-btn{
+  float:left;
+  position: absolute;
+  margin-left: 30%; 
+}
+.wd-btn2{
+	float:left;
+	position: absolute;
+	margin-left: 45%;
+}
+.wd-group{
+	margin-bottom: 200px;
+}
  .recooutbtn{
 	width: 120px;
     padding: 13px 20px;
@@ -652,7 +688,14 @@ progress {
   font-size: 0.875em;
   color: #6c757d;
 }
-
+.containers{
+  width: 60%;
+  padding-right: var(--bs-gutter-x, 0.75rem);
+  padding-left: var(--bs-gutter-x, 0.75rem);
+  margin-right: auto;
+  margin-left: auto;
+  background-color: whitesmoke;
+}
 .container,
 .container-fluid,
 .container-xxl,

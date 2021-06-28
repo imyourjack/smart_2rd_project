@@ -102,8 +102,6 @@ function wonduContent(data) {  //위에 callContent callback 함수 만들기
 								</p>
 							</div>
 							<br>
-
-
 							<div class="gray-line">
 								<p style="font-size: 1.0em; color: black;">
 								<div class="gray-line2">
@@ -122,10 +120,7 @@ function wonduContent(data) {  //위에 callContent callback 함수 만들기
 								&nbsp;&nbsp;<input type="radio" name="chk_info1" value="견과류향">견과류향
 								</p>
 							</div>
-
 							<br>
-
-
 							<div class="gray-line">
 								<p style="font-size: 1.0em; color: black;">
 								<div class="gray-line2">
@@ -147,7 +142,6 @@ function wonduContent(data) {  //위에 callContent callback 함수 만들기
 								</p>
 							</div>
 							<br>
-
 							<div class="gray-line">
 								<p style="font-size: 1.0em; color: black;">
 								<div class="gray-line2">
@@ -167,8 +161,6 @@ function wonduContent(data) {  //위에 callContent callback 함수 만들기
 								</p>
 							</div>
 							<br>
-
-
 							<div class="gray-line">
 								<p style="font-size: 1.0em; color: black;">
 								<div class="gray-line2">
@@ -188,7 +180,6 @@ function wonduContent(data) {  //위에 callContent callback 함수 만들기
 								</p>
 							</div>
 							<br>
-
 							<div class="gray-line">
 								<p style="font-size: 1.0em; color: black;">
 								<div class="gray-line2">
@@ -211,10 +202,7 @@ function wonduContent(data) {  //위에 callContent callback 함수 만들기
 
 							<button type="submit" class="recosubmit" onclick="wonduContent()">보내기</button>
 							<!-- 버튼 css 그대로 들어가면 클래스 이름 바꿔주고 꾸미기로 하기. -->
-
-
 						</div>
-
 					</div>
 				</div>
 

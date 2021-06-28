@@ -1,3 +1,5 @@
+<%@page import="model.GoodVO"%>
+<%@page import="model.DAOMybatis"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
    pageEncoding="UTF-8"%>
 <%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
@@ -41,8 +43,12 @@
    color: white;
 }
 </style>
+<% 
+String test_coffee = (String) session.getAttribute("wonduInfo");
+GoodVO vo = new GoodVO();
+vo.setWondu_n(test_coffee);
 
-
+%>
 
 </head>
 <body>
@@ -80,6 +86,7 @@
    <div id="map" style="width: 65%; height: 700px; margin-left: 450px;"></div>
 
    <script>
+   
       /* var map = new naver.maps.Map('map', {
       
        center: new naver.maps.LatLng(35.149741, 126.920007),
@@ -157,11 +164,30 @@
       //카페 젬마
       var jemma = new naver.maps.LatLng(35.149662823887816,
             126.92011596361931);
-      var marker2 = new naver.maps.Marker({
+      var marker4 = new naver.maps.Marker({
          map : map,
          position : jemma,
          title : '카페 젬마',
          animation : naver.maps.Animation.DROP,
+
+      });
+      markers.push(marker4);
+
+      naver.maps.Event.addListener(marker4, 'click', function() {
+         if (marker4.getAnimation() !== null) {
+            marker4.setAnimation(null);
+         } else {
+            marker4.setAnimation(naver.maps.Animation.BOUNCE);
+         }
+      });
+
+      // 풀 카페
+      var full = new naver.maps.LatLng(35.1501188, 126.919876);
+      var marker2 = new naver.maps.Marker({
+         map : map,
+         position : full,
+         title : '카페 풀',
+         animation : naver.maps.Animation.DROP
 
       });
       markers.push(marker2);
@@ -173,15 +199,14 @@
             marker2.setAnimation(naver.maps.Animation.BOUNCE);
          }
       });
-
-      // 풀 카페
-      var full = new naver.maps.LatLng(35.1501188, 126.919876);
+      //모어레스 4
+      var moreless = new naver.maps.LatLng(35.14913468310194,
+            126.91915854029897);
       var marker3 = new naver.maps.Marker({
          map : map,
-         position : full,
-         title : '카페 풀',
+         position : moreless,
+         title : '카페 모어레스',
          animation : naver.maps.Animation.DROP
-
       });
       markers.push(marker3);
 
@@ -190,24 +215,6 @@
             marker3.setAnimation(null);
          } else {
             marker3.setAnimation(naver.maps.Animation.BOUNCE);
-         }
-      });
-      //모어레스 4
-      var moreless = new naver.maps.LatLng(35.14913468310194,
-            126.91915854029897);
-      var marker4 = new naver.maps.Marker({
-         map : map,
-         position : moreless,
-         title : '카페 모어레스',
-         animation : naver.maps.Animation.DROP
-      });
-      markers.push(marker4);
-
-      naver.maps.Event.addListener(marker4, 'click', function() {
-         if (marker4.getAnimation() !== null) {
-            marker4.setAnimation(null);
-         } else {
-            marker4.setAnimation(naver.maps.Animation.BOUNCE);
          }
       });
       //카페 소쿱5
@@ -413,7 +420,7 @@
       });
       // 여기서부터 각 마커에 대한 정보를 입력하는 공간 입니다 . 
       // 스마트 인재 개발원
-      var contentString = [
+      var contentString1 = [
             '<div class="iw_inner">',
             '   <h3>스마트 인재 개발원</h3>',
             '   <p>광주 동구 예술길 31-16 스마트인재개발원 <br />',
@@ -423,7 +430,7 @@
             '   </p>', '</div>' ].join('');
 
       var infowindow1 = new naver.maps.InfoWindow({
-         content : contentString
+         content : contentString1
       });
       infoWindows.push(infowindow1);
       
@@ -652,6 +659,16 @@
                getClickHandler(i));
 
       }
+
+     
+      
+      // 인포 윈도우는 인덱싱임  -1해서 계산   밑에 애니메이션은 그대로 숫자 쓰면 됨
+      infoWindows[13].open(map, markers[13]);
+      marker14.setAnimation(naver.maps.Animation.BOUNCE);
+      marker1.setAnimation(naver.maps.Animation.BOUNCE);
+      
+      //  infowindow.open(map, marker4);
+
        //선 그어지는 함수 
    /*    function drowline(position1, position2){
          var polyline = new naver.maps.Polyline({
@@ -673,30 +690,13 @@
       
    /*    function markerBounce(targetMarker){
          targetMarker.setAnimation(naver.maps.Animation.BOUNCE);
-         infoWindows[targetMarker].open(map, markers[targetMarker-1]);
       }
        */
       
       // 이게 지금 정보창은 14번을 불러오고 마커는 13번을 불러옴 근데 그게 같은 VIVID 카페임.
       // 14번 VIVID마커와 14번 VIVID 인포윈도우를 불러옴. 
-      infoWindows[
-    	  4].open(map, markers[4]);
-      marker1.setAnimation(naver.maps.Animation.BOUNCE);
-      marker5.setAnimation(naver.maps.Animation.BOUNCE);
       
-      /* return function(e){
-      if (DBnum==infowindows[seq]){
-    	  
-      } */
    </script>
-
-<div class="row">
-  
-
-   <img src = "./Resources/assets/img/" width = "40">
-
-</div>
-
 <footer class="footer text-faded text-center py-5">
    <div class="container">
       <p class="m-0 small">Copyright &copy; Your Website 2021</p>

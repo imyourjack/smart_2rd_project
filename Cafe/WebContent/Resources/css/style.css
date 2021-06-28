@@ -137,7 +137,19 @@ input[type="radio"] {
     outline: none;
     border-radius: 30px;
 }
-
+.recosubmit1 {
+    width: 90px;
+    padding: 15px 15px;
+    cursor: pointer;
+    display: block;
+    margin: 30px auto;
+    background:linear-gradient(to right, #2F170F, #2F170F9C);
+    color:white;
+    border: 0;
+    outline: none;
+    border-radius: 30px;
+    align-content: center;
+}
 .reco-img{
 	width: 20px; height: 20px;
     background-size: contain;
