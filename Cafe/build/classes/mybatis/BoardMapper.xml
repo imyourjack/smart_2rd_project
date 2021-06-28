@@ -22,8 +22,11 @@
       update user_tbl set user_name = #{user_name}, password = #{password} where user_id = #{user_id}
     </update>
     
-    <select id="wonduContent" resultType="wonduCVO"> <!-- vo로 묶어주고 idx로 파라미터값을 불러옴 -->
+    <select id="wonduContent" resultType="wonduCVO"> 
         select wondu_c from wondu_tbl where wondu_n = #{wondu_n}				
+    </select>
+    <select id="good" resultType="goodVO">
+        select * from wondu_good 			
     </select>
     
 </mapper>

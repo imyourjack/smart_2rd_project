@@ -1,6 +1,7 @@
 package model;
 
 import java.io.InputStream;
+import java.util.List;
 
 import org.apache.ibatis.io.Resources;
 import org.apache.ibatis.session.SqlSession;
@@ -68,7 +69,13 @@ public class DAOMybatis {
 		sqlSession.close();
 		return vo;
 	}
-	
+	public List<GoodVO> good(){
+	      SqlSession sqlSession=sqlSessionFactory.openSession();
+	      List<GoodVO> list=sqlSession.selectList("good");//MAPPER이름 맞춰주기.
+	      sqlSession.close();//반납
+	      return list;
+	   }
+
 //	public WonduCVO search(WonduCVO vo) {
 //		SqlSession sqlSession=sqlSessionFactory.openSession();
 //		WonduCVO wonducvo = sqlSession.selectOne("wondu_n", wondu_n);

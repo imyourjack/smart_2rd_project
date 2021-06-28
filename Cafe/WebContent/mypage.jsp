@@ -82,7 +82,7 @@ tr:nth-child(even) {
 				<ul class="navbar-nav mx-auto">
 
 					<jsp:include page="menu.jsp">
-						<jsp:param name="pageSelection" value="9" />
+						<jsp:param name="pageSelection" value="7" />
 					</jsp:include>
 
 				</ul>
@@ -218,10 +218,10 @@ tr:nth-child(even) {
 								</div>
 							</div>
 							<div class="column">
-								<!-- 추천내역 -->
+								<!-- 게시판 작성 내역 -->
 								<div class="sh_group">
 									<div class="sh_header">
-										<h2>${sessionScope.userVO.user_name}님이 작성한 리뷰</h2>
+										<h2>${sessionScope.userVO.user_name}님이 자유게시판에 작성한 내용</h2>
 									</div>
 									<div class="sh_content">
 										<dl class="sh_lst2">

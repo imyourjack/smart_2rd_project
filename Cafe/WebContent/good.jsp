@@ -1,5 +1,3 @@
-<%-- <%@page import="model.wonduCVO"%> --%>
-<%@page import="model.DAOMybatis"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
 <%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
@@ -11,7 +9,7 @@
 	content="width=device-width, initial-scale=1, shrink-to-fit=no" />
 <meta name="description" content="" />
 <meta name="author" content="" />
-<title>Business Casual - Start Bootstrap Theme</title>
+<title>카페</title>
 <link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
 <!-- Font Awesome icons (free version)-->
 <script src="./Resources/js/all.js" crossorigin="anonymous"></script>
@@ -21,24 +19,60 @@
 <link href="stylesheet" rel="stylesheet" />
 <!-- Core theme CSS (includes Bootstrap)-->
 <link href="./Resources/css/styles.css" rel="stylesheet" />
-<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-<script type="text/javascript">
-function wonduContent(data) {  //위에 callContent callback 함수 만들기
-	/* $("#bc").css("display", "block"); 
-	$("#bf").css("display", "none"); */
-	var wondu_c=data.wondu_c;
-	$.ajax({
-		  url : "ajaxcontents.do",
-		  type : "get",
-		  data : {"wondu_c" : wondu_c},
-		  datatype : "json",
-		  success : wonduContent, //콜백
-		  error : function () {alert("error");}			
-	});
-	//$("#cidx").val(idx);   
-	
+<script
+	src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+<script type="text/javascript" src="./script.js"></script>
+
+<style>
+td, th {
+	border: 1px solid #dddddd;
+	text-align: left;
+	padding: 8px;
 }
+
+tr:nth-child(even) {
+	background-color: rgba(230, 167, 86, 0.9);
+}
+</style>
+<script type="text/javascript">
+$(document).ready(()=>{
+	Wondulist();
+});
+function Wondulist() {
+	$.ajax({
+        url : "good.do",    
+        type : "get",        
+        success: listCallBack,     
+        dataType: "json",
+        error : function() {alert("listerror");
+        }
+     });      
+}
+function listCallBack(data){
+    var view = "<table class=recommendTable>";
+    view += "<tr class=recommendTr>";
+    view += "<th>번호</th>";
+    view += "<th>작성자</th>";
+    view += "<th>원두이름</th>";
+    view += "<th>만족도</th>";
+    view += "</tr>";
+    $.each(data,(index,obj)=>{
+       view += "<tr>";
+       view += "<th>" + obj.good_index + "</th>";
+       view += "<td>" + obj.user_id + "</td>";
+       view += "<td>" + obj.wondu_n + "</td>";
+       view += "<td>" + obj.good + "</td>";
+       view += "</tr>";
+    });
+    $("#good").html(view);
+}
+
+
+
+
 </script>
+
 </head>
 <body>
 	<header>
@@ -48,7 +82,6 @@ function wonduContent(data) {  //위에 callContent callback 함수 만들기
 				Casual</span>
 		</h1>
 	</header>
-
 	<!-- Navigation-->
 	<nav class="navbar navbar-expand-lg navbar-dark py-lg-4" id="mainNav">
 		<div class="container">
@@ -62,67 +95,49 @@ function wonduContent(data) {  //위에 callContent callback 함수 만들기
 			</button>
 			<div class="collapse navbar-collapse" id="navbarSupportedContent">
 				<ul class="navbar-nav mx-auto">
+
 					<jsp:include page="menu.jsp">
-						<jsp:param name="pageSelection" value="2" />
+						<jsp:param name="pageSelection" value="5" />
 					</jsp:include>
 
 				</ul>
 			</div>
 		</div>
 	</nav>
-
-
-	<!-- 내용 넣을 곳 -->
 	<section class="page-section cta">
 		<div class="container">
 			<div class="row">
 				<div class="col-xl-9 mx-auto">
 					<div class="cta-inner bg-faded text-center rounded">
-						<h2 class="section-heading mb-5">
-						
-							<span class="section-heading-upper">당신의 취향을 발견하다</span><br>
-							
-							<span class="section-heading-lower"><strong>원두 추천 결과</strong></span>
-						</h2>
-						
-							<img class="recooutput-img" src="./Resources/assets/img/intro.jpg" alt="..." style="
-    						width: 500px;"/>
-							<br>
-						
-						
-						<ul class="list-unstyled list-hours mb-5 text-left mx-auto">
-							<li class="list-unstyled-item list-hours-item d-flex">
-							<!-- li 글 쓰고 밑에 옅은 회색 줄 생김 -->
-								<!-- 여기 왼쪽 글씨 쓰는 부분 한글 안 먹힘 -->
-								<h4><br><br><strong>${sessionScope.wonduInfo }</strong><br><br>
-								<p style= color:#2F170F align="left">
-								<br>원두 정보 : ${sessionScope.vo2.wondu_c}
-								<br><br>가격 : ${sessionScope.vo2.price }</h4></li><br>
-								</p>
-								
-								<span class="ms-auto">ClosedLorem ipsum dolor sit amet, consectetur adipiscing elit.
-				Maecenas sit amet pretium urna. Vivamus venenatis velit nec neque
-				ultricies, eget elementum magna tristique. Quisque vehicula, risus
-				eget aliquam placerat, purus leo tincidunt eros, eget luctus quam
-				orci in velit. Praesent scelerisque tortor sed accumsan convallis.</span>
-							
-							
-						</ul>
-						
-						<!-- 다시 하기 버튼 => recommend.jsp -->
-						<!-- 홈으로 가기 버튼 => index.jsp -->
-						<div>
-						<p>
-						<button type="button" class="recooutbtn">다시하기</button>
-						<button type="button" class="recooutbtn">홈으로</button>
-						</p>
+						<!-- 자유게시판 내용 들어가는 곳 -->
+						<div class="sh_group">
+							<div class="sh_header">
+								<h2>만족도</h2>
+							</div>
+							<div class="sh_content">
+								<dl class="sh_lst2">
+									<table class=recommendTable id="good">
+										<tr class=recommendTr>
+											<th>번호</th>
+											<th>작성자</th>
+											<th>원두이름</th>
+											<th>만족도</th>
+										</tr>
+										<tr>
+											<th></th>
+											<td></td>
+											<td></td>
+											<td></td>
+										</tr>
+									</table>
+								</dl>
+							</div>
 						</div>
 					</div>
 				</div>
 			</div>
 		</div>
 	</section>
-	
 	<footer class="footer text-faded text-center py-5">
 		<div class="container">
 			<p class="m-0 small">Copyright &copy; Your Website 2021</p>
@@ -133,5 +148,7 @@ function wonduContent(data) {  //위에 callContent callback 함수 만들기
 		src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js"></script>
 	<!-- Core theme JS-->
 	<script src="./Resources/js/scripts.js"></script>
+
+
 </body>
 </html>
