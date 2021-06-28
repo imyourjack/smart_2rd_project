@@ -21,22 +21,43 @@
 <link href="stylesheet" rel="stylesheet" />
 <!-- Core theme CSS (includes Bootstrap)-->
 <link href="./Resources/css/styles.css" rel="stylesheet" />
+<link rel="stylesheet" href="./Resources/css/style.css" />
 <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 <script type="text/javascript">
 function wonduContent(data) {  //위에 callContent callback 함수 만들기
 	/* $("#bc").css("display", "block"); 
 	$("#bf").css("display", "none"); */
-	var wondu_c=data.wondu_c;
+	//var wondu_c=data.wondu_c;
 	$.ajax({
 		  url : "ajaxcontents.do",
 		  type : "get",
 		  data : {"wondu_c" : wondu_c},
-		  datatype : "json",
 		  success : wonduContent, //콜백
 		  error : function () {alert("error");}			
 	});
 	//$("#cidx").val(idx);   
 	
+}
+function goreset(){
+	location.href="recommend.jsp"
+}
+function gohome(){
+	location.href="index.jsp"
+}
+function gocontroller(){
+	location.href="ajaxwondugood.do"
+}
+function goodsFn() {
+	 var formdata=$("#wondugood").serialize(); //boardForm에 form아이디를 불러옴 serialize란 폼안에 있는 모든 데이터를 읽어올 수 있다.
+	//alert(data);
+	$.ajax({
+		url : "ajaxwondugood.do",
+		type : "post",
+		data :formdata,
+		datatype : "json",
+		success : gohome(),
+		error : function () {alert("error");}					
+	});
 }
 </script>
 </head>
@@ -50,6 +71,7 @@ function wonduContent(data) {  //위에 callContent callback 함수 만들기
 	</header>
 
 	<!-- Navigation-->
+	<form id="wondugood" class="form-horizontal" method="get">
 	<nav class="navbar navbar-expand-lg navbar-dark py-lg-4" id="mainNav">
 		<div class="container">
 			<a class="navbar-brand text-uppercase fw-bold d-lg-none"
@@ -71,13 +93,13 @@ function wonduContent(data) {  //위에 callContent callback 함수 만들기
 		</div>
 	</nav>
 
-
+     
 	<!-- 내용 넣을 곳 -->
 	<section class="page-section cta">
 		<div class="container">
 			<div class="row">
 				<div class="col-xl-9 mx-auto">
-					<div class="cta-inner bg-faded text-center rounded">
+					<div class="cta-inner bg-fade text-center rounded">
 						<h2 class="section-heading mb-5">
 						
 							<span class="section-heading-upper">당신의 취향을 발견하다</span><br>
@@ -100,27 +122,46 @@ function wonduContent(data) {  //위에 callContent callback 함수 만들기
 								<br><br>가격 : ${sessionScope.vo2.price }</h4></li><br>
 								</p>
 								
-								<span class="ms-auto">ClosedLorem ipsum dolor sit amet, consectetur adipiscing elit.
-				Maecenas sit amet pretium urna. Vivamus venenatis velit nec neque
-				ultricies, eget elementum magna tristique. Quisque vehicula, risus
-				eget aliquam placerat, purus leo tincidunt eros, eget luctus quam
-				orci in velit. Praesent scelerisque tortor sed accumsan convallis.</span>
+								<span class="ms-auto"></span>
 							
 							
 						</ul>
-						
+						<div class="containers">
+						<div class="gray-line">
+								<p style="font-size: 1.5em; color: black;">
+								<div>
+									<br> <h5>&nbsp;&nbsp;<strong>만족도 평가</strong>(1 - 불만족	5 - 만족)
+									</h5>
+									<br>
+								</div>
+								<br><input type="radio" name="good" value="1" style="width:15px;border:1px;">1 &nbsp;&nbsp; 
+									<input type="radio" name="good" value="2" style="width:15px;border:1px;">2 &nbsp;&nbsp;
+									<input type="radio" name="good" value="3" style="width:15px;border:1px;">3 &nbsp;&nbsp;
+									<input type="radio" name="good" value="4" style="width:15px;border:1px;">4 &nbsp;&nbsp;
+									<input type="radio" name="good" value="5" style="width:15px;border:1px;">5 
+									<input type="button" class="btn-reco btn-sm" onclick="goodsFn()" value="완료">
+								    </p> 
+							</div>
+							</div>
+							</form>
 						<!-- 다시 하기 버튼 => recommend.jsp -->
 						<!-- 홈으로 가기 버튼 => index.jsp -->
-						<div>
-						<p>
-						<button type="button" class="recooutbtn">다시하기</button>
-						<button type="button" class="recooutbtn">홈으로</button>
-						</p>
+						<div class="wd-group">
+						<div class ="wd-btn">					
+						<button type="button" class="recooutbtn" onclick='goreset()'><span class="glyphicon glyphicon-heart-empty"></span>다시하기</button>
 						</div>
+						<div class = "wd-btn2">											
+						<button type="button" class="recooutbtn" onclick='gohome()'>홈으로</button>						
+						</div>
+						</div>
+						
+												
 					</div>
+					
 				</div>
-			</div>
+			</div>			
 		</div>
+		
 	</section>
 	
 	<footer class="footer text-faded text-center py-5">

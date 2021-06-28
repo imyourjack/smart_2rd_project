@@ -1,3 +1,5 @@
+<%@page import="model.GoodVO"%>
+<%@page import="model.DAOMybatis"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
    pageEncoding="UTF-8"%>
 <%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
@@ -41,8 +43,12 @@
    color: white;
 }
 </style>
+<% 
+String test_coffee = (String) session.getAttribute("wonduInfo");
+GoodVO vo = new GoodVO();
+vo.setWondu_n(test_coffee);
 
-
+%>
 
 </head>
 <body>
@@ -80,6 +86,7 @@
    <div id="map" style="width: 65%; height: 700px; margin-left: 450px;"></div>
 
    <script>
+   
       /* var map = new naver.maps.Map('map', {
       
        center: new naver.maps.LatLng(35.149741, 126.920007),
@@ -109,7 +116,7 @@
 
       //C:\Users\21SMT61\git\coffee\Cafe
       //스마트 인재 개발원 
-      var marker= new naver.maps.Marker({
+      var marker1= new naver.maps.Marker({
          map : map,
          position : smart,
          title : '스마트 인재 개발원',
@@ -122,14 +129,14 @@
          animation : naver.maps.Animation.DROP,
 
       });
-      markers.push(marker);
+      markers.push(marker1);
       
 
-      naver.maps.Event.addListener(marker, 'click', function() {
-         if (marker.getAnimation() !== null) {
-            marker.setAnimation(null);
+      naver.maps.Event.addListener(marker1, 'click', function() {
+         if (marker1.getAnimation() !== null) {
+            marker1.setAnimation(null);
          } else {
-            marker.setAnimation(naver.maps.Animation.BOUNCE);
+            marker1.setAnimation(naver.maps.Animation.BOUNCE);
          }
       });
       
@@ -652,6 +659,16 @@
                getClickHandler(i));
 
       }
+
+     
+      
+      // 인포 윈도우는 인덱싱임  -1해서 계산   밑에 애니메이션은 그대로 숫자 쓰면 됨
+      infoWindows[13].open(map, markers[13]);
+      marker14.setAnimation(naver.maps.Animation.BOUNCE);
+      marker1.setAnimation(naver.maps.Animation.BOUNCE);
+      
+      //  infowindow.open(map, marker4);
+
        //선 그어지는 함수 
    /*    function drowline(position1, position2){
          var polyline = new naver.maps.Polyline({
@@ -678,13 +695,8 @@
       
       // 이게 지금 정보창은 14번을 불러오고 마커는 13번을 불러옴 근데 그게 같은 VIVID 카페임.
       // 14번 VIVID마커와 14번 VIVID 인포윈도우를 불러옴. 
-      infoWindows[14].open(map, markers[13]);
-      marker14.setAnimation(naver.maps.Animation.BOUNCE);
-      marker.setAnimation(naver.maps.Animation.BOUNCE);
       
    </script>
-
-
 <footer class="footer text-faded text-center py-5">
    <div class="container">
       <p class="m-0 small">Copyright &copy; Your Website 2021</p>

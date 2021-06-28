@@ -30,9 +30,9 @@
     		<label>작성자: </label>
     		<input type="text" class="form-control" id="user_id" name = "user_id" readonly="readonly">
   		</div> 		
-  			<input type="button" class="btn btn-primary btn-sm" value="글쓰기" onclick="writeFn()"> <%--함수를 ajax04에 만들어줌 --%> 
-  		    <input type='reset' value='취소' class='btn btn-warning btn-sm' id='resetbtn'>	
-  		    <button type="button" class="btn btn-success btn-sm" onclick="closeFn()"><span class="glyphicon glyphicon-heart-empty"></span>닫기</button>		
+  			<input type="button" class="content2btn" value="글쓰기" onclick="writeFn()"> <%--함수를 ajax04에 만들어줌 --%> 
+  		    <input type='reset' value='취소' class='content3btn' id='resetbtn'>	
+  		    <button type="button" class="content4btn" onclick="closeFn()"><span class="glyphicon glyphicon-heart-empty"></span>닫기</button>		
 	</form>        
     	</div>    		
   		</div>

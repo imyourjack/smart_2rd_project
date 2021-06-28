@@ -82,7 +82,7 @@ tr:nth-child(even) {
 				<ul class="navbar-nav mx-auto">
 
 					<jsp:include page="menu.jsp">
-						<jsp:param name="pageSelection" value="6" />
+						<jsp:param name="pageSelection" value="7" />
 					</jsp:include>
 
 				</ul>
