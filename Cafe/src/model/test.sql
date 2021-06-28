@@ -274,7 +274,7 @@ insert into wondu_good(good, wondu_n, user_id) values('3', '브라질 세하도 
 insert into wondu_good(good, wondu_n, user_id) values('5', '과테말라 안티구아', 'gg');
 insert into wondu_good(good, wondu_n, user_id) values('4', '케냐 AA', 'hello');
 
-select * from wondu_good;
+select * from recos_tbl;
 
 DESCRIBE wondu_tbl;
 

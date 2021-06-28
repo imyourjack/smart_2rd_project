@@ -64,10 +64,6 @@ function WondulistCallBack(data){
     $("#attach").html(view);
 }
 
-
-
-
-
 </script>
 </head>
 <body>
@@ -91,8 +87,6 @@ function WondulistCallBack(data){
          <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav mx-auto">
 
-
-<<<<<<< HEAD
                <jsp:include page="menu.jsp">
                   <jsp:param name="pageSelection" value="3" />
                </jsp:include>
@@ -147,7 +141,6 @@ function WondulistCallBack(data){
       <h3>&nbsp;&nbsp;&nbsp;&nbsp;10. 과테말라 안티구아</h3>
       <br>
       <br>
-=======
 					<jsp:include page="menu.jsp">
                     	<jsp:param name="pageSelection" value="3" />
                     </jsp:include>
@@ -240,9 +233,6 @@ function WondulistCallBack(data){
   </searchranking>
 </section>
 	
-	
->>>>>>> branch 'master' of https://github.com/2021-SMHRD-KDT-Bigdata-4/coffee.git
-
       </div>
       </searchranking>
    </section>
