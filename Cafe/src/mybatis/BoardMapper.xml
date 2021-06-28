@@ -25,5 +25,17 @@
     <select id="wonduContent" resultType="wonduCVO"> <!-- vo로 묶어주고 idx로 파라미터값을 불러옴 -->
         select wondu_c from wondu_tbl where wondu_n = #{wondu_n}				
     </select>
+     <insert id="insertgood" >
+        insert into wondu_good(good, wondu_n, user_id) values(#{good},#{wondu_n},#{user_id})
+    </insert>
     
+    <select id="good" resultType="goodVO"> <!-- vo로 묶어주고 idx로 파라미터값을 불러옴 -->
+      select * from wondu_good          
+    </select>
+    <select id="WonduSearchlist" resultType="wonduCVO">
+        select wondu_n,wondu_c,price,img from wondu_tbl where wondu_n LIKE '%' || #{wondu_n} || '%' 
+    </select>
+    <select id="Wondulist" resultType="wonduCVO">
+        select wondu_n,wondu_c,price,img from wondu_tbl
+    </select>
 </mapper>

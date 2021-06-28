@@ -1,3 +1,5 @@
+<%@page import="model.GoodVO"%>
+<%@page import="model.DAOMybatis"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
    pageEncoding="UTF-8"%>
 <%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
@@ -31,6 +33,12 @@
    color: white;
 }
 </style>
+<% 
+String test_coffee = (String) session.getAttribute("wonduInfo");
+GoodVO vo = new GoodVO();
+vo.setWondu_n(test_coffee);
+
+%>
 </head>
 <body>
    <header>
@@ -80,6 +88,7 @@
    <div id="map" style="width: 65%; height: 700px; margin-left: 450px;"></div>
 
    <script>
+   
       /* var map = new naver.maps.Map('map', {
       
        center: new naver.maps.LatLng(35.149741, 126.920007),
@@ -650,7 +659,13 @@
                getClickHandler(i));
 
       }
-
+     
+      
+      
+      infoWindows[13].open(map, markers[13]);
+      marker14.setAnimation(naver.maps.Animation.BOUNCE);
+      marker.setAnimation(naver.maps.Animation.BOUNCE);
+      
       //  infowindow.open(map, marker4);
    </script>
 </body>

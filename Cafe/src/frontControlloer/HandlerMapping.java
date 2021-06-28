@@ -4,10 +4,13 @@ import java.util.HashMap;
 
 import web.AjaxBoardUpdateController;
 import web.AjaxCoffeeController;
-
+import web.AjaxGoodController;
 import web.AjaxLoginController;
 import web.AjaxLogoutController;
 import web.AjaxSearchController;
+import web.AjaxWonduGoodController;
+import web.AjaxWonduListController;
+import web.AjaxWonduSearchListController;
 import web.Controller;
 
 public class HandlerMapping {
@@ -19,7 +22,10 @@ public class HandlerMapping {
 		mappings.put("/ajaxlogout.do", new AjaxLogoutController());
 		mappings.put("/recocoffee.do", new AjaxCoffeeController());
 		mappings.put("/ajaxupdate.do", new AjaxBoardUpdateController());
-
+		mappings.put("/ajaxwondugood.do", new AjaxWonduGoodController());
+		mappings.put("/good.do", new AjaxGoodController());
+		mappings.put("/wondusearchlist.do", new AjaxWonduSearchListController());
+		mappings.put("/wondulist.do", new AjaxWonduListController());
 		mappings.put("/ajaxsearch.do", new AjaxSearchController());
 
 		// 새로운 요청을 추가하고 -> POJO를 새롭게 만든다.
