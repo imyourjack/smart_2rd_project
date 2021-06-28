@@ -269,6 +269,7 @@ a {
   color: #e6a756;
   text-decoration: underline;
 }
+
 a:hover {
   color: #b88645;
 }
@@ -11141,8 +11142,9 @@ b.btn_jun1 {
 }
 
 p.btn_area_btm1 {
-    margin-left: 84%;
+    margin-left: 91%;
 }
+
 /* '프로필사진' 글자 위치 */
 dt.blind {
     margin-left: 9%;
@@ -11171,3 +11173,15 @@ p.btn_area_btm2{
   width: 100%;
 }
 
+.contentFirstBtn{
+	/* margin-left: 91%; */
+	background-color: #e6a756; 
+	color: rgba(47, 23, 15, 0.9); 
+	border-radius: 15px;
+}
+
+/* 자유게시판 상세보기 타이틀 css */
+.content_a {
+  color: black;
+  text-decoration: underline;
+}

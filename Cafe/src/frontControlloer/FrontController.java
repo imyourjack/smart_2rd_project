@@ -17,7 +17,7 @@ public class FrontController extends HttpServlet {
 												throws ServletException, IOException {
 		
 		request.setCharacterEncoding("utf-8"); //한글이 깨지지않게 함
-		
+		System.out.println("11");
 		// 1. 클라이언트가 어떤 요청을 했는지 알아보는 것
 		// http://127.0.0.1:8081/MVC02/list.do
 		String reqUrl = request.getRequestURI();

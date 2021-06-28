@@ -684,12 +684,6 @@
       
    </script>
 
-<div class="row">
-   <!-- 내용 넣을 곳 -->
-
-   <img src = "./Resources/assets/img/" width = "40">
-
-</div>
 
 <footer class="footer text-faded text-center py-5">
    <div class="container">
