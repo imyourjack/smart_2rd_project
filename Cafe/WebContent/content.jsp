@@ -68,8 +68,8 @@ function content_callback(data) {
 	view+="</tr>";
 	$.each(data, (index, obj)=> {
 		view+="<tr>";
-		view+="<td>"+obj.content_idx+"</td>";
-		view+="<td><a  class=content_a href='javascript:contentFn("+index+")'>"+obj.title+"</a></td>";
+		view+="<td id='content_idx"+index+"'>"+obj.content_idx+"</td>";
+		view+="<td><a class=content_a href='javascript:contentFn("+index+")'>"+obj.title+"</a></td>";
 		view+="<td>"+obj.user_id+"</td>";
 		view+="</tr>";	
 	});
@@ -103,11 +103,11 @@ function btnWrite() {
 }
 
 function contentFn(index) {
-	var content_idx=$("#content_idx"+index).text();
+	var idx=$("#content_idx"+index).text();
 $.ajax({
 	  url : "ajaxcontent.do",
 	  type : "get",
-	  data : {"content_idx" : content_idx},
+	  data : {"content_idx" : idx},
 	  datatype : "json",
 	  success : callContent, //콜백
 	  error : function () {alert("error");}			

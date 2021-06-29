@@ -90,9 +90,9 @@ public class DAOMybatis {
 		sqlSession.close();
 		return list;
 	}
-	public BoardVO boardContent(int idx) {
+	public BoardVO boardContent(int content_idx) {
 		SqlSession sqlSession = sqlSessionFactory.openSession();	
-		BoardVO vo = sqlSession.selectOne("boardContent", idx);
+		BoardVO vo = sqlSession.selectOne("boardContent", content_idx);
 		sqlSession.close();
 		return vo;
 	}
