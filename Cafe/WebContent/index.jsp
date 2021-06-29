@@ -31,9 +31,14 @@
     </head>
     <body>
         <header>
-            <h1 class="site-heading text-faded d-none d-lg-block"margin-right="50%">  
+            <!-- <h1 class="site-heading text-faded d-none d-lg-block"margin-right="50%">  
                 <span class="youngmain">COFFEE DICTIONARY。</span>
-            </h1> 
+            </h1>  -->
+            <h1 class="site-heading text-center text-faded d-none d-lg-block">
+			<span class="site-heading-upper text-primary mb-3">당신만을 위한 원두</span> 
+			<span class="youngmain">COFFEE DICTIONARY。</span>
+			</h1>
+            
         </header>
         <!-- Navigation-->
         <nav class="navbar navbar-expand-lg navbar-dark py-lg-4" id="mainNav">

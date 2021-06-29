@@ -83,6 +83,34 @@ public class DAOMybatis {
 //		sqlSession.close();
 //		return vo;
 //	}
+	
+//	자유게시판 dao
+	public List<BoardVO> content(){
+		SqlSession sqlSession = sqlSessionFactory.openSession();	
+		List<BoardVO> list = sqlSession.selectList("content");
+		sqlSession.close();
+		return list;
+	}
+	public BoardVO boardContent(int content_idx) {
+		SqlSession sqlSession = sqlSessionFactory.openSession();	
+		BoardVO vo = sqlSession.selectOne("boardContent", content_idx);
+		sqlSession.close();
+		return vo;
+	}
+	public int boardInsert(BoardVO vo) {
+		SqlSession sqlSession = sqlSessionFactory.openSession();
+		int cnt = sqlSession.insert("boardInsert", vo);
+		sqlSession.commit();//완료  insert, update, delete는 commit을 해줘야함
+		sqlSession.close();//반납
+		return cnt;
+	}
+	public int boardDelete(int contetnt_idx) {
+		SqlSession sqlSession = sqlSessionFactory.openSession();
+		int cnt = sqlSession.delete("boardDelete", contetnt_idx);
+		sqlSession.commit();
+		sqlSession.close();
+		return cnt;
+	}
 	public int insertgood(GoodVO vo ) {
 		System.out.println(vo.getUser_id());
 		System.out.println(vo.getWondu_n());
@@ -108,14 +136,12 @@ public class DAOMybatis {
 		  return searchlist;
     }
 	//원두 기본 정보 50몇개 뽑는 리스트
+
 	   public List<wonduCVO> Wondulist(){
 	      SqlSession sqlSession=sqlSessionFactory.openSession();
 	      List<wonduCVO> list=sqlSession.selectList("Wondulist");//MAPPER이름 맞춰주기.
 	      sqlSession.close();//반납
 	      return list;
 	   }
-	
-
-	
-	
+		
 }

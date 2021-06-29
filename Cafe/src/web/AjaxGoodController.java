@@ -23,7 +23,6 @@ public class AjaxGoodController implements Controller {
 		response.setContentType("text/html; charset=euc-kr");
 		//GoodVO vo = new GoodVO();
 		DAOMybatis dao = new DAOMybatis();
-		System.out.println("들어옴gg");
 		List<GoodVO> list = dao.good();
 	      
 	      Gson g = new Gson();

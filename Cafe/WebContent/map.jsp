@@ -53,10 +53,10 @@ vo.setWondu_n(test_coffee);
 </head>
 <body>
    <header>
-      <h1 class="site-heading text-center text-faded d-none d-lg-block">
-         <span class="site-heading-upper text-primary mb-3">Let's me
-            alone</span> <span class="site-heading-lower">home comming</span>
-      </h1>
+		<h1 class="site-heading text-center text-faded d-none d-lg-block">
+			<span class="site-heading-upper text-primary mb-3">당신만을 위한 원두</span> 
+			<span class="youngmain">COFFEE DICTIONARY。</span>
+		</h1>
    </header>
    <!-- Navigation-->
    <nav class="navbar navbar-expand-lg navbar-dark py-lg-4" id="mainNav">
@@ -80,6 +80,10 @@ vo.setWondu_n(test_coffee);
          </div>
       </div>
    </nav>
+   <br>
+   <br>
+   <br>
+   <br>
    <div class="row"></div>
    <!-- 지도 맵의 크기 css 형식입니다 수정 가능 합니다 !  -->
 
@@ -697,9 +701,13 @@ vo.setWondu_n(test_coffee);
       // 14번 VIVID마커와 14번 VIVID 인포윈도우를 불러옴. 
       
    </script>
+   <br>
+   <br>
+   <br>
+   <br>
 <footer class="footer text-faded text-center py-5">
    <div class="container">
-      <p class="m-0 small">Copyright &copy; Your Website 2021</p>
+      <p class="m-0 small">Copyright CNWA &copy; CHORDCAPTURECHRRY NEVER WORK ALONE</p>
    </div>
 </footer>
 <!-- Bootstrap core JS-->

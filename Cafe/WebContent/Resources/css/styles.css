@@ -39,6 +39,7 @@
   width: 20px; height: 20px;
     background-size: contain;
  }
+
  .sh_content{
   height: 500px;
  }
@@ -71,13 +72,16 @@
 /*여기 4개부터 search 페이지*/
 /* Create two columns/boxes that floats next to each other */
 searchnav {
-  float: left;
-  width: 75%;
+  /* float: left; */
+  width: 90%;
   height: auto; 
   /* only for demonstration, should be removed 
   기본값 300px였는데 auto로 했다. 여기 말 보니까 지워도 될 듯*/
+  padding-left:500px;
   background: none;
   padding: 10px;
+  
+  
 }
 
 /* Style the list inside the menu */
@@ -85,21 +89,23 @@ searchnavul {
   list-style-type: none;
   padding: 0;
 }
+                 
 
-searchranking {
-  float: left;
-  padding: 20px;
-  width: 25%;
-  
-  background-color: rgba(246, 225, 197, 0.8);
-  /*아주 옅은 회색*/
-  height: auto; /* only for demonstration, should be removed */
-}
 .searchcolumn {
 	float: left;
-	width: 32%;
-	padding: 10px;
-	color: white;
+    width: 32%;
+    height : 900px;
+    padding-left: 50px;
+    color: black;
+}
+
+.searchbtn{
+	color: #fff;
+	background: #3c1414;
+	font-size:1.0em;
+	border-radius:0.5em;
+	padding:10px 20px;
+	
 }
 
 /* Clear floats after the columns */
@@ -313,6 +319,7 @@ a {
   color: #e6a756;
   text-decoration: underline;
 }
+
 a:hover {
   color: #b88645;
 }
@@ -1061,7 +1068,7 @@ progress {
 
   .col-sm-10 {
     flex: 0 0 auto;
-    width: 83.3333333333%;
+    width: 100%;
   }
 
   .col-sm-11 {
@@ -2311,7 +2318,7 @@ progress {
   opacity: 1;
 }
 .form-control:disabled, .form-control[readonly] {
-  background-color: #e9ecef;
+  background-color: wheat;
   opacity: 1;
 }
 .form-control::file-selector-button {
@@ -10966,7 +10973,7 @@ p {
 .site-heading .site-heading-upper {
   display: block;
   font-size: 2rem;
-  font-weight: 800;
+  font-weight: 500;
 }
 .site-heading .site-heading-lower {
   font-size: 5rem;
@@ -11192,8 +11199,9 @@ b.btn_jun1 {
 }
 
 p.btn_area_btm1 {
-    margin-left: 84%;
+    margin-left: 91%;
 }
+
 /* '프로필사진' 글자 위치 */
 dt.blind {
     margin-left: 9%;
@@ -11222,6 +11230,50 @@ p.btn_area_btm2{
   width: 100%;
 }
 
+.contentFirstBtn{
+	/* margin-left: 91%; */
+	background-color: #e6a756; 
+	color: rgba(47, 23, 15, 0.9); 
+	border-radius: 15px;
+    margin-left: 90%;
+}
+
+/* .mypage_content {
+    height: 300px;
+} */
+
+/* 자유게시판 상세보기 타이틀 css */
+.content_a {
+  color: black;
+  text-decoration: underline;
+}
+.content2btn{
+	background-color: #e6a756;
+    color: rgba(47, 23, 15, 0.9);
+    border-radius: 15px;
+    margin-top: 2%;
+    margin-left: 77%;
+}
+.content3btn{
+	background-color: #e6a756;
+    color: rgba(47, 23, 15, 0.9);
+    border-radius: 15px;
+}
+.content4btn{
+	background-color: #e6a756;
+    color: rgba(47, 23, 15, 0.9);
+    border-radius: 15px;
+}
+.content5btn{
+	background-color: #e6a756;
+    color: rgba(47, 23, 15, 0.9);
+    border-radius: 15px;
+    margin-top: 2%;
+    margin-left: 93%;
+}
+
+
+
 /* 메인 페이지 폰트 */
 @font-face {
    font-family: 'Gmarket Sans';    font-style: normal;    font-weight: 500;
@@ -11233,11 +11285,10 @@ p.btn_area_btm2{
 .youngmain{
 	font-family: 'Gmarket Sans';
 	font-size: 70px;
+	color: #f6e1c5;
 }
 .youngmiddle{
 	font-family: 'Gmarket Sans';
 	font-size: 20px;
 }
-
-
 

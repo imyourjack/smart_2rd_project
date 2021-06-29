@@ -46,8 +46,8 @@ function wonduContent(data) {  //위에 callContent callback 함수 만들기
 
 	<header>
 		<h1 class="site-heading text-center text-faded d-none d-lg-block">
-			<span class="site-heading-upper text-primary mb-3">Let's me
-				alone</span> <span class="site-heading-lower">home comming</span>
+			<span class="site-heading-upper text-primary mb-3">당신만을 위한 원두</span> 
+			<span class="youngmain">COFFEE DICTIONARY。</span>
 		</h1>
 	</header>
 
@@ -213,7 +213,7 @@ function wonduContent(data) {  //위에 callContent callback 함수 만들기
 
 	<footer class="footer text-faded text-center py-5">
 		<div class="container">
-			<p class="m-0 small">Copyright &copy; Cafe Coffee Website 2022</p>
+			<p class="m-0 small">Copyright CNWA &copy; CHORDCAPTURECHRRY NEVER WORK ALONE</p>
 		</div>
 	</footer>
 	<!-- Bootstrap core JS-->
