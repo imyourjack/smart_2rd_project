@@ -68,8 +68,8 @@ function content_callback(data) {
 	view+="</tr>";
 	$.each(data, (index, obj)=> {
 		view+="<tr>";
-		view+="<td>"+obj.content_idx+"</td>";
-		view+="<td><a  class=content_a href='javascript:contentFn("+index+")'>"+obj.title+"</a></td>";
+		view+="<td id='content_idx"+index+"'>"+obj.content_idx+"</td>";
+		view+="<td><a class=content_a href='javascript:contentFn("+index+")'>"+obj.title+"</a></td>";
 		view+="<td>"+obj.user_id+"</td>";
 		view+="</tr>";	
 	});
@@ -103,22 +103,17 @@ function btnWrite() {
 }
 
 function contentFn(index) {
-	var content_idx=$("#content_idx"+index).text();
+	var idx=$("#content_idx"+index).text();
 $.ajax({
 	  url : "ajaxcontent.do",
 	  type : "get",
-	  data : {"content_idx" : content_idx},
+	  data : {"content_idx" : idx},
 	  datatype : "json",
 	  success : callContent, //콜백
 	  error : function () {alert("error");}			
 });
 	
 }
-/* function closeFn(){
-	$("#bc").css("display", "none");
-	$("#bf").css("display", "none");
-	
-} */
 function resetFn() {
 	var idx=$("#content_idx").val();  //cidx를 가지고와서 취소버튼을 눌렀을때 원래대로 
 $.ajax({
@@ -201,7 +196,7 @@ function updateFn() {
 				<ul class="navbar-nav mx-auto">
 
 					<jsp:include page="menu.jsp">
-						<jsp:param name="pageSelection" value="5" />
+						<jsp:param name="pageSelection" value="6" />
 					</jsp:include>
 
 				</ul>
