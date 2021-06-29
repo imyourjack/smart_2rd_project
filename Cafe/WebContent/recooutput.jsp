@@ -130,20 +130,39 @@ function goodsFn() {
 						<div class="gray-line">
 								<p style="font-size: 1.5em; color: black;">
 								<div>
-									<br> <h5>&nbsp;&nbsp;<strong>만족도 평가</strong>(1 - 불만족	5 - 만족)
-									</h5>
+									<br> 
+									
+									<h4><img class="facehead-imgs" src="./Resources/assets/img/emotion.png" alt="..." style=""/>&nbsp;&nbsp;<strong>만족도를 평가해주세요</strong>
+									
+									<br>
+									</h4>
 									<br>
 								</div>
-								<br><input type="radio" name="good" value="1" style="width:15px;border:1px;">1 &nbsp;&nbsp; 
-									<input type="radio" name="good" value="2" style="width:15px;border:1px;">2 &nbsp;&nbsp;
-									<input type="radio" name="good" value="3" style="width:15px;border:1px;">3 &nbsp;&nbsp;
-									<input type="radio" name="good" value="4" style="width:15px;border:1px;">4 &nbsp;&nbsp;
-									<input type="radio" name="good" value="5" style="width:15px;border:1px;">5 
-									<input type="button" class="btn-reco btn-sm" onclick="goodsFn()" value="완료">
+								
+								<br><input type="radio" name="good" value="1" style="width:15px;border:1px;"><img
+										class="face-imgs" src="./Resources/assets/img/angry.png" alt="..." style=""/> &nbsp;&nbsp; 
+										
+									<input type="radio" name="good" value="2" style="width:15px;border:1px;"><img
+										class="face-imgs" src="./Resources/assets/img/umm.png" alt="..." style=""/>  &nbsp;&nbsp;
+										
+									<input type="radio" name="good" value="3" style="width:15px;border:1px;"><img
+										class="face-imgs" src="./Resources/assets/img/soso.png" alt="..." style=""/>  &nbsp;&nbsp;
+									
+									<input type="radio" name="good" value="4" style="width:15px;border:1px;"><img
+										class="face-imgs" src="./Resources/assets/img/smile.png" alt="..." style=""/>  &nbsp;&nbsp;
+									
+									<input type="radio" name="good" value="5" style="width:15px;border:1px;"><img
+										class="face-imgs" src="./Resources/assets/img/sogood.png" alt="..." style=""/>
+									
+									<br>
+									<br>
+									<br>
+									<input type="button" class="btn-reco btn-sm" onclick="goodsFn()" style="font-size : 20px" value="완료">
 								    </p> 
 							</div>
 							</div>
 							</form>
+							<br><br><br>
 						<!-- 다시 하기 버튼 => recommend.jsp -->
 						<!-- 홈으로 가기 버튼 => index.jsp -->
 						<div class="wd-group">

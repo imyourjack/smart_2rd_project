@@ -36,6 +36,8 @@ insert into user_tbl values('python','12345','재밌네');
 insert into user_tbl values('kaggle','12345','시밣');
 insert into user_tbl values('jun','12345','준혁');
 
+insert into user_tbl values('gggg','12345','코드캡처체리');
+
 insert into user_tbl values('jenny','12345','헤으응');
 insert into user_tbl values('gg','12345','쥬지');
 insert into user_tbl values('hello','12345','인생쓰다');

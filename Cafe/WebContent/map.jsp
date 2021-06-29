@@ -80,6 +80,10 @@ vo.setWondu_n(test_coffee);
          </div>
       </div>
    </nav>
+   <br>
+   <br>
+   <br>
+   <br>
    <div class="row"></div>
    <!-- 지도 맵의 크기 css 형식입니다 수정 가능 합니다 !  -->
 
@@ -697,6 +701,10 @@ vo.setWondu_n(test_coffee);
       // 14번 VIVID마커와 14번 VIVID 인포윈도우를 불러옴. 
       
    </script>
+   <br>
+   <br>
+   <br>
+   <br>
 <footer class="footer text-faded text-center py-5">
    <div class="container">
       <p class="m-0 small">Copyright &copy; Your Website 2021</p>
