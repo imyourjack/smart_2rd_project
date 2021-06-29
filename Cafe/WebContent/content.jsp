@@ -58,115 +58,12 @@ function content_list() {     //list를 호출하기위해 함수에 담아줌
 			error : function() {alert("error");}		   
 	   });
 }
-
-function content_callback(data) {
-	var view="<table class=recommendTable>";
-	view+="<tr class=recommendTr>"; //동적으로 붙히기때문에 여기서부터는 +를 붙힘
-	view+="<td>번호</td>";
-	view+="<td>제목</td>";
-	view+="<td>작성자</td>";
-	view+="</tr>";
-	$.each(data, (index, obj)=> {
-		view+="<tr>";
-		view+="<td id='content_idx"+index+"'>"+obj.content_idx+"</td>";
-		view+="<td><a class=content_a href='javascript:contentFn("+index+")'>"+obj.title+"</a></td>";
-		view+="<td>"+obj.user_id+"</td>";
-		view+="</tr>";	
-	});
- 	view+="<tr>";
- 	view+="<td colspan='3'>";
- 	view+="<input type='button' value='글쓰기' class='contentFirstBtn' onclick='btnWrite()'/>";
- 	view+="</td>";
- 	view+="</tr>";
-	view+="</table>";
-	$("#content_id").html(view);
-}
-
-function writeFn() {
-	var formdata=$("#frm").serialize(); //boardForm에 form아이디를 불러옴 serialize란 폼안에 있는 모든 데이터를 읽어올 수 있다.
-	//alert(data);
-	$.ajax({
-		url : "ajaxregister.do",
-		type : "post",
-		data :formdata ,
-		success : content_list,
-		error : function () {alert("error");}					
-	});
-}
-
 function btnWrite() {
 	var user_id='${sessionScope.userVO.user_id}';
 	$("#bc").css("display", "none"); 
 	$("#bf").css("display", "block"); //display = none 이였던걸 보여주라라는 뜻
 	$("#resetbtn").trigger("click"); //글쓰기후 글쓰기를 새로할때 전에 입력한 정보가 리셋되는 느낌
 	$("#user_id").val(user_id);
-}
-
-function contentFn(index) {
-	var idx=$("#content_idx"+index).text();
-$.ajax({
-	  url : "ajaxcontent.do",
-	  type : "get",
-	  data : {"content_idx" : idx},
-	  datatype : "json",
-	  success : callContent, //콜백
-	  error : function () {alert("error");}			
-});
-	
-}
-function resetFn() {
-	var idx=$("#content_idx").val();  //cidx를 가지고와서 취소버튼을 눌렀을때 원래대로 
-$.ajax({
-	  url : "ajaxcontent.do",
-	  type : "get",
-	  data : {"idx" : idx},
-	  datatype : "json",
-	  success : callContent, //콜백
-	  error : function () {alert("error");}			
-});
-}
-
-function callContent(data) {  //위에 callContent callback 함수 만들기
-	$("#bc").css("display", "block"); 
-	$("#bf").css("display", "none");
-	var content_idx=data.content_idx;
-	var title=data.title;
-	var contents=data.contents;
-	var user_id=data.user_id;
-	$("#ccontent_idx").val(content_idx);
-	$("#ctitle").val(title);
-	$("#ccontents").val(contents);
-	$("#cuser_id").val(user_id);
-}
-
-function delbtn(content_idx) {
-	if(confirm("정말로 삭제하시겠습니까?")==true){
-	$.ajax({ 
-		url : "delete.do",
-		type : "get",
-		data : {"content_idx": content_idx},
-		success : content_list,
-	    error : function() {alert("error");}
-	});
- }else{
-	return false;
- }
-}
-function closeFn() {
-	$("#bc").css("display", "none");
-	$("#bf").css("display", "none");
-	$("#content_id").css("display","inline-table")
-}
-function updateFn() {
-	var formdata=$("#ufrm").serialize();
-	//alert(formdata);
-	$.ajax({
-		url : "ajaxupdate.do",
-		type : "post",
-		data :formdata ,
-		success : list,
-		error : function () {alert("error");}					
-	});
 }
 
 </script>
@@ -176,9 +73,8 @@ function updateFn() {
 <body>
 	<header>
 		<h1 class="site-heading text-center text-faded d-none d-lg-block">
-			<span class="site-heading-upper text-primary mb-3">A Free
-				Bootstrap Business Theme</span> <span class="site-heading-lower">Business
-				Casual</span>
+			<span class="site-heading-upper text-primary mb-3">당신만을 위한 원두</span> 
+			<span class="youngmain">COFFEE DICTIONARY。</span>
 		</h1>
 	</header>
 	<!-- Navigation-->
@@ -211,7 +107,7 @@ function updateFn() {
 						<!-- 자유게시판 내용 들어가는 곳 -->
 						<div class="sh_group">
 							<div class="sh_header">
-								<h2>자유게시판</h2>
+								<h2 style="color : #e6a756; margin-top: 1%;">자유게시판</h2>
 							</div>
 							<div class="sh_content">
 								<dl class="sh_lst2">
@@ -230,7 +126,6 @@ function updateFn() {
 												<td></td>
 											</tr>
 										</table>
-										
 										
 										<!-- <input type="button" class="btn_area_btm1" value="글쓰기"
 											onclick="writeFn()"> <input type='reset' value='취소'
@@ -273,7 +168,7 @@ function updateFn() {
 	</section>
 	<footer class="footer text-faded text-center py-5">
 		<div class="container">
-			<p class="m-0 small">Copyright &copy; Your Website 2021</p>
+			<p class="m-0 small">Copyright CNWA &copy; CHORDCAPTURECHRRY NEVER WORK ALONE</p>
 		</div>
 	</footer>
 	<!-- Bootstrap core JS-->

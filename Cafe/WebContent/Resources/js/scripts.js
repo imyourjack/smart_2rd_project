@@ -113,3 +113,111 @@ function registerFn() {
 
 
 
+function content_callback(data) {
+	var view="<table class=recommendTable>";
+	view+="<tr class=recommendTr>"; //동적으로 붙히기때문에 여기서부터는 +를 붙힘
+	view+="<td>번호</td>";
+	view+="<td>제목</td>";
+	view+="<td>작성자</td>";
+	view+="</tr>";
+	$.each(data, (index, obj)=> {
+		view+="<tr>";
+		view+="<td id='content_idx"+index+"'>"+obj.content_idx+"</td>";
+		view+="<td><a class=content_a href='javascript:contentFn("+index+")'>"+obj.title+"</a></td>";
+		view+="<td>"+obj.user_id+"</td>";
+		view+="</tr>";	
+	});
+ 	view+="<tr>";
+ 	view+="<td colspan='3' style='background-color: white;'>";
+ 	view+="<input type='button' value='글쓰기' class='contentFirstBtn' onclick='btnWrite()'/>";
+ 	view+="</td>";
+ 	view+="</tr>";
+	view+="</table>";
+	$("#content_id").html(view);
+}
+
+function writeFn() {
+	var formdata=$("#frm").serialize(); //boardForm에 form아이디를 불러옴 serialize란 폼안에 있는 모든 데이터를 읽어올 수 있다.
+	//alert(data);
+	$.ajax({
+		url : "ajaxregister.do",
+		type : "post",
+		data :formdata ,
+		success : content_list,
+		error : function () {alert("error");}					
+	});
+}
+
+
+
+function contentFn(index) {
+	var idx=$("#content_idx"+index).text();
+$.ajax({
+	  url : "ajaxcontent.do",
+	  type : "get",
+	  data : {"content_idx" : idx},
+	  datatype : "json",
+	  success : callContent, //콜백
+	  error : function () {alert("error");}			
+});
+	
+}
+function resetFn() {
+	var idx=$("#content_idx").val();  //cidx를 가지고와서 취소버튼을 눌렀을때 원래대로 
+$.ajax({
+	  url : "ajaxcontent.do",
+	  type : "get",
+	  data : {"idx" : idx},
+	  datatype : "json",
+	  success : callContent, //콜백
+	  error : function () {alert("error");}			
+});
+}
+
+function callContent(data) {  //위에 callContent callback 함수 만들기
+	$("#bc").css("display", "block"); 
+	$("#bf").css("display", "none");
+	var content_idx=data.content_idx;
+	var title=data.title;
+	var contents=data.contents;
+	var user_id=data.user_id;
+	$("#ccontent_idx").val(content_idx);
+	$("#ctitle").val(title);
+	$("#ccontents").val(contents);
+	$("#cuser_id").val(user_id);
+}
+
+function delbtn(content_idx) {
+	if(confirm("정말로 삭제하시겠습니까?")==true){
+	$.ajax({ 
+		url : "delete.do",
+		type : "get",
+		data : {"content_idx": content_idx},
+		success : content_list,
+	    error : function() {alert("error");}
+	});
+ }else{
+	return false;
+ }
+}
+function closeFn() {
+	$("#bc").css("display", "none");
+	$("#bf").css("display", "none");
+	$("#content_id").css("display","inline-table")
+}
+function updateFn() {
+	var formdata=$("#ufrm").serialize();
+	//alert(formdata);
+	$.ajax({
+		url : "ajaxupdate.do",
+		type : "post",
+		data :formdata ,
+		success : list,
+		error : function () {alert("error");}					
+	});
+}
+
+
+
+
+

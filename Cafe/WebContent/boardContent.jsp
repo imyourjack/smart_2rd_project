@@ -26,25 +26,25 @@
 			<div class="panel-body">
 				<form id="ufrm" class="form-horizontal" method="post">
 					<div class="form-group">
-						<label class="control-label col-sm-2">번호:</label>
+						<h2 style="color : #e6a756; margin-top: 3%;">번호</h2>
 						<div class="col-sm-10">
 							<input type="text" class="form-control" name="content_idx" id="ccontent_idx" readonly="readonly">							
 						</div>
 					</div>
 					<div class="form-group">
-						<label class="control-label col-sm-2">제목:</label>
+						<h2 style="color : #e6a756; margin-top: 1%;">제목</h2>
 						<div class="col-sm-10">
 							<input type="text" class="form-control" name="title" id="ctitle">								
 						</div>
 					</div>
 					<div class="form-group">
-						<label class="control-label col-sm-2">내용:</label>
+						<h2 style="color : #e6a756; margin-top: 1%;">내용</h2>
 						<div class="col-sm-10">
 							<textarea rows="8" cols="60" class="form-control" name="contents" id="ccontents"></textarea>								
 						</div>
 					</div>
 					<div class="form-group">
-						<label class="control-label col-sm-2">작성자:</label>
+						<h2 style="color : #e6a756; margin-top: 1%;">작성자</h2>
 						<div class="col-sm-10">
 							<input type="text" class="form-control" readonly="readonly" id="cuser_id" readonly="readonly">								
 						</div>
@@ -55,7 +55,7 @@
 							<button type="button" class="btn btn-primary btn-sm" onclick="updateFn()">수정</button>
 							</c:if>
 							<button type="button" class="btn btn-warning btn-sm" onclick="resetFn()">취소</button> --%>
-							<button type="button" class="btn btn-success btn-sm" onclick="closeFn()"><span class="glyphicon glyphicon-heart-empty"></span>닫기</button>
+							<button type="button" class="content5btn" onclick="closeFn()"><span class="glyphicon glyphicon-heart-empty"></span>닫기</button>
 						</div>
 					</div>
 				</form>
