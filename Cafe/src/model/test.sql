@@ -72,7 +72,7 @@ create table wondu_tbl(
 );
 
 
-
+select *from wondu_tbl;
 --truncate wondu_tbl;
 insert into wondu_tbl values('1','에티오피아 아리차 내추럴 g1','은은한 꽃향과 상큼한 베리향의 프리미엄 커피','7500','1','https://search.pstatic.net/common/?src=http%3A%2F%2Fshop1.phinf.naver.net%2F20200916_290%2F1600241498533CBul8_PNG%2F1377344176991246_1333992608.png&type=sc960_832');
 insert into wondu_tbl values('2','인도 마이소르 너깃 엑스트라 볼드','견과류 특유의 향과 고소함 밀크초콜릿의 바디감 달콤하고 부드러운 산미의 커피','8000','2','https://search.pstatic.net/common/?src=http%3A%2F%2Fshop1.phinf.naver.net%2F20210512_233%2F1620807599511WiUnd_JPEG%2F21943434337742690_624569600.jpg&type=sc960_832');

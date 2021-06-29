@@ -106,12 +106,12 @@ public class DAOMybatis {
 		  return searchlist;
     }
 	//원두 기본 정보 50몇개 뽑는 리스트
-	   public List<wonduCVO> Wondulist(){
-	      SqlSession sqlSession=sqlSessionFactory.openSession();
-	      List<wonduCVO> list=sqlSession.selectList("Wondulist");//MAPPER이름 맞춰주기.
-	      sqlSession.close();//반납
-	      return list;
-	   }
+		public List<wonduCVO> Wondulist(){
+			SqlSession sqlSession=sqlSessionFactory.openSession();
+			List<wonduCVO> list=sqlSession.selectList("Wondulist");//MAPPER이름 맞춰주기.
+			sqlSession.close();//반납
+			return list;
+		}
 
 	
 	
