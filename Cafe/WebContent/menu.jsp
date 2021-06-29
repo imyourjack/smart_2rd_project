@@ -48,34 +48,34 @@
 
 <c:if test="${sessionScope.userVO==null}">
 <li class="nav-item px-lg-4">
-	<a   class="nav-link text-uppercase"  href="good.jsp"
-		<%
-			if(num.equals("5")){
-		%>
-			style="color:#e6a756;"
-		<% } %>
-	>만족도</a>
+   <a   class="nav-link text-uppercase"  href="good.jsp"
+      <%
+         if(num.equals("5")){
+      %>
+         style="color:#e6a756;"
+      <% } %>
+   >만족도</a>
 </li>
 </c:if>
 <c:if test="${sessionScope.userVO!=null}">
 <li class="nav-item px-lg-4">
-	<a   class="nav-link text-uppercase"  href="good.jsp"
-		<%
-			if(num.equals("5")){
-		%>
-			style="color:#e6a756;"
-		<% } %>
-	>만족도</a>
+   <a   class="nav-link text-uppercase"  href="good.jsp"
+      <%
+         if(num.equals("5")){
+      %>
+         style="color:#e6a756;"
+      <% } %>
+   >만족도</a>
 </li>
 </c:if>
 <li class="nav-item px-lg-4">
-	<a class="nav-link text-uppercase" href="content.jsp"
-		<%
-			if(num.equals("6")){
-		%>
-			style="color:#e6a756;"
-		<% } %>
-	>자유게시판</a>
+   <a class="nav-link text-uppercase" href="content.jsp"
+      <%
+         if(num.equals("6")){
+      %>
+         style="color:#e6a756;"
+      <% } %>
+   >자유게시판</a>
 </li>
 <c:if test="${sessionScope.userVO==null}">
 <li class="nav-item px-lg-4">
@@ -89,7 +89,6 @@
    >마이페이지</a>
 </li>
 </c:if>
-
 <c:if test="${sessionScope.userVO!=null}">
 <li class="nav-item px-lg-4">
    <a class="nav-link text-uppercase" href="mypage.jsp"
@@ -116,7 +115,7 @@
    >로그인</a>
 </li>
 
-</c:if>               
+</c:if>
 
 <c:if test="${sessionScope.userVO!=null}">
 <li class="nav-item px-lg-4">
@@ -131,8 +130,4 @@
    >${sessionScope.userVO.user_name}님 로그아웃</a>
 
 </li>
-</c:if>         
-                  
-                  
-                  
-                  
+</c:if>                 

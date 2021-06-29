@@ -39,8 +39,9 @@ public class HandlerMapping {
 
 		mappings.put("/ajaxwondugood.do", new AjaxWonduGoodController());
 		mappings.put("/good.do", new AjaxGoodController());
-		mappings.put("/wondusearchlist.do", new AjaxWonduSearchListController());
 		mappings.put("/wondulist.do", new AjaxWonduListController());
+		mappings.put("/wondusearchlist.do", new AjaxWonduSearchListController());
+		
 
 		// 새로운 요청을 추가하고 -> POJO를 새롭게 만든다.
 		// mappings.put("

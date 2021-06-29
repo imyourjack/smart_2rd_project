@@ -63,13 +63,16 @@
 /*여기 4개부터 search 페이지*/
 /* Create two columns/boxes that floats next to each other */
 searchnav {
-  float: left;
-  width: 75%;
+  /* float: left; */
+  width: 90%;
   height: auto; 
   /* only for demonstration, should be removed 
   기본값 300px였는데 auto로 했다. 여기 말 보니까 지워도 될 듯*/
+  padding-left:500px;
   background: none;
   padding: 10px;
+  
+  
 }
 
 /* Style the list inside the menu */
@@ -77,21 +80,23 @@ searchnavul {
   list-style-type: none;
   padding: 0;
 }
+                 
 
-searchranking {
-  float: left;
-  padding: 20px;
-  width: 25%;
-  
-  background-color: rgba(246, 225, 197, 0.8);
-  /*아주 옅은 회색*/
-  height: auto; /* only for demonstration, should be removed */
-}
 .searchcolumn {
 	float: left;
-	width: 32%;
-	padding: 10px;
-	color: white;
+    width: 32%;
+    height : 900px;
+    padding-left: 50px;
+    color: black;
+}
+
+.searchbtn{
+	color: #fff;
+	background: #3c1414;
+	font-size:1.0em;
+	border-radius:0.5em;
+	padding:10px 20px;
+	
 }
 
 /* Clear floats after the columns */
