@@ -18,16 +18,16 @@
   <div class="panel panel-default">
     <div class="panel-body">
     <form id="frm" method = "post">
-  		<div class="form-group">
-    		<label>제목</label>
+  		<div class="form-group" style="margin-top: 3%;">
+    		<h2 style="color : #e6a756;">제목</h2>
     		<input type="text" class="form-control" id="title" name = "title">
   		</div>
   		<div class="form-group">
-    		<label >내용</label>
+    		<h2 style="color : #e6a756; margin-top: 1%;">내용</h2>
     		 <textarea class="form-control" rows="5" id="contents" name = "contents"></textarea>
   		</div>
   			<div class="form-group">
-    		<label>작성자: </label>
+    		<h2 style="color : #e6a756; margin-top: 1%;">작성자</h2>
     		<input type="text" class="form-control" id="user_id" name = "user_id" readonly="readonly">
   		</div> 		
   			<input type="button" class="content2btn" value="글쓰기" onclick="writeFn()"> <%--함수를 ajax04에 만들어줌 --%> 

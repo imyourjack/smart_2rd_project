@@ -62,9 +62,8 @@ tr:nth-child(even) {
 <body>
 	<header>
 		<h1 class="site-heading text-center text-faded d-none d-lg-block">
-			<span class="site-heading-upper text-primary mb-3">A Free
-				Bootstrap Business Theme</span> <span class="site-heading-lower">Business
-				Casual</span>
+			<span class="site-heading-upper text-primary mb-3">당신만을 위한 원두</span> 
+			<span class="youngmain">COFFEE DICTIONARY。</span>
 		</h1>
 	</header>
 	<!-- Navigation-->
@@ -112,7 +111,7 @@ tr:nth-child(even) {
 													<h2>프로필</h2>
 													<br>
 												</div>
-												<div class="sh_content">
+												<div class="mypage_content">
 													<dl class="sh_lst">
 														<dt class="blind">프로필 사진</dt>
 														<dd class="pic_desc">
@@ -135,7 +134,7 @@ tr:nth-child(even) {
 															value="${sessionScope.userVO.user_id}"
 															readonly="readonly">
 														<dt class="nic_tit">
-															<label for="fname">이름 : </label> <input class="change1"
+															<label for="fname">이   름 : </label> <input class="change1"
 																type="text" value="${sessionScope.userVO.user_name}">
 															<br>
 														</dt>
@@ -172,7 +171,7 @@ tr:nth-child(even) {
 									<div class="sh_header">
 										<h2>추천 내역</h2>
 									</div>
-									<div class="sh_content">
+									<div class="mypage_content">
 										<dl class="sh_lst2">
 											<table class=recommendTable>
 												<tr class=recommendTr>
@@ -223,18 +222,18 @@ tr:nth-child(even) {
 									<div class="sh_header">
 										<h2>${sessionScope.userVO.user_name}님이 자유게시판에 작성한 내용</h2>
 									</div>
-									<div class="sh_content">
+									<div class="mypage_content">
 										<dl class="sh_lst2">
 											<table class=recommendTable>
 												<tr class=recommendTr>
-													<th >선택</th>
-													<th>원두 이름</th>
-													<th>리뷰내역</th>
+													<th>선택</th>
+													<th>제목</th>
+													<th>작성자</th>
 												</tr>
 												<tr>
 													<th><input type="checkbox"></th>
-													<td>에티오피아 아리차 내추럴 g1</td>
-													<td>상큼한 베리향이 정말 좋아요!</td>
+													<td>에티오피아 아리차 내추럴 g1 추천 받았아요!</td>
+													<td>jun</td>
 												</tr>
 											</table>
 										</dl>
@@ -263,7 +262,7 @@ tr:nth-child(even) {
 	</section>
 	<footer class="footer text-faded text-center py-5">
 		<div class="container">
-			<p class="m-0 small">Copyright &copy; Your Website 2021</p>
+			<p class="m-0 small">Copyright CNWA &copy; CHORDCAPTURECHRRY NEVER WORK ALONE</p>
 		</div>
 	</footer>
 	<!-- Bootstrap core JS-->
