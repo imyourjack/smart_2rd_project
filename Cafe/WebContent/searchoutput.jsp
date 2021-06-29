@@ -1,4 +1,7 @@
 <%-- <%@page import="model.wonduCVO"%> --%>
+<%@page import="com.google.gson.Gson"%>
+<%@page import="model.wonduCVO"%>
+<%@page import="java.util.List"%>
 <%@page import="model.DAOMybatis"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
    pageEncoding="UTF-8"%>
@@ -18,7 +21,6 @@
 <!-- ./Resources/js/all.min.js -->
 <!-- Google fonts-->
 <link href="stylesheet" rel="stylesheet" />
-<link href="stylesheet" rel="stylesheet" />
 <!-- Core theme CSS (includes Bootstrap)-->
 <link href="./Resources/css/styles.css" rel="stylesheet" />
 
@@ -28,12 +30,31 @@
    src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 <script type="text/javascript" src="./script.js"></script>
 <style type="text/css">
-</style>
-<script type="text/javascript">
-$(document).ready(()=>{
-   Wondusearchlist();
-});
 
+</style>
+
+<% 
+request.setCharacterEncoding("EUC-KR");
+String wondu_n = request.getParameter("wondu_n");
+System.out.println("wondu_n >> "+wondu_n);
+DAOMybatis dao = new DAOMybatis();
+List<wonduCVO> list = dao.WonduSearchlist(wondu_n);
+
+Gson gson = new Gson();
+String list_json = gson.toJson(list);
+for(int i = 0; i<list.size(); i++){
+	
+System.out.println("list : "+list.get(i).getWondu_n());
+}
+
+%>
+
+<script type="text/javascript">
+//$(document).ready(()=>{
+//	console.log(list_json);
+	
+	/* WondusearchlistCallBack(); */
+//});
 
 function searchgoFn(){
    location.href="search.jsp"
@@ -41,39 +62,52 @@ function searchgoFn(){
 function homegoFn(){
    location.href="index.jsp"
 }
+
+
+
+
 //원두 리스트 뽑아준다
 
- function Wondusearchlist() {
-    $.ajax({
-         url : "wondusearchlist.do",    //-----AjaxBoardListController-----------
-         type : "get",           // JSON = dic : {"idx":1, "name:"}
-         success: WondusearchlistCallBack,      // <----------------
-         dataType: "json",
-         error : function() {alert("searchlisterror");
-         }
-      });      
-}
-function WondusearchlistCallBack(data){
- var view = ""
- $.each(data,(index,obj)=>{
-    view += "<div class=\"searchcolumn\">";
-    view += "<img class=\"recooutput-img\" src="+obj.img+" alt=\"...\" style=\"width: 200px; height :200px\" />"
-    view += "<br>";
-    view += "<br>";
-    view += "<h2>" + obj.wondu_n + "</h2>";
-    view += "<p>" + obj.wondu_c + "</p>";
-    view += "<p>" + obj.price +"</p>";
-    view += "<br>";
-    view += "<br>";
-    view += "<br>";
-    view += "</div>";
- });
- $("#searchattach").html(view);
-}
+//   function Wondusearchlist() {
+//	let data = $('span.section-heading-lower > strong').val();
+//	console.log('커피원두>> ',data);
+	
+//	$.ajax({
+//         url : "wondusearchlist.do",    //-----AjaxBoardListController-----------
+//         type : "get",           // JSON = dic : {"idx":1, "name:"}
+//         dataType: "json",
+//         success: function(data){
+//        	 console.log(data)
+        	 /* WondusearchlistCallBack */
+//        	 } ,      // <----------------
+//         error : function() {alert("searchlisterror");
+//         }
+//      });      
+//}
+
+/* function WondusearchlistCallBack(data){
+	 var view = ""
+	 $.each(data,(index,wondu)=>{
+	    view += "<div class=\"searchcolumn\">";
+	    view += "<img class=recooutput-img src="+wondu.img+"alt=\"\"  />"
+	    view += "<br>";
+	    view += "<br>";
+	    view += "<h2>" + wondu.wondu_n + "</h2>";
+	    view += "<p>" + wondu.wondu_c + "</p>";
+	    view += "<p>" + wondu.price +"</p>";
+	    view += "<br>";
+	    view += "<br>";
+	    view += "<br>";
+	    view += "</div>";
+	 });
+	 $("#searchattach").html(view);
+	}  */
 
 </script>
 </head>
 <body>
+
+
    <header>
       <h1 class="site-heading text-center text-faded d-none d-lg-block">
          <span class="site-heading-upper text-primary mb-3">A Free
@@ -110,22 +144,28 @@ function WondusearchlistCallBack(data){
       <div class="container">
          <div class="row">
             <div class="col-xl-9 mx-auto">
-               <div class="cta-inner bg-faded text-center rounded">
+               <div class="cta-inners bg-faded text-center rounded">
                   <h2 class="section-heading mb-5">
 
                      <span class="section-heading-upper">당신의 취향을 발견하다</span><br>
 
-                     <span class="section-heading-lower"><strong>원두 검색
+                     <span class="section-heading-lower"><strong data-value="<%=request.getParameter("wondu_n")%>">원두 검색
                            결과</strong></span>
                   </h2>
 
                   <div id="searchattach">
-                     <!--  -->
+
                   </div>
-
-
-
-
+                  
+                <%for(int i=0; i<list.size(); i++){ %>
+	                  <div class="searchcolumn" style="color : black;">
+	         				<img class=recooutput-img src="<%= list.get(i).getImg() %>">
+	         				<br><br>
+	         				<h2> <%= list.get(i).getWondu_n() %></h2>
+	         				<p> <%= list.get(i).getWondu_c() %></p>
+	         				<p> <%= list.get(i).getPrice() %></p>
+	 				 </div>
+ 					<%} %> 
 
 
                   <ul class="list-unstyled list-hours mb-5 text-left mx-auto">
@@ -133,13 +173,14 @@ function WondusearchlistCallBack(data){
                         <!-- li 글 쓰고 밑에 옅은 회색 줄 생김 --> <!-- 여기 왼쪽 글씨 쓰는 부분 한글 안 먹힘 --> <!-- 여기는 나중에 원두 이미지 컬럼에 src 전부 넣어준 후에 작성.우선 자리 비워둠.
                         <img alt="" src="">
                          -->
+                         
+                     
                   </ul>
 
-                  <div>
-                     <p>
-                        <button type="button" class="recooutbtn" onclick="searchgoFn()">검색하기</button>
-                        <button type="button" class="recooutbtn" onclick="homegoFn()">홈으로</button>
-                     </p>
+                  <div style="clear : both">
+                        <input type="button" class="recooutbtn" onclick="searchgoFn()" value="다시하기">
+                        <input type="button" class="recooutbtn" onclick="homegoFn()" value="홈으로">
+   
                   </div>
                </div>
             </div>

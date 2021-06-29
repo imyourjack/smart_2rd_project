@@ -34,8 +34,9 @@
         select * from wondu_good 			
     </select>
 
-    <select id="WonduSearchlist" resultType="wonduCVO">
-        select wondu_n,wondu_c,price,img from wondu_tbl where wondu_n LIKE '%' || #{wondu_n} || '%' 
+    <select id="WonduSearchlist" resultType="wonduCVO">      
+        select wondu_n,wondu_c,price,img from wondu_tbl where wondu_n like CONCAT('%',#{wondu_n},'%')
+       
     </select>
     <select id="Wondulist" resultType="wonduCVO">
         select wondu_n,wondu_c,price,img from wondu_tbl

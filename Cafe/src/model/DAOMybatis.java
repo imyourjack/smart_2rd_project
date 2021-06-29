@@ -14,6 +14,7 @@ public class DAOMybatis {
 	private static SqlSessionFactory sqlSessionFactory;
 	static { // 초기화 블록
 		try {
+			System.out.println("들어왔니?");
 			String resource = "mybatis/config.xml";
 			InputStream inputStream = Resources.getResourceAsStream(resource);
 			sqlSessionFactory = new SqlSessionFactoryBuilder().build(inputStream);
@@ -99,9 +100,10 @@ public class DAOMybatis {
 		 return vo;
 		
 	}
-	public List<wonduCVO> WonduSearchlist(wonduCVO swon){
+	public List<wonduCVO> WonduSearchlist(String wondu_n){
 		  SqlSession sqlSession=sqlSessionFactory.openSession();
-		  List<wonduCVO> searchlist=sqlSession.selectList("WonduSearchlist", swon);//MAPPER이름 맞춰주기.
+		  List<wonduCVO> searchlist=sqlSession.selectList("WonduSearchlist",wondu_n);//MAPPER이름 맞춰주기.
+		  System.out.println(searchlist.size());
 		  sqlSession.close();//반납
 		  return searchlist;
     }
@@ -112,6 +114,7 @@ public class DAOMybatis {
 	      sqlSession.close();//반납
 	      return list;
 	   }
+	
 
 	
 	

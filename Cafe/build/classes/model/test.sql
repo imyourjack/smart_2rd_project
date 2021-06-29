@@ -285,4 +285,34 @@ insert into content_tbl(title, contents, user_id) values('카페가봤어요', '
 insert into content_tbl(title, contents, user_id) values('인생이', '인생이 쓴데 커피도 쓰네 후......','min');
 
 select * from wondu_good;
+
+
+
+SELECT CONVERT(CONVERT(wondu_n USING BINARY) USING utf8), 
+	   CONVERT(CONVERT(wondu_c USING BINARY) USING utf8), 
+	   CONVERT(CONVERT(price USING BINARY) USING utf8), 
+	   CONVERT(CONVERT(img USING BINARY) USING utf8) 
+       
+FROM wondu_tbl 
+WHERE CONVERT(wondu_n USING BINARY) like  '%' #{wondu_n} '%' 
+
+
+
+select wondu_n,wondu_c,price,img from wondu_tbl where wondu_n like  '%' '브라질' '%' 
+
+
+select wondu_n,wondu_c,price,img from wondu_tbl where wondu_n like CONCAT('%','브라질','%')
+
+
+
+
+
+
+
+
+
+
+
+
+
 commit;

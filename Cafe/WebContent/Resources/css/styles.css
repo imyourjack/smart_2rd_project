@@ -10,6 +10,14 @@
  * Copyright 2011-2021 Twitter, Inc.
  * Licensed under MIT (https://github.com/twbs/bootstrap/blob/main/LICENSE)
  */
+ .cta .cta-inners {
+  position: relative;
+  padding: 3rem;
+  margin: 0.5rem;
+  padding-bottom : 450px;
+}
+
+ 
  .recooutput-img{
   width: 200px;
   height: 200px;

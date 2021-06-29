@@ -1,7 +1,9 @@
 package frontControlloer;
 
 import java.io.IOException;
+import java.util.Enumeration;
 
+import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
@@ -24,6 +26,11 @@ public class FrontController extends HttpServlet {
 		//System.out.println(reqUrl);
 		String cpath = request.getContextPath(); //  /MVC02
 		//System.out.println(cpath);
+		Enumeration params = request.getParameterNames();// 들어간 파라미터 확인
+        while(params.hasMoreElements()) {
+          String name = (String) params.nextElement();
+          System.out.print(name + " : " + request.getParameter(name) + "     "); 
+        }
 		
 		String command = reqUrl.substring(cpath.length());
 		System.out.println(command);
@@ -45,8 +52,8 @@ public class FrontController extends HttpServlet {
 				response.sendRedirect(view.split(":/")[1]); // view=redirect://list.do   / 리다이렉트
 			}
 			else {
-				//RequestDispatcher rd = request.getRequestDispatcher(ViewResolver.makeUrl(view)); // WEB-INF/views/boardList -> boardList
-				//rd.forward(request, response); //포워드
+				RequestDispatcher rd = request.getRequestDispatcher(ViewResolver.makeUrl(view)); // WEB-INF/views/boardList -> boardList
+				rd.forward(request, response); //포워드
 			}
 		}
 	}

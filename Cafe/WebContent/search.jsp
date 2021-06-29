@@ -22,44 +22,49 @@
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 <script type="text/javascript" src="./script.js"></script>
 <style type="text/css"> </style>
+
+
+
 <script type="text/javascript">
- $(document).ready(()=>{
+$(document).ready(()=>{
    Wondulist();
-}); 
+});
+
+
 
 //원두 리스트 뽑아준다
 function Wondulist() {
       //$("#bc").css("display","none");
-      //$("#id").css("display","block");//글쓰기 이후에 안 보이게 함.
+      //$("#bf").css("display","none");//글쓰기 이후에 안 보이게 함.
        $.ajax({
             url : "wondulist.do",    //-----AjaxBoardListController-----------
-            type : "get",           // JSON = dic : {"idx":1, "name:"}
-            dataType: "json",
+            type : "post",           // JSON = dic : {"idx":1, "name:"}
             success: WondulistCallBack,      // <----------------
-            error : function() {alert("error");
+            dataType: "json",
+            error : function() {alert("listerror");
             }
          });      
    }
-//class=\"recooutput-img\"   style=\"width: 200px; height :200px;\" alt=\"\"
 function WondulistCallBack(data){
     var view = ""
-    
     $.each(data,(index,obj)=>{
        
        view += "<div class=\"searchcolumn\">";
-       view += "<img class=recooutput-img src="+obj.img+" />";
-       view += "<br><br>";
+       view += "<img class=recooutput-img src="+obj.img+" alt=\"\" />" 
+       view += "<br><br>"
        view += "<h2>" + obj.wondu_n + "</h2>";
        view += "<p>" + obj.wondu_c + "</p>";
        view += "<p>" + obj.price + "</p>";
        view += "<br>";
        view += "<br>";
        view += "<br>";
-       view += "</div>";   
+       view += "</div>";
     });
-
     $("#attach").html(view);
 }
+
+
+
 
 </script>
 </head>
@@ -84,6 +89,7 @@ function WondulistCallBack(data){
          <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav mx-auto">
 
+
                <jsp:include page="menu.jsp">
                   <jsp:param name="pageSelection" value="3" />
                </jsp:include>
@@ -96,29 +102,29 @@ function WondulistCallBack(data){
    <div class="searchbean">
       <!-- 여기 원두 검색 -->
    </div>
-   <form method="post" action="searchoutput.jsp" name="formname">
+   <form  action="searchoutput.jsp" name="formname">
       <br> <br>
       <div class="searchbar">
-         <input type="text" id="wondu_n" name="wondu_n" placeholder="원두 이름">&nbsp;&nbsp; 
-            <input type="submit" class="searchbtn"  value="검색하기">
+         <input type="text" id="wondu_n" name="wondu_n" placeholder="원두 이름" value="">&nbsp;&nbsp; 
+            <input type="submit" class="submit"  value="검색하기">
       </div>
       
       <br> <br>
    </form>
    <section>
       <searchnav> <br>
-     
       <div id="attach">
          <div class="searchcolumn">
+
             <!-- 
             원두 이미지
             원두 이름
             원두 상세 내용
             가격
              -->
+             
          </div>
       </div>
-     
       </searchnav>
       
       <searchranking> <br>
@@ -138,98 +144,7 @@ function WondulistCallBack(data){
       <h3>&nbsp;&nbsp;&nbsp;&nbsp;10. 과테말라 안티구아</h3>
       <br>
       <br>
-					<jsp:include page="menu.jsp">
-                    	<jsp:param name="pageSelection" value="3" />
-                    </jsp:include>
-                    
-                    
-				</ul>
-			</div>
-		</div>
-	</nav>
-	<div class="searchbean">
-	<!-- 여기 원두 검색 -->
-	</div>
-	<form>
-	<br>
-	<br>
-	<div class="searchbar">
-	<input type="text" id="coffeebean" name="coffeebean" placeholder="원두 이름">&nbsp;&nbsp;
-	<input type="button"  class="searchbtn" value="검색하기" onclick="searchbeanFn()">
-	</div>
-	<br>
-	<br>
-	</form>
-	<section>
-  <searchnav>
-    	<br>
-    <div id="attach1">
-      <div class="searchcolumn">
-			<h2>원두 이름1</h2>
-			<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-				Maecenas sit amet pretium urna. Vivamus venenatis velit nec neque
-				ultricies, eget elementum magna tristique. Quisque vehicula, risus
-				eget aliquam placerat, purus leo tincidunt eros, eget luctus quam
-				orci in velit. Praesent scelerisque tortor sed accumsan convallis.</p>
-		</div>
-      <div class="searchcolumn">
-			<h2>원두 이름2</h2>
-			<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-				Maecenas sit amet pretium urna. Vivamus venenatis velit nec neque
-				ultricies, eget elementum magna tristique. Quisque vehicula, risus
-				eget aliquam placerat, purus leo tincidunt eros, eget luctus quam
-				orci in velit. Praesent scelerisque tortor sed accumsan convallis.</p>
-                
-		</div>
-        <div class="searchcolumn">
-			<h2>원두 이름3</h2>
-			<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-				Maecenas sit amet pretium urna. Vivamus venenatis velit nec neque
-				ultricies, eget elementum magna tristique. Quisque vehicula, risus
-				eget aliquam placerat, purus leo tincidunt eros, eget luctus quam
-				orci in velit. Praesent scelerisque tortor sed accumsan convallis.</p>
-		</div>
-        <div class="searchcolumn">
-			<h2>원두 이름4</h2>
-			<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-				Maecenas sit amet pretium urna. Vivamus venenatis velit nec neque
-				ultricies, eget elementum magna tristique. Quisque vehicula, risus
-				eget aliquam placerat, purus leo tincidunt eros, eget luctus quam
-				orci in velit. Praesent scelerisque tortor sed accumsan convallis.</p>
-		</div>
-		<div class="searchcolumn">
-			<h2>원두 이름5</h2>
-			<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-				Maecenas sit amet pretium urna. Vivamus venenatis velit nec neque
-				ultricies, eget elementum magna tristique. Quisque vehicula, risus
-				eget aliquam placerat, purus leo tincidunt eros, eget luctus quam
-				orci in velit. Praesent scelerisque tortor sed accumsan convallis.</p>
-		</div>
-		</div>
-   <br>
-    <br>
-  </searchnav>
-  
-  <searchranking>
-  <br>
-    <h1>&nbsp;&nbsp;인 기 목 록</h1>
-    <br>
-    <h3>&nbsp;&nbsp;&nbsp;&nbsp;1. 원두1</h3>
-    <h3>&nbsp;&nbsp;&nbsp;&nbsp;2. 원두2</h3>
-    <h3>&nbsp;&nbsp;&nbsp;&nbsp;3. 원두3</h3>
-    <h3>&nbsp;&nbsp;&nbsp;&nbsp;4. 원두4</h3>
-    <h3>&nbsp;&nbsp;&nbsp;&nbsp;5. 원두5</h3>
-    <h3>&nbsp;&nbsp;&nbsp;&nbsp;6. 원두6</h3>
-    <h3>&nbsp;&nbsp;&nbsp;&nbsp;7. 원두7</h3>
-    <h3>&nbsp;&nbsp;&nbsp;&nbsp;8. 원두8</h3>
-    <h3>&nbsp;&nbsp;&nbsp;&nbsp;9. 원두9</h3>
-    <h3>&nbsp;&nbsp;&nbsp;&nbsp;10. 원두10</h3>
-    <br>
-    <br>
-    <p>블라블라 임의 할말 없으면 br</p>
-  </searchranking>
-</section>
-	
+
       </div>
       </searchranking>
    </section>
