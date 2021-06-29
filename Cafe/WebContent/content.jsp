@@ -114,11 +114,6 @@ $.ajax({
 });
 	
 }
-/* function closeFn(){
-	$("#bc").css("display", "none");
-	$("#bf").css("display", "none");
-	
-} */
 function resetFn() {
 	var idx=$("#content_idx").val();  //cidx를 가지고와서 취소버튼을 눌렀을때 원래대로 
 $.ajax({
@@ -201,7 +196,7 @@ function updateFn() {
 				<ul class="navbar-nav mx-auto">
 
 					<jsp:include page="menu.jsp">
-						<jsp:param name="pageSelection" value="5" />
+						<jsp:param name="pageSelection" value="6" />
 					</jsp:include>
 
 				</ul>

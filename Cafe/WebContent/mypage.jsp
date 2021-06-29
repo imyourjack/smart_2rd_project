@@ -154,7 +154,7 @@ tr:nth-child(even) {
 												<div>
 													<p class="btn_area_btm1">
 														<button type="button" onclick="updateFn()" value="수정"
-															style="background-color: #e6a756; color: rgba(47, 23, 15, 0.9); border-radius: 15px;">수정</button>
+															style="background-color: #e6a756; color: rgba(47, 23, 15, 0.9); border-radius: 15px; margin-left: -50px;">수정</button>
 														<button type="reset" class="btn_model" id="bt_mypage_jun">
 															<b class="btn_jun2">취소</b>
 														</button>
@@ -242,7 +242,7 @@ tr:nth-child(even) {
 									<div>
 										<p class="btn_area_btm1">
 											<button type="button" onclick="reviewUpdateFn()" value="수정"
-													style="background-color: #e6a756; color: rgba(47, 23, 15, 0.9); border-radius: 15px;">수정</button>
+													style="background-color: #e6a756; color: rgba(47, 23, 15, 0.9); border-radius: 15px; margin-left: -50px;">수정</button>
 											<button type="button" onclick="reviewDeleteFn()" class="btn_model" id="bt_mypage_jun">
 													<b class="btn_jun2">삭제</b>
 											</button>
