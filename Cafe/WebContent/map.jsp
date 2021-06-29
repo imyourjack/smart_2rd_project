@@ -116,7 +116,7 @@ vo.setWondu_n(test_coffee);
 
       //C:\Users\21SMT61\git\coffee\Cafe
       //스마트 인재 개발원 
-      var marker= new naver.maps.Marker({
+      var marker1= new naver.maps.Marker({
          map : map,
          position : smart,
          title : '스마트 인재 개발원',
@@ -129,14 +129,14 @@ vo.setWondu_n(test_coffee);
          animation : naver.maps.Animation.DROP,
 
       });
-      markers.push(marker);
+      markers.push(marker1);
       
 
-      naver.maps.Event.addListener(marker, 'click', function() {
-         if (marker.getAnimation() !== null) {
-            marker.setAnimation(null);
+      naver.maps.Event.addListener(marker1, 'click', function() {
+         if (marker1.getAnimation() !== null) {
+            marker1.setAnimation(null);
          } else {
-            marker.setAnimation(naver.maps.Animation.BOUNCE);
+            marker1.setAnimation(naver.maps.Animation.BOUNCE);
          }
       });
       
@@ -662,10 +662,10 @@ vo.setWondu_n(test_coffee);
 
      
       
-      
+      // 인포 윈도우는 인덱싱임  -1해서 계산   밑에 애니메이션은 그대로 숫자 쓰면 됨
       infoWindows[13].open(map, markers[13]);
       marker14.setAnimation(naver.maps.Animation.BOUNCE);
-      marker.setAnimation(naver.maps.Animation.BOUNCE);
+      marker1.setAnimation(naver.maps.Animation.BOUNCE);
       
       //  infowindow.open(map, marker4);
 
@@ -697,14 +697,6 @@ vo.setWondu_n(test_coffee);
       // 14번 VIVID마커와 14번 VIVID 인포윈도우를 불러옴. 
       
    </script>
-
-<div class="row">
-   <!-- 내용 넣을 곳 -->
-
-   <img src = "./Resources/assets/img/" width = "40">
-
-</div>
-
 <footer class="footer text-faded text-center py-5">
    <div class="container">
       <p class="m-0 small">Copyright &copy; Your Website 2021</p>

@@ -91,7 +91,6 @@
 </c:if>
 <c:if test="${sessionScope.userVO!=null}">
 <li class="nav-item px-lg-4">
-<<<<<<< HEAD
    <a class="nav-link text-uppercase" href="mypage.jsp"
       <%
          if(num.equals("7")){

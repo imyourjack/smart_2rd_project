@@ -25,6 +25,22 @@
     <select id="wonduContent" resultType="wonduCVO"> 
         select wondu_c from wondu_tbl where wondu_n = #{wondu_n}				
     </select>
+    
+    <select id="content" resultType="boardVO">
+        select * from content_tbl
+    </select>
+    
+    <select id="boardContent" resultType="boardVO"> <!-- vo로 묶어주고 idx로 파라미터값을 불러옴 -->
+        select content_idx, title, contents, user_id from content_tbl where content_idx = #{content_idx}				
+    </select>
+    
+    <insert id="boardInsert" >
+     insert into content_tbl(title, contents, user_id) values(#{title},#{contents},#{user_id})
+    </insert> 
+    
+    <delete id="boardDelete" >
+     delete from content_tbl where content_idx = #{content_idx}
+    </delete>
 
      <insert id="insertgood" >
         insert into wondu_good(good, wondu_n, user_id) values(#{good},#{wondu_n},#{user_id})

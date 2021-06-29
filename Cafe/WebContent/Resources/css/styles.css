@@ -310,6 +310,7 @@ a {
   color: #e6a756;
   text-decoration: underline;
 }
+
 a:hover {
   color: #b88645;
 }
@@ -11189,8 +11190,9 @@ b.btn_jun1 {
 }
 
 p.btn_area_btm1 {
-    margin-left: 84%;
+    margin-left: 91%;
 }
+
 /* '프로필사진' 글자 위치 */
 dt.blind {
     margin-left: 9%;
@@ -11217,5 +11219,51 @@ p.btn_area_btm2{
   font-family: arial, sans-serif;
   border-collapse: collapse;
   width: 100%;
+}
+
+.contentFirstBtn{
+	/* margin-left: 91%; */
+	background-color: #e6a756; 
+	color: rgba(47, 23, 15, 0.9); 
+	border-radius: 15px;
+}
+
+/* 자유게시판 상세보기 타이틀 css */
+.content_a {
+  color: black;
+  text-decoration: underline;
+}
+.content2btn{
+	background-color: #e6a756;
+    color: rgba(47, 23, 15, 0.9);
+    border-radius: 15px;
+}
+.content3btn{
+	background-color: #e6a756;
+    color: rgba(47, 23, 15, 0.9);
+    border-radius: 15px;
+}
+.content4btn{
+	background-color: #e6a756;
+    color: rgba(47, 23, 15, 0.9);
+    border-radius: 15px;
+}
+
+
+/* 메인 페이지 폰트 */
+@font-face {
+   font-family: 'Gmarket Sans';    font-style: normal;    font-weight: 500;
+   src: local('Gmarket Sans Medium'), local('GmarketSans-Medium'),
+   url('http://script.ebay.co.kr/fonts/GmarketSansMedium.woff2') format('woff2'), /* Chrome 26+, Opera 23+, Firefox 39+ */
+   url('http://script.ebay.co.kr/fonts/GmarketSansMedium.woff') format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+}
+
+.youngmain{
+	font-family: 'Gmarket Sans';
+	font-size: 70px;
+}
+.youngmiddle{
+	font-family: 'Gmarket Sans';
+	font-size: 20px;
 }
 

@@ -31,10 +31,9 @@
     </head>
     <body>
         <header>
-            <h1 class="site-heading text-center text-faded d-none d-lg-block">
-                <span class="site-heading-upper text-primary mb-3">Let's me alone</span>
-                <span class="site-heading-lower">home comming</span>
-            </h1>
+            <h1 class="site-heading text-faded d-none d-lg-block"margin-right="50%">  
+                <span class="youngmain">COFFEE DICTIONARY。</span>
+            </h1> 
         </header>
         <!-- Navigation-->
         <nav class="navbar navbar-expand-lg navbar-dark py-lg-4" id="mainNav">
@@ -55,13 +54,19 @@
         <section class="page-section clearfix">
             <div class="container">
                 <div class="intro">
-                    <img class="intro-img img-fluid mb-3 mb-lg-0 rounded" src="./Resources/assets/img/intro.jpg" alt="..." />
+                    <img class="intro-img img-fluid mb-3 mb-lg-0 rounded" src="./Resources/assets/img/cafe2.PNG" alt="..." />
                     <div class="intro-text left-0 text-center bg-faded p-5 rounded">
                         <h2 class="section-heading mb-4">
-                            <span class="section-heading-upper">Fresh Coffee</span>
-                            <span class="section-heading-lower">Worth Drinking</span>
+                            <span class="section-heading-upper">TO YOU </span>
+                            <span class="youngmiddle">당신만의 커피를 알아보세요</span>
                         </h2>
-                        <p class="mb-3">Every cup of our quality artisan coffee starts with locally sourced, hand picked ingredients. Once you try it, our coffee will be a blissful addition to your everyday morning routine - we guarantee it!</p>
+                        <nav>
+                        <ul>
+                        <li><a href="#">원두 추천받기</a></li>
+                        <li><a href="#">커피맵 확인하기</a></li>
+                        </ul>
+                        </nav>
+                        <p class="mb-3">매일 아침부터 늦은 오후까지 사람들은 각자의 이유들로 커피를 찿습니다. 이젠 당신에게 딱 맞는 커피를 발견해보세요.</p>
                         <div class="intro-button mx-auto"><a class="btn btn-primary btn-xl" href="#!" onclick="junFn()">추천받으러 가기</a></div>
                     </div>
                 </div>
@@ -76,14 +81,14 @@
                                 <span class="section-heading-upper">Our Promise</span>
                                 <span class="section-heading-lower">To You</span>
                             </h2>
-                            <p class="mb-0">When you walk into our shop to start your day, we are dedicated to providing you with friendly service, a welcoming atmosphere, and above all else, excellent products made with the highest quality ingredients. If you are not satisfied, please let us know and we will do whatever we can to make things right!</p>
+                            <p class="youngmiddle">저희 COFFEE DICTIONARY는 세계 각지의 원두정보와 당신의 설문조사를 토대로 분석하여 당신의 취향에 가장 알맞는 원두를 추천합니다. 당신에게 가장 알맞는 원두를 확인하고 그 원두로 커피를 파는곳 또한 확인해보세요!</p>
                         </div>
                     </div>
                 </div>
             </div>
         </section>
         <footer class="footer text-faded text-center py-5">
-            <div class="container"><p class="m-0 small">Copyright &copy; Your Website 2021</p></div>
+            <div class="container"><p class="m-0 small">Copyright CNWA &copy; CHORDCAPTURECHRRY NEVER WORK ALONE</p></div>
         </footer>
         <!-- Bootstrap core JS-->
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js"></script>
