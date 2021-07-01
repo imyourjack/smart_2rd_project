@@ -13,7 +13,14 @@
 	align:center;
 }
 
-
+.gray-line1 {
+    background: floralwhite;
+    color: #583E32;
+    border: 2px solid black;
+    border-radius: 8px;
+    margin-left: -2%;
+    width: 524px;
+}
 .gray-line-head{
 	 background: #FFF2E6;
 	 color:#583E32;

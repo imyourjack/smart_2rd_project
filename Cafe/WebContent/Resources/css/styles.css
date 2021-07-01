@@ -10,6 +10,13 @@
  * Copyright 2011-2021 Twitter, Inc.
  * Licensed under MIT (https://github.com/twbs/bootstrap/blob/main/LICENSE)
  */
+ .searchcolumns{
+	float: left;
+    width: 32%;
+    height : 500x;
+    padding-left: 50px;
+    color: black;
+ }
  .cta .cta-inners {
   position: relative;
   padding: 3rem;
@@ -10991,13 +10998,15 @@ p {
 }
 .section-heading .section-heading-upper {
   display: block;
-  font-size: 1.5rem;
-  font-weight: 800;
+  font-size: 2.5rem;
+  font-weight: 700;
+  color : black;
 }
 .section-heading .section-heading-lower {
   display: block;
-  font-size: 3rem;
-  font-weight: 100;
+  font-size: 5rem;
+  font-weight: 150;
+  color : black;
 }
 
 .bg-faded {
@@ -11280,6 +11289,16 @@ p.btn_area_btm2{
    src: local('Gmarket Sans Medium'), local('GmarketSans-Medium'),
    url('http://script.ebay.co.kr/fonts/GmarketSansMedium.woff2') format('woff2'), /* Chrome 26+, Opera 23+, Firefox 39+ */
    url('http://script.ebay.co.kr/fonts/GmarketSansMedium.woff') format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+}
+.youngmain2{
+	font-family: 'Gmarket Sans';
+	font-size: 40px;
+	color: black;
+}
+.youngmain1{
+	font-family: 'Gmarket Sans';
+	font-size: 50px;
+	color: black;
 }
 
 .youngmain{

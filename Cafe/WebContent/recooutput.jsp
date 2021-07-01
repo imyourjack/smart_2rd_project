@@ -42,7 +42,10 @@ function goreset(){
 	location.href="recommend.jsp"
 }
 function gohome(){
-	location.href="index.jsp"
+	location.href="map.jsp"
+}
+function gomin() {
+	location.href="map.jsp"
 }
 function gocontroller(){
 	location.href="ajaxwondugood.do"
@@ -55,10 +58,11 @@ function goodsFn() {
 		type : "post",
 		data :formdata,
 		datatype : "json",
-		success : gohome(),
+		success : gomin(),
 		error : function () {alert("error");}					
 	});
 }
+
 </script>
 </head>
 <body>
@@ -99,24 +103,21 @@ function goodsFn() {
 			<div class="row">
 				<div class="col-xl-9 mx-auto">
 					<div class="cta-inner bg-fade text-center rounded">
-						<h2 class="section-heading mb-5">
-						
-							<span class="section-heading-upper">당신의 취향을 발견하다</span><br>
-							
-							<span class="section-heading-lower"><strong>원두 추천 결과</strong></span>
-						</h2>
-						
-							<img class="recooutput-img" src="./Resources/assets/img/intro.jpg" alt="..." style="
-    						width: 500px;"/>
+						<h2 class="section-heading mb-5">						
+							<span class="section-heading-upper" style="font-family: Gmarket Sans";>당신의 취향을 발견하다</span><br>							
+							<h1 class="section-heading-lower" style="font-family: Gmarket Sans";><strong>원두 추천 결과</strong></h1>
+						</h2>						
+							<img class="recooutput-img" src="./Resources/assets/img/wondu1.jpg" alt="..." style="
+    						width: 500px; height: 500px;"/>
 							<br>
 						
 						
-						<ul class="list-unstyled list-hours mb-5 text-left mx-auto">
+						<ul class="list-unstyled" >
 							<li class="list-unstyled-item list-hours-item d-flex">
 							<!-- li 글 쓰고 밑에 옅은 회색 줄 생김 -->
 								<!-- 여기 왼쪽 글씨 쓰는 부분 한글 안 먹힘 -->
-								<h4><br><br><strong>${sessionScope.wonduInfo }</strong><br><br>
-								<p style= color:#2F170F align="left">
+								<h4 class="youngmain1"><br><br>${sessionScope.wonduInfo }<br><br>
+								<p  class="youngmain2" align="left">
 								<br>원두 정보 : ${sessionScope.vo2.wondu_c}
 								<br><br>가격 : ${sessionScope.vo2.price }</h4></li><br>
 								</p>
@@ -125,19 +126,18 @@ function goodsFn() {
 							
 							
 						</ul>
-						<div class="containers">
+						 <div class="containers">
 						<div class="gray-line">
 								<p style="font-size: 1.5em; color: black;">
 								<div>
 									<br> 
 									
-									<h4><img class="facehead-imgs" src="./Resources/assets/img/emotion.png" alt="..." style=""/>&nbsp;&nbsp;<strong>만족도를 평가해주세요</strong>
+									<h4>&nbsp;&nbsp;<strong>만족도를 평가해주세요</strong>
 									
 									<br>
 									</h4>
 									<br>
-								</div>
-								
+								</div>								
 								<br><input type="radio" name="good" value="1" style="width:15px;border:1px;"><img
 										class="face-imgs" src="./Resources/assets/img/angry.png" alt="..." style=""/> &nbsp;&nbsp; 
 										
@@ -169,19 +169,14 @@ function goodsFn() {
 						<button type="button" class="recooutbtn" onclick='goreset()'><span class="glyphicon glyphicon-heart-empty"></span>다시하기</button>
 						</div>
 						<div class = "wd-btn2">											
-						<button type="button" class="recooutbtn" onclick='gohome()'>홈으로</button>						
+						<button type="button" class="recooutbtn" onclick='gohome()'>카페 추천</button>						
 						</div>
-						</div>
-						
-												
-					</div>
-					
+						</div>																		
+					</div>					
 				</div>
 			</div>			
-		</div>
-		
-	</section>
-	
+		</div>		
+	</section>	
 	<footer class="footer text-faded text-center py-5">
 		<div class="container">
 			<p class="m-0 small">Copyright CNWA &copy; CHORDCAPTURECHRRY NEVER WORK ALONE</p>

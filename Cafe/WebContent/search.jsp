@@ -108,11 +108,11 @@ function WondulistCallBack(data){
 			<div class="searchbean">
 				<!-- 여기 원두 검색 기능 위치-->
 			</div>
-			<form method="post" action="wondusearchlist.do" name="formname">
+			<form method="get" action="searchoutput.jsp" name="formname">
 				<br> <br>
 				<div class="searchbar">
 					<input type="text" id="wondu_n" name="wondu_n" placeholder="원두 이름을 입력하세요"
-					 style="width:300px;height:50px;font-size:20px;">&nbsp;&nbsp;&nbsp;&nbsp;
+					 style="width:300px;height:50px;font-size:20px;" value="">&nbsp;&nbsp;&nbsp;&nbsp;
 					 
 					<input type="submit" class="searchbtn" value="검색하기">
 				</div>

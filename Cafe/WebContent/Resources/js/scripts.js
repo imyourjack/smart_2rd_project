@@ -42,9 +42,11 @@ function registerFn() {
               document.getElementById('chk_info1').innerHTML = '현재 페이지 URL에 쿼리정보가 없습니다.';
             }
          }
-      function loginFn() {
+      function loginFn() { 
          var user_id = $("#user_id").val(); //id하나만 가지고 오기위해서 val을 씀
-         var password = $("#password").val(); //serialize는 다 가져오는것              
+         var password = $("#password").val(); //serialize는 다 가져오는것     
+         
+               
          $.ajax({
             url : "ajaxlogin.do", //글쓰기 버튼을 누르면 serialize을 가지고ajaxregister여기로 연결해서 처리해주고
             type : "post",

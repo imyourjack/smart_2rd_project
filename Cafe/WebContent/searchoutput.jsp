@@ -157,7 +157,7 @@ function homegoFn(){
                   </div>
                   
                 <%for(int i=0; i<list.size(); i++){ %>
-	                  <div class="searchcolumn" style="color : black;">
+	                  <div class="searchcolumns" style="color : black;">
 	         				<img class=recooutput-img src="<%= list.get(i).getImg() %>">
 	         				<br><br>
 	         				<h2> <%= list.get(i).getWondu_n() %></h2>

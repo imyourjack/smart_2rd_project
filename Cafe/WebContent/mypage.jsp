@@ -54,7 +54,7 @@ td, th {
 }
 
 tr:nth-child(even) {
-  background-color: rgba(230, 167, 86, 0.9);
+  background-color: wheat;
 }
 </style>
 
@@ -103,9 +103,7 @@ tr:nth-child(even) {
 									<!-- 프로필 설정 -->
 									<div class="sh_group">
 										<br>
-
 										<form>
-
 											<div>
 												<div class="sh_header" method="post">
 													<h2>프로필</h2>
@@ -204,6 +202,12 @@ tr:nth-child(even) {
 													<td>감귤류의 달콤함 허브의 향 다크초콜릿의 쌉쌉름한 커피</td>
 													<td>7500</td>
 												</tr>
+												<tr>
+													<th><input type="checkbox"></th>
+													<td>디카페인 콜롬비아</td>
+													<td>오렌지같은 단맛 달콤하고 고소한 맛 부드러운 목넘김이 특징인 커피</td>
+													<td>9000</td>
+												</tr>
 											</table>
 										</dl>
 									</div>
@@ -233,7 +237,12 @@ tr:nth-child(even) {
 												<tr>
 													<th><input type="checkbox"></th>
 													<td>에티오피아 아리차 내추럴 g1 추천 받았아요!</td>
-													<td>jun</td>
+													<td>min</td>
+												</tr>
+												<tr>
+													<th><input type="checkbox"></th>
+													<td>콜롬비아 원두 추천 후기</td>
+													<td>min</td>
 												</tr>
 											</table>
 										</dl>

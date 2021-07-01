@@ -34,7 +34,7 @@ td, th {
 }
 
 tr:nth-child(even) {
-   background-color: rgba(230, 167, 86, 0.9);
+   background-color: wheat;
 }
 </style>
 <script type="text/javascript">
@@ -140,7 +140,7 @@ function gohome1(){
                      </div>
                      </form>
                   </div>
-                  <input type="button" class = "recosubmit1" align="center" value="가버렷" onclick="gohome1()">
+                  <input type="button" class = "recosubmit1" align="center" value="홈으로" onclick="gohome1()">
                </div>
             </div>
          </div>

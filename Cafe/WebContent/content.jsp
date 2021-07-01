@@ -32,8 +32,8 @@ td, th {
 	padding: 8px;
 }
 
-tr:nth-child(even) {
-	background-color: rgba(230, 167, 86, 0.9);
+td:nth-child(1) {
+   background-color: wheat;
 }
 </style>
 
@@ -104,7 +104,7 @@ function btnWrite() {
 							<div class="sh_header">
 								<h2 style="color : #e6a756; margin-top: 1%;">자유게시판</h2>
 							</div>
-							<div class="sh_content">
+							<div class="sh_content" style="height: 400px;">
 								<dl class="sh_lst2">
 									<div style="overflow: scroll;">
 										<!-- <div style="display: none" id="bf"> -->

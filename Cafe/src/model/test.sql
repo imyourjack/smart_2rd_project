@@ -44,7 +44,7 @@ insert into user_tbl values('hello','12345','인생쓰다');
 insert into user_tbl values('gson','12345','아가준혁');
 insert into user_tbl values('java','12345','아가영우');
 insert into user_tbl values('python','12345','아가근아');
-insert into user_tbl values('kaggle','12345','시밣');
+insert into user_tbl values('kaggle','12345','시박');
 
 select * from wondu_good;
 
@@ -79,7 +79,7 @@ create table wondu_tbl(
 
 
 
---truncate wondu_tbl;
+truncate wondu_good;
 insert into wondu_tbl values('1','에티오피아 아리차 내추럴 g1','은은한 꽃향과 상큼한 베리향의 프리미엄 커피','7500','1','https://search.pstatic.net/common/?src=http%3A%2F%2Fshop1.phinf.naver.net%2F20200916_290%2F1600241498533CBul8_PNG%2F1377344176991246_1333992608.png&type=sc960_832');
 insert into wondu_tbl values('2','인도 마이소르 너깃 엑스트라 볼드','견과류 특유의 향과 고소함 밀크초콜릿의 바디감 달콤하고 부드러운 산미의 커피','8000','2','https://search.pstatic.net/common/?src=http%3A%2F%2Fshop1.phinf.naver.net%2F20210512_233%2F1620807599511WiUnd_JPEG%2F21943434337742690_624569600.jpg&type=sc960_832');
 insert into wondu_tbl values('3','인도네시아 만델링 g1','밀크초콜릿의 부드러움 초콜릿같은 풍미 묵직한 바디감의 커피','9500','3','https://search.pstatic.net/common/?src=https%3A%2F%2Fphinf.pstatic.net%2Fshop%2F20210226_163%2F1614291715802Cumgi_JPEG%2F054396018_0.jpg&type=sc960_832');
@@ -154,20 +154,20 @@ select * from content_tbl;
 
 select * from content_tbl;
 
-insert into content_tbl(title, contents, user_id) values('서비스에 대해서', '이 프로그램 아주 좋네요 편해요','admin');
-insert into content_tbl(title, contents, user_id) values('원두 추천', '원두 추천 해주신거 맛잇었어요','babo');
-insert into content_tbl(title, contents, user_id) values('카페가봤어요', '추천해주신 카페 가봤는데 맛잇더라구요','jenny');
-insert into content_tbl(title, contents, user_id) values('인생이', '인생이 쓴데 커피도 쓰네 후......','min');
-insert into content_tbl(title, contents, user_id) values('기모찌맨', '커피를 마시면 기모찌맨이 되는 준짱','jun');
+
 
 insert into content_tbl(title, contents, user_id) values('서비스에 대해서', '이 프로그램 아주 좋네요 편해요','admin');
 insert into content_tbl(title, contents, user_id) values('원두 추천', '원두 추천 해주신거 맛잇었어요','babo');
 insert into content_tbl(title, contents, user_id) values('카페가봤어요', '추천해주신 카페 가봤는데 맛잇더라구요','jenny');
 insert into content_tbl(title, contents, user_id) values('인생이', '인생이 쓴데 커피도 쓰네 후......','min');
-insert into content_tbl(title, contents, user_id) values('기모찌맨', '커피를 마시면 기모찌맨이 되는 준짱','jun');
+insert into content_tbl(title, contents, user_id) values('최고의 서비스', '커피를 마시면 기모찌맨이 되는 준짱','jun');
+insert into content_tbl(title, contents, user_id) values('만족합니다', '이 프로그램 아주 좋네요 편해요','kaggle');
+insert into content_tbl(title, contents, user_id) values('커피없이 못살아', '원두 추천 해주신거 맛잇었어요','python');
 
-delete from content_tbl where content_idx 
 
+
+
+select
 create table wondu_good(
   good_index int not null auto_increment,
   good int not null,
@@ -199,8 +199,8 @@ select * from wondu_good;
 
 select * from user_tbl;
 
---TRUNCATE user_tbl; --지정 테이블 데이터 초기화
-
+TRUNCATE content_tbl;
+delete from content_tbl where content_idx = '8' 
 
 --select * from wondu_tbl where wondu_n like '디%'
 
@@ -218,7 +218,7 @@ create table recos_tbl(
 
 
 
-select * from wondu_tbl;
+select * from recos_tbl;
 
 DESCRIBE wondu_tbl;
 

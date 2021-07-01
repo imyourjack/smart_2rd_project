@@ -15,7 +15,7 @@
    content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=yes">
 <script type="text/javascript"
    src="https://openapi.map.naver.com/openapi/v3/maps.js?ncpClientId=n2u6sqdm7a"></script>
-   
+<link href="./Resources/css/style.css" rel="stylesheet" /> 
    
    
    
@@ -33,7 +33,12 @@
 <link href="./Resources/css/styles.css" rel="stylesheet" />
 <script
    src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-
+   
+<script type="text/javascript">
+function min_jun() {
+	alert("만족도가 등록 되었습니다.");
+}
+</script>
 <script type="text/javascript" src="./script.js"></script>
 <style type="text/css">
 .column {
@@ -620,7 +625,7 @@ vo.setWondu_n(test_coffee);
       var contentString = [
             '<div class="iw_inner">',
             '   <h3>카페 Cystem</h3>',
-            '   <p>광주 동구 제봉로138번길 12 1층 카페 Cystem<br />',
+            '   <p>광주 동구 제봉로138번길 12 1층 카페 Cystem<br /<br> <h3 style ="color:brown"> 원두 : 디카페인 콜롬비아</h3>',
             '       <img src="./Resources/assets/img/cystem.PNG" width="100" height="80" alt="cystem" class="thumbYoung"/><br />',
             '       062-120 | 카페 &gt; Cystem<br />',
             '       <a href="https://m.blog.naver.com/PostView.naver?isHttpsRedirect=true&blogId=nec1400&logNo=221524848815" target="_blank">https://m.blog.naver.com/PostView.naver?isHttpsRedirect=true&blogId=nec1400&logNo=221524848815</a>',
@@ -705,6 +710,46 @@ vo.setWondu_n(test_coffee);
    <br>
    <br>
    <br>
+  
+   <div class="containers" style=" width: 524px;">
+						<div class="gray-line1" style="background-color: floralwhite;margin-left: -2%;">
+								<p style="font-size: 1.5em; color: black;">
+								<div>
+									<br> 
+									
+									<h4>&nbsp;&nbsp;<strong style="margin-left: 21%;">만족도를 평가해주세요</strong>
+									
+									<br>
+									</h4>
+									<br>
+								</div>
+																
+								<br>
+								<div style="margin-left: 8%;">
+								<input type="radio" name="good" value="1" style="width:15px;border:1px;"><img
+										class="face-imgs" src="./Resources/assets/img/angry.png" alt="..." style=""/> &nbsp;&nbsp; 
+										
+									<input type="radio" name="good" value="2" style="width:15px;border:1px;"><img
+										class="face-imgs" src="./Resources/assets/img/umm.png" alt="..." style=""/>  &nbsp;&nbsp;
+										
+									<input type="radio" name="good" value="3" style="width:15px;border:1px;"><img
+										class="face-imgs" src="./Resources/assets/img/soso.png" alt="..." style=""/>  &nbsp;&nbsp;
+									
+									<input type="radio" name="good" value="4" style="width:15px;border:1px;"><img
+										class="face-imgs" src="./Resources/assets/img/smile.png" alt="..." style=""/>  &nbsp;&nbsp;
+									
+									<input type="radio" name="good" value="5" style="width:15px;border:1px;"><img
+										class="face-imgs" src="./Resources/assets/img/sogood.png" alt="..." style=""/>
+									</div>
+									<br>
+									<br>
+									<br>
+									<input type="button" class="btn-reco btn-sm" onclick="min_jun()" style="font-size : 20px;margin-left: 41%;margin-bottom: 2%;" value="완료">
+								    </p> 
+							</div>
+							</div>
+							
+   							<br><br><br>
 <footer class="footer text-faded text-center py-5">
    <div class="container">
       <p class="m-0 small">Copyright CNWA &copy; CHORDCAPTURECHRRY NEVER WORK ALONE</p>
