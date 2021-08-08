@@ -21,13 +21,6 @@
         <link href="./Resources/css/styles.css" rel="stylesheet" />
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 		
-		<script type="text/javascript">
-		function junFn() {
-			alert("힝 속았찌~");
-		}
-		
-		</script>
-		
     </head>
     <body>
         <header>
@@ -72,7 +65,7 @@
                         </ul>
                         </nav>
                         <p class="mb-3">매일 아침부터 늦은 오후까지 사람들은 각자의 이유들로 커피를 찿습니다. 이젠 당신에게 딱 맞는 커피를 발견해보세요.</p>
-                        <div class="intro-button mx-auto"><a class="btn btn-primary btn-xl" href="#!" onclick="junFn()">추천받으러 가기</a></div>
+                        <div class="intro-button mx-auto"><a class="btn btn-primary btn-xl" href="recommend.jsp">추천받으러 가기</a></div>
                     </div>
                 </div>
             </div>
